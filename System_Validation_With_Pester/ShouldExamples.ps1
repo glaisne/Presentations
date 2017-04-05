@@ -19,13 +19,9 @@
         it "Should BeLike" {
             "text" | Should BeLike "*x*"
         }
-        it "test" {
-            $actual="Actual value"
-            $actual | Should BeLikeExactly "Actual *" 
-        }
-        it "Should BeLikeExactly " {
-            "Text" | Should BeLikeExactly "T*"
-        }
+        #it "Should BeLikeExactly " {
+        #    "Text" | Should BeLikeExactly "T*"
+        #}
         it "should BeOfType" {
             "Text" | Should BeOfType System.String
         }
@@ -69,9 +65,9 @@
         it "Should Not BeLike" {
             "text" | Should Not BeLike "*q*"
         }
-        it "Should Not BeExactlyLike" {
-            "Text" | Should Not BeLikeExactly "E*"
-        }
+        #it "Should Not BeExactlyLike" {
+        #    "Text" | Should Not BeLikeExactly "E*"
+        #}
         it "should Not BeOfType" {
             "Text" | Should Not BeOfType int
         }
