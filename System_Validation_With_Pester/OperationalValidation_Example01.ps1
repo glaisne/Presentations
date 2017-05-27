@@ -1,19 +1,19 @@
 ﻿Describe "Describe" {
     BeforeEach {
-        Write-host "Describe: BeforeEach"
+        #Write-host "Describe: BeforeEach"
     }
 
     BeforeAll {
-        Write-Host "Describe: BeforeAll"
+        #Write-Host "Describe: BeforeAll"
     }
 
     Context "Context" {
         BeforeEach {
-            Write-host "Context : BeforeEach"
+            #Write-host "Context : BeforeEach"
         }
 
         BeforeAll {
-            Write-Host "Context: BeforeAll"
+            #Write-Host "Context: BeforeAll"
         }
 
         it "First Test" {
@@ -58,6 +58,18 @@
 
         it "Azure Module should be version 1.3.2" {
             (get-module Azure -ListAvailable).version | should be '1.3.2'
+        }
+
+        it "Azure Module version (major) should be version 1" {
+            (get-module Azure -ListAvailable).version.Major | should BeGreaterThan 1
+        }
+        
+        it "Azure Module version (Minor) should be version 3" {
+            (get-module Azure -ListAvailable).version.Minor | should BeGreaterThan 3
+        }
+        
+        it "Azure Module version (Build) should be version 2" {
+            (get-module Azure -ListAvailable).version.Build | should BeGreaterThan 2
         }
 
         foreach ($drive in @(Get-WMIObject Win32_LogicalDisk |? {$_.DriveType -eq 3}))
