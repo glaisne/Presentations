@@ -29,13 +29,13 @@
         }
 
         it "bing 1" {
-            [net.webrequest]::Create('http://www.bing.com').GetResponse().StatusCode.value__ | should Be 200
+        #    [net.webrequest]::Create('http://www.bing.com').GetResponse().StatusCode.value__ | should Be 200
         }
         it "bing 2" {
-            ([net.webrequest]::Create('http://www.bing.com').GetResponse().StatusCode) -as [int] | should Be 200
+        #    ([net.webrequest]::Create('http://www.bing.com').GetResponse().StatusCode) -as [int] | should Be 200
         }
         it "bing 3" {
-            [net.webrequest]::Create('http://www.bing.com').GetResponse().StatusCode | should Be 'OK'
+        #    [net.webrequest]::Create('http://www.bing.com').GetResponse().StatusCode | should Be 'OK'
         }
 
         # if any one of these fails, the entire test failes.
@@ -60,6 +60,7 @@
             (get-module Azure -ListAvailable).version | should be '1.3.2'
         }
 
+<<<<<<< HEAD
         it "Azure Module version (major) should be version 1" {
             (get-module Azure -ListAvailable).version.Major | should BeGreaterThan 1
         }
@@ -70,6 +71,14 @@
         
         it "Azure Module version (Build) should be version 2" {
             (get-module Azure -ListAvailable).version.Build | should BeGreaterThan 2
+=======
+        it "Azure Module should be at least 1.3.2" {
+            $Version = (get-module Azure -ListAvailable).version
+            if (-not $Version.Major -ge 1 -or -not $version.Minor -ge 3 -or -not $Version.Revision -ge 2)
+            {
+                Throw "Older version of the module ($Version)"
+            }
+>>>>>>> 755e13423ba5d6a3878f0d3f62d0bea49536cee1
         }
 
         foreach ($drive in @(Get-WMIObject Win32_LogicalDisk |? {$_.DriveType -eq 3}))
