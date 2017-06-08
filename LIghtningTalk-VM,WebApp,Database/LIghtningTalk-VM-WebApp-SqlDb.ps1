@@ -5,6 +5,19 @@ login-AzureRmAccount
 $ResourceGroup = 'VMDemo'
 $Location      = 'East US'
 
+# This script requires these Resource Providers
+#  * Microsoft.Network
+#  * Microsoft.Compute
+if (-Not (Get-AzureRmResourceProvider -ProviderNamespace Microsoft.Network))
+{
+    Register-AzureRmResourceProvider -ProviderNamespace Microsoft.Network
+}
+
+if (-Not (Get-AzureRmResourceProvider -ProviderNamespace Microsoft.Compute))
+{
+    Register-AzureRmResourceProvider -ProviderNamespace Microsoft.Compute
+}
+
 # Create the Resource Group
 New-AzureRmResourceGroup -Name $ResourceGroup -Location $Location
 
