@@ -1,6 +1,8 @@
 # Tools
 1) [VSCode](https://code.visualstudio.com/)
    * [Tips and tricks](https://github.com/Microsoft/vscode-tips-and-tricks)
+1) snipping tool
+   * I use this all the time!
 1) [ConEmu](http://conemu.github.io/)
    * Terminal emulator
 1) [RuckZuck](https://ruckzuck.tools/)
@@ -23,3 +25,5 @@
    * WinDiff
 1) [GifCam](http://blog.bahraniapps.com/gifcam/)
    * Generate Gifs from your screen (great for blogs/web tutorials)
+1) [private internet access](https://www.privateinternetaccess.com)
+   * Personal VPN
