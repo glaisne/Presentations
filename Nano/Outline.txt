@@ -1,0 +1,15 @@
+https://docs.microsfot.com/en-us/windows0-server/get-started/update-nano-server
+
+* Creating a Nano server
+ - New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath .\ -TargetPath C:\VMs\NanoIIS\NanoIIS.vhdx -EnableRemoteManagementPort -Package 'Microsoft-NanoServer-IIS-Package' -AdministratorPassword $(ConvertTo-SecureString -string 'Password!101' -AsPlainText -Force) -Verbose
+
+* Getting into a Nano server
+	get-vm | get-vmnetworkadapter
+ 	dir WSMan:\localhost\client
+	set-item wsman:\localhost\client\trustedHosts -value '__________'
+
+* Updating a Nano server
+* Getting files to and from a Nano server
+* Installing a package on Nano server
+* Remote managing a Nano Server
+  - Requirements for hyper-v on hyper-v
