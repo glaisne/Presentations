@@ -2,8 +2,16 @@ if (-not $(test-path C:\vms\Source\NanoServer))
 {
     # Mount Server 2016 ISO
     Mount-DiskImage -ImagePath 'C:\VMs\Source\ISO\Windows Server 2016\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO' -StorageType ISO
+
+    # Identify the new dirve
+    $newDrive = get-psdrive |? {$_.Used -eq $mount.size}
+    if (($newDrive | measure).count -gt 1) 
+    {
+        Write-warning "Figure out which drive is the one manually"
+    }
+    
     # Copy the NanoServer folder to the local HD
-    Copy-item -Path d:\NanoServer -Destination c:\vms\source -recurse
+    Copy-item -Path "$($newdrive.root)NanoServer" -Destination c:\vms\source -recurse
     # Dismount the ISO
     Dismount-DiskImage -ImagePath 'C:\VMs\Source\ISO\Windows Server 2016\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO'
 }
@@ -11,7 +19,7 @@ if (-not $(test-path C:\vms\Source\NanoServer))
 # Import the module to create the Nano VHDX
 import-module C:\vms\Source\NanoServer\NanoServerImageGenerator\NanoServerImageGenerator.psm1
 
-get-service winrm | start-service
+if ((get-service winrm).status -ne 'Running'){Start-Service WinRm}
 
 foreach ($index in 1..2)
 {
@@ -49,7 +57,7 @@ foreach ($index in 1..2)
     Get-VM -Name $NanoServerName | start-vm 
 
     $tryCount = 0
-    while ((Geet-VM -Name $NanoServerName).State -ne 'Running' -and $tryCount -lt 100) {
+    while ((Get-VM -Name $NanoServerName).State -ne 'Running' -and $tryCount -lt 100) {
         start-sleep -s 1
         $tryCount++
     }
@@ -58,11 +66,25 @@ foreach ($index in 1..2)
     $NanoIP = (get-vm -Name $NanoServerName | get-vmnetworkadapter).IPAddresses |? {$_ -match "^\d+\.\d+\.\d+\.\d+$"} | select -first 1
 
     # make sure your system trusts the Nano Server to be able to remote to it.
-    $TrustedHosts = new-object system.collections.arraylist
-    $null = $TrustedHosts.AddRange(@((get-item WSMan:\localhost\Client\TrustedHosts).value.replace(' ', '') -split ','))
-    if (-NOt $TrustedHosts.Contains($NanoIP))
+    $TrustedHosts = @((get-item WSMan:\localhost\Client\TrustedHosts).value.replace(' ', '') -split ',')
+    if (-Not $TrustedHosts.Contains($NanoIP))
     {
-        $null = $TrustedHosts.Add($NanoIP)
-        set-item wsman:\localhost\client\trustedHosts -value $($TrustedHosts.toArray() -join ',') -Confirm:$false -force
+        Set-Item 'wsman:\localhost\client\trustedhosts' -Value "$NanoIP" -Concatenate
     }
+
+    # Remote the Nano Server
+    $Session = new-pssession -ComputerName $nanoIP -Credential ~\administrator
+    Enter-pssession $Session
+
+    # Get the windows version
+    Get-ItemProperty 'hklm:software\microsoft\windows Nt\currentversion\'
+
+    # # update Nano
+    # # https://blogs.technet.microsoft.com/nanoserver/2016/01/16/updating-nano-server-using-windows-update-or-windows-server-update-service/
+    # $sess = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession
+    # $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria = "IsInstalled=0"; OnlineScan = $true}
+    # # See what we need:
+    # $scanResults.updates
+    # # update
+    # $Results = Invoke-CimMethod -InputObject $sess -MethodName ApplyApplicableUpdates
 }

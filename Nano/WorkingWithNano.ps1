@@ -7,13 +7,29 @@
 
 
 # Mount Server 2016 ISO
-Mount-DiskImage -ImagePath 'C:\VMs\Source\ISO\Windows Server 2016\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO' -StorageType ISO
+$imageFilePath = 'C:\VMs\Source\ISO\Windows Server 2016\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO'
+$mount = Mount-DiskImage -ImagePath $imageFilePath -StorageType ISO -passThru
+
+# Identify the new dirve
+$newDrive = get-psdrive |? {$_.Used -eq $mount.size}
+if (($newDrive | measure).count -gt 1) 
+{
+    Write-warning "Figure out which drive is the one manually"
+}
+
 # Copy the NanoServer folder to the local HD
-Copy-item -Path d:\NanoServer -Destination c:\vms\source -recurse
+if (-not (test-path c:\vms\source))
+{
+    $null = mkdir c:\vms\source
+}
+Copy-item -Path "$($newdrive.root)NanoServer" -Destination c:\vms\source -recurse -force
+
 # Dismount the ISO
-Dismount-DiskImage -ImagePath 'C:\VMs\Source\ISO\Windows Server 2016\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO'
+Dismount-DiskImage -ImagePath $imageFilePath
+
 # Import the module to create the Nano VHDX
 import-module C:\vms\Source\NanoServer\NanoServerImageGenerator\NanoServerImageGenerator.psm1
+
 # Create a new Nano VHDX
 $NanoServerName = 'NanoIIS'
 $Param = @{
@@ -50,17 +66,17 @@ Get-VM -Name $NanoServerName | start-vm
 #
 
 # Get the Nano Server's IP Address
-$NanoIP = (get-vm -Name $NanoServerName | get-vmnetworkadapter).IPAddresses |? {$_ -match "^\d+\.\d+\.\d+\.\d+$"} | select -first 1
+$NanoIP = (get-vm -Name $NanoServerName |? {$_.state -eq 'Running'} | get-vmnetworkadapter).IPAddresses |? {$_ -match "^\d+\.\d+\.\d+\.\d+$"} | select -first 1
 $NanoIP
 
 # make sure your system trusts the Nano Server to be able to remote to it.
-dir WSMan:\localhost\client
-$TrustedHosts = new-object system.collections.arraylist
-$null = $TrustedHosts.AddRange(@((get-item WSMan:\localhost\Client\TrustedHosts).value.replace(' ', '') -split ','))
-if (-NOt $TrustedHosts.Contains($NanoIP))
+# Make sure WinRm is running
+if ((get-service winrm).status -ne 'Running'){Start-Service WinRm}
+
+$TrustedHosts = @((get-item WSMan:\localhost\Client\TrustedHosts).value.replace(' ', '') -split ',')
+if (-Not $TrustedHosts.Contains($NanoIP))
 {
-    $null = $TrustedHosts.Add($NanoIP)
-    set-item wsman:\localhost\client\trustedHosts -value $($TrustedHosts.toArray() -join ',')
+    Set-Item 'wsman:\localhost\client\trustedhosts' -Value "$NanoIP" -Concatenate
 }
 
 # Remote the Nano Server
