@@ -13,3 +13,9 @@ https://docs.microsfot.com/en-us/windows0-server/get-started/update-nano-server
 * Installing a package on Nano server
 * Remote managing a Nano Server
   - Requirements for hyper-v on hyper-v
+
+
+clustering Notes:
+https://docs.microsoft.com/en-us/windows-server/get-started/deploy-nano-server
+Join nano to domain:
+https://www.petri.com/join-windows-server-2016-nano-domain
