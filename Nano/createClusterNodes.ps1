@@ -47,7 +47,7 @@ foreach ($index in 1..2)
         VHDPath            = "C:\VMs\$NanoServerName\$NanoServerName.vhdx"
         Path               = "C:\VMs\$NanoServerName"
         Generation         = 2
-        'Switch'           = 'ExternalSwitch'    
+        Switch             = 'ExternalSwitch'    
     }
     New-VM @Param
 
