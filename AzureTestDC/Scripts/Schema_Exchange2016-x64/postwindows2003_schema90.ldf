@@ -1,0 +1,224 @@
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResourceCapacity
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResourceDisplay
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResourceMetaData
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResourceSearchProperties
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMDtmfMap
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMListInDirectorySearch
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMRecipientDialPlanLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMSpokenName
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-PhoneticDisplayName
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneFlags
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchHABShowInDepartments
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLDeleteThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLJunkThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLQuarantineThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLRejectThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientDisplayType
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientTypeDetails
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSafeRecipientsHash
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSafeSendersHash
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSenderHintTranslations
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchArbitrationMailbox
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchBlockedSendersHash
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCoManagedObjectsBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEnableModeration
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchModeratedByLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchModeratedObjectsBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchModerationFlags
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAPolicy
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSignupAddresses
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchWindowsLiveID
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchImmutableId
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSharingPartnerIdentities
+-
+
+

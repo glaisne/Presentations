@@ -1,0 +1,350 @@
+dn: CN=ms-Exch-Oma-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Data-Source,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Delivery-Provider,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Device-Capability,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Device-Type,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Rpc-Http-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Sender-Reputation,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Web-Services-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-IP-Gateway-Address,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 2048
+-
+
+
+dn: CN=ms-Exch-UM-IP-Gateway-Address,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 1
+-
+
+
+dn: CN=ms-Exch-Accepted-Domain,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFedAcceptedDomainLink
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailTipsLargeAudienceThreshold
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportExternalDefaultLanguage
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportExternalDSNReportingAuthority
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportExternalMaxDSNMessageAttachmentSize
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportExternalPostmasterAddress
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportInternalDefaultLanguage
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportInternalDSNReportingAuthority
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportInternalMaxDSNMessageAttachmentSize
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Journaling-Reconciliation-Mailboxes,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Journaling-Reconciliation-Mailboxes
+adminDisplayName: ms-Exch-Journaling-Reconciliation-Mailboxes
+attributeID: 1.2.840.113556.1.4.7000.102.51239
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchJournalingReconciliationMailboxes
+name: ms-Exch-Journaling-Reconciliation-Mailboxes
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 8Z/zxQce6kmG2CBVpU0s8Q==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Journaling-Reconciliation-Password,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Journaling-Reconciliation-Password
+adminDisplayName: ms-Exch-Journaling-Reconciliation-Password
+attributeID: 1.2.840.113556.1.4.7000.102.51238
+attributeSyntax: 2.5.5.5
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchJournalingReconciliationPassword
+name: ms-Exch-Journaling-Reconciliation-Password
+oMSyntax: 19
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 1024
+schemaIdGuid:: pYByx7L6okeECaf0wRjgxg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Journaling-Reconciliation-Url,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Journaling-Reconciliation-Url
+adminDisplayName: ms-Exch-Journaling-Reconciliation-Url
+attributeID: 1.2.840.113556.1.4.7000.102.51236
+attributeSyntax: 2.5.5.5
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchJournalingReconciliationUrl
+name: ms-Exch-Journaling-Reconciliation-Url
+oMSyntax: 19
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 5
+rangeUpper: 2048
+schemaIdGuid:: ixpqx6fpm0mkWa2FOi7gxw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Journaling-Reconciliation-Username,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Journaling-Reconciliation-Username
+adminDisplayName: ms-Exch-Journaling-Reconciliation-Username
+attributeID: 1.2.840.113556.1.4.7000.102.51237
+attributeSyntax: 2.5.5.5
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchJournalingReconciliationUsername
+name: ms-Exch-Journaling-Reconciliation-Username
+oMSyntax: 19
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 1024
+schemaIdGuid:: TzLNQo4/hEyChC/5n/pD7w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Reseller,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Reseller
+adminDisplayName: ms-Exch-Reseller
+attributeID: 1.2.840.113556.1.4.7000.102.51235
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchReseller
+name: ms-Exch-Reseller
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1023
+schemaIdGuid:: KDorw6X8ykeuoutDF25FZw==
+searchFlags: 1
+
+
+dn: CN=ms-Exch-Retention-Comment,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Retention-Comment
+adminDisplayName: ms-Exch-Retention-Comment
+attributeID: 1.2.840.113556.1.4.7000.102.51240
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRetentionComment
+mapiId: 36054
+name: ms-Exch-Retention-Comment
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: M/OtJGBXBUO/cAALqNCyhg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Retention-URL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Retention-URL
+adminDisplayName: ms-Exch-Retention-URL
+attributeID: 1.2.840.113556.1.4.7000.102.51242
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRetentionURL
+mapiId: 36055
+name: ms-Exch-Retention-URL
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 2048
+schemaIdGuid:: gCYLTvV14Eire8n1VzoutQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Service-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Service-Plan
+adminDisplayName: ms-Exch-Service-Plan
+attributeID: 1.2.840.113556.1.4.7000.102.51234
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchServicePlan
+name: ms-Exch-Service-Plan
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1023
+schemaIdGuid:: nd8rBwpaYUqFREDEBuxfGQ==
+searchFlags: 33
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Journaling-Reconciliation-Remote-Account,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Journaling-Reconciliation-Remote-Account
+adminDisplayName: ms-Exch-Journaling-Reconciliation-Remote-Account
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50137
+lDAPDisplayName: msExchJournalingReconciliationRemoteAccount
+name: ms-Exch-Journaling-Reconciliation-Remote-Account
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: s32ZIgx080ahenuZm0BDtg==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: msExchContainer
+mayContain: msExchJournalingReconciliationMailboxes
+mayContain: msExchJournalingReconciliationPassword
+mayContain: msExchJournalingReconciliationUrl
+mayContain: msExchJournalingReconciliationUsername
+
+

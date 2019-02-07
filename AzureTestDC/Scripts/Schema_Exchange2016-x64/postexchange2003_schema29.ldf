@@ -1,0 +1,238 @@
+dn: CN=ms-Exch-Mobile-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsAllowedServers
+-
+
+
+dn: CN=ms-Exch-Mobile-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsBlockedServers
+-
+
+
+dn: CN=ms-Exch-Mobile-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsInternalDomainSuffixList
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMinAdminVersion
+-
+
+
+dn: CN=ms-Exch-OAB-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPollInterval
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchELCOrganizationalRootURL
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchForeignForestFQDN
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchForeignForestOrgAdminUSGSid
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchForeignForestReadOnlyAdminUSGSid
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchForeignForestRecipientAdminUSGSid
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchHABRootDepartmentLink
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: folderPathname
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWATranscodingFlags
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWATranscodingMimeTypes
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: contentType
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: oWAServer
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapBanner
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapCalendarItemRetrievalOption
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapCommandSize
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapFlags
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapIncomingPreauthConnectionTimeout
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapMaxIncomingConnectionFromSingleSource
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapMaxIncomingConnectionPerUser
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapX509CertificateName
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: portNumber
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: contentType
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: oWAServer
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapBanner
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapCalendarItemRetrievalOption
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapCommandSize
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapFlags
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapIncomingPreauthConnectionTimeout
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapMaxIncomingConnectionFromSingleSource
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapMaxIncomingConnectionPerUser
+-
+
+

@@ -1,0 +1,338 @@
+dn: CN=ms-Exch-Mailbox-Move-Batch-Name,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 1
+-
+
+
+dn: CN=ms-Exch-Tenant-Perimeter-Settings-Org-ID,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 8
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLicenseToken
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchObjectID
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchObjectCountQuota
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLicenseToken
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchObjectID
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExch2003Url
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLegacyRedirectType
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxFolderSet2
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Content-Conversion-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Content-Conversion-Settings
+adminDisplayName: ms-Exch-Content-Conversion-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51490
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchContentConversionSettings
+name: ms-Exch-Content-Conversion-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: TmUPzp8qg0SYxbV64F7xdg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-IMAP4-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-IMAP4-Settings
+adminDisplayName: ms-Exch-IMAP4-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51485
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchIMAP4Settings
+name: ms-Exch-IMAP4-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 6YinFv+/JUunkMwndapiIQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Management-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Management-Settings
+adminDisplayName: ms-Exch-Management-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51491
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchManagementSettings
+name: ms-Exch-Management-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: bmA5hRjr6UyH8xHCCZGGiA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Mobile-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mobile-Settings
+adminDisplayName: ms-Exch-Mobile-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51489
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchMobileSettings
+name: ms-Exch-Mobile-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 2nP7NMztkUSziKYvYvR3bg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-OWA-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-OWA-Settings
+adminDisplayName: ms-Exch-OWA-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51488
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchOWASettings
+name: ms-Exch-OWA-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 8lpEGzA3w0uPT4DpP66LoQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-POP3-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-POP3-Settings
+adminDisplayName: ms-Exch-POP3-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51484
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchPOP3Settings
+name: ms-Exch-POP3-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: WxO/r4cqXEudFqO6aoLeeA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Inbound-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Inbound-Settings
+adminDisplayName: ms-Exch-Transport-Inbound-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51486
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportInboundSettings
+name: ms-Exch-Transport-Inbound-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 63hEbzKIdEGZEjPTOWhITw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Outbound-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Outbound-Settings
+adminDisplayName: ms-Exch-Transport-Outbound-Settings
+attributeID: 1.2.840.113556.1.4.7000.102.51487
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportOutboundSettings
+name: ms-Exch-Transport-Outbound-Settings
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: I89UyGdxKUCYNOcvqy25GQ==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Organization-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Organization-Settings
+adminDisplayName: ms-Exch-Organization-Settings
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50147
+lDAPDisplayName: msExchOrganizationSettings
+name: ms-Exch-Organization-Settings
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: QXafxXnkzEycK1H8kFK7dw==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: container
+mayContain: msExchContentConversionSettings
+mayContain: msExchIMAP4Settings
+mayContain: msExchManagementSettings
+mayContain: msExchMobileSettings
+mayContain: msExchOWASettings
+mayContain: msExchPOP3Settings
+mayContain: msExchTransportInboundSettings
+mayContain: msExchTransportOutboundSettings
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-UM-Max-Recording-Duration,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeLower
+rangeLower: 1
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchContentConversionSettings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchIMAP4Settings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchManagementSettings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileSettings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWASettings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPOP3Settings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportInboundSettings
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportOutboundSettings
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+

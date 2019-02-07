@@ -1,0 +1,453 @@
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchBypassModerationBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchBypassModerationFromDLMembersBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchBypassModerationFromDLMembersLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchBypassModerationLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchParentPlanLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchProvisioningFlags
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSendAsAddresses
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchThrottlingPolicyDN
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMRedirectTarget
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpReceiveMaxAcknowledgementDelay
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportShadowHeartbeatRetryCount
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportShadowHeartbeatTimeoutInterval
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportShadowMessageAutoDiscardInterval
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Edge-Sync-Configuration-Sync-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Configuration-Sync-Interval
+adminDisplayName: ms-Exch-Edge-Sync-Configuration-Sync-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.51171
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncConfigurationSyncInterval
+name: ms-Exch-Edge-Sync-Configuration-Sync-Interval
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: LnoB8DGP5UuIyWkl9sz+lg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Cookie-Valid-Duration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Cookie-Valid-Duration
+adminDisplayName: ms-Exch-Edge-Sync-Cookie-Valid-Duration
+attributeID: 1.2.840.113556.1.4.7000.102.51176
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncCookieValidDuration
+name: ms-Exch-Edge-Sync-Cookie-Valid-Duration
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: GMcSrRmKRE+rll/iL6e6Ww==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Failover-DC-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Failover-DC-Interval
+adminDisplayName: ms-Exch-Edge-Sync-Failover-DC-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.51177
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncFailoverDCInterval
+name: ms-Exch-Edge-Sync-Failover-DC-Interval
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: /Mikw2WPi0CYZLsNZ0AR5g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Lock-Duration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Lock-Duration
+adminDisplayName: ms-Exch-Edge-Sync-Lock-Duration
+attributeID: 1.2.840.113556.1.4.7000.102.51173
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLockDuration
+name: ms-Exch-Edge-Sync-Lock-Duration
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: NH1wa9PN+UmP6HE0D3zibQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Lock-Renewal-Duration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Lock-Renewal-Duration
+adminDisplayName: ms-Exch-Edge-Sync-Lock-Renewal-Duration
+attributeID: 1.2.840.113556.1.4.7000.102.51174
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLockRenewalDuration
+name: ms-Exch-Edge-Sync-Lock-Renewal-Duration
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: MYfsc0QDSUyU0Vvo4AHa+A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Log-Enabled,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Log-Enabled
+adminDisplayName: ms-Exch-Edge-Sync-Log-Enabled
+attributeID: 1.2.840.113556.1.4.7000.102.51178
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLogEnabled
+name: ms-Exch-Edge-Sync-Log-Enabled
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: GOPu7Sjr+EST9pfa5/UfAw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Log-Level,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Log-Level
+adminDisplayName: ms-Exch-Edge-Sync-Log-Level
+attributeID: 1.2.840.113556.1.4.7000.102.51182
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLogLevel
+name: ms-Exch-Edge-Sync-Log-Level
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 8G2QH2afmU+32861YjgNAg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Log-Max-Age,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Log-Max-Age
+adminDisplayName: ms-Exch-Edge-Sync-Log-Max-Age
+attributeID: 1.2.840.113556.1.4.7000.102.51179
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLogMaxAge
+name: ms-Exch-Edge-Sync-Log-Max-Age
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: gDn5eyxvi0izdm8BB3kvBw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Log-Max-Directory-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Log-Max-Directory-Size
+adminDisplayName: ms-Exch-Edge-Sync-Log-Max-Directory-Size
+attributeID: 1.2.840.113556.1.4.7000.102.51180
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLogMaxDirectorySize
+name: ms-Exch-Edge-Sync-Log-Max-Directory-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: S7jELCzMxkWBYi59zbcVXA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Log-Max-File-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Log-Max-File-Size
+adminDisplayName: ms-Exch-Edge-Sync-Log-Max-File-Size
+attributeID: 1.2.840.113556.1.4.7000.102.51181
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLogMaxFileSize
+name: ms-Exch-Edge-Sync-Log-Max-File-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: TigXpNQgSUGcwddNDlvjOQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Log-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Log-Path
+adminDisplayName: ms-Exch-Edge-Sync-Log-Path
+attributeID: 1.2.840.113556.1.4.7000.102.51183
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncLogPath
+name: ms-Exch-Edge-Sync-Log-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: jtanPV7LOUWBN3Aqsdf+rw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Backup-Lease-Location,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Backup-Lease-Location
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Backup-Lease-Location
+attributeID: 1.2.840.113556.1.4.7000.102.51189
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncMservBackupLeaseLocation
+name: ms-Exch-Edge-Sync-Mserv-Backup-Lease-Location
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: GT2f4MyUTkiNT1eGoKebIw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Local-Certificate,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Local-Certificate
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Local-Certificate
+attributeID: 1.2.840.113556.1.4.7000.102.51187
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncMservLocalCertificate
+name: ms-Exch-Edge-Sync-Mserv-Local-Certificate
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: hJ8Uds7hf0CkBwYAAIjPOg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Primary-Lease-Location,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Primary-Lease-Location
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Primary-Lease-Location
+attributeID: 1.2.840.113556.1.4.7000.102.51191
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncMservPrimaryLeaseLocation
+name: ms-Exch-Edge-Sync-Mserv-Primary-Lease-Location
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: ELTCgc7qmUSzMdvX+bZajA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Provision-Url,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Provision-Url
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Provision-Url
+attributeID: 1.2.840.113556.1.4.7000.102.51185
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncMservProvisionUrl
+name: ms-Exch-Edge-Sync-Mserv-Provision-Url
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: O6vVj6vvDUmL6VpYToBp8g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Remote-Certificate,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Remote-Certificate
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Remote-Certificate
+attributeID: 1.2.840.113556.1.4.7000.102.51188
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncMservRemoteCertificate
+name: ms-Exch-Edge-Sync-Mserv-Remote-Certificate
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: Cc8m8Msxmka/adPeqRix2Q==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Setting-Url,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Setting-Url
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Setting-Url
+attributeID: 1.2.840.113556.1.4.7000.102.51186
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncMservSettingUrl
+name: ms-Exch-Edge-Sync-Mserv-Setting-Url
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: W93iNAbfhU67enIRsV7+pQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Option-Duration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Option-Duration
+adminDisplayName: ms-Exch-Edge-Sync-Option-Duration
+attributeID: 1.2.840.113556.1.4.7000.102.51175
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncOptionDuration
+name: ms-Exch-Edge-Sync-Option-Duration
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: PiMEBgUdOE60t989znqbKg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Provider-Assembly-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Provider-Assembly-Path
+adminDisplayName: ms-Exch-Edge-Sync-Provider-Assembly-Path
+attributeID: 1.2.840.113556.1.4.7000.102.51190
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncProviderAssemblyPath
+name: ms-Exch-Edge-Sync-Provider-Assembly-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: yJ+O1O3hdEyyaZnG9XfiPQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Edge-Sync-Recipient-Sync-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Recipient-Sync-Interval
+adminDisplayName: ms-Exch-Edge-Sync-Recipient-Sync-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.51172
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEdgeSyncRecipientSyncInterval
+name: ms-Exch-Edge-Sync-Recipient-Sync-Interval
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: s41cRh8sz0OYZSjFfXzD5g==
+searchFlags: 0
+
+

@@ -1,0 +1,284 @@
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Active-Sync-Devices,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchMobileMailboxSettings
+-
+
+
+dn: CN=ms-Exch-Transport-Reseller-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchContainer
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAddressBookFlags
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDirsyncSourceObjectClass
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLitigationHoldDate
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLitigationHoldOwner
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxAuditLastAdminAccess
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxAuditLastDelegateAccess
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxAuditLastExternalAccess
+-
+
+
+dn: CN=ms-Exch-Edge-Sync-EHF-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEdgeSyncEHFFlags
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationLogAgeQuotaInHours
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationLogDirectorySizeQuota
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationLogExtensionData
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationLogLogFilePath
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationLogLoggingLevel
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationLogPerFileSizeQuota
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSIPAccessService
+-
+
+
+dn: CN=ms-Exch-Fed-Sharing-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFedTargetOWAURL
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPreviousMailboxGuid
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncAsyncOperationIds
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSIPSBCService
+-
+
+
+dn: CN=ms-Exch-Routing-SMTP-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpSendNdrLevel
+-
+
+
+dn: CN=ms-Exch-Routing-SMTP-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpSendTlsDomain
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpReceiveTlsDomainCapabilities
+-
+
+
+dn: CN=ms-Exch-Tenant-Perimeter-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTargetServerAdmins
+-
+
+
+dn: CN=ms-Exch-Tenant-Perimeter-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTargetServerPartnerAdmins
+-
+
+
+dn: CN=ms-Exch-Tenant-Perimeter-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTargetServerPartnerViewOnlyAdmins
+-
+
+
+dn: CN=ms-Exch-Tenant-Perimeter-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTargetServerViewOnlyAdmins
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Minor-Partner-Id,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Minor-Partner-Id
+adminDisplayName: ms-Exch-Minor-Partner-Id
+attributeID: 1.2.840.113556.1.4.7000.102.51749
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchMinorPartnerId
+name: ms-Exch-Minor-Partner-Id
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 3pc9aSd/8kGN2v1ZQvDyUw==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-Mobile-OTA-Notification-Mail-Insert-2,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mobile-OTA-Notification-Mail-Insert-2
+adminDisplayName: ms-Exch-Mobile-OTA-Notification-Mail-Insert-2
+attributeID: 1.2.840.113556.1.4.7000.102.51748
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchMobileOTANotificationMailInsert2
+name: ms-Exch-Mobile-OTA-Notification-Mail-Insert-2
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 16384
+schemaIdGuid:: ns3VMaZs1EKLwKXUAazYMQ==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-Reconciliation-Cookies,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Reconciliation-Cookies
+adminDisplayName: ms-Exch-Reconciliation-Cookies
+attributeID: 1.2.840.113556.1.4.7000.102.51751
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchReconciliationCookies
+name: ms-Exch-Reconciliation-Cookies
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: BME5QV9ebEeuk3YMRghZbA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Responsible-For-Sites,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Responsible-For-Sites
+adminDisplayName: ms-Exch-Responsible-For-Sites
+attributeID: 1.2.840.113556.1.4.7000.102.51750
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchResponsibleForSites
+name: ms-Exch-Responsible-For-Sites
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: BwmFQeVI/Emj1aD84eQcEA==
+searchFlags: 16
+
+

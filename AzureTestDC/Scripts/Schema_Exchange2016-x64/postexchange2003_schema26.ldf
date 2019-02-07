@@ -1,0 +1,238 @@
+dn: CN=ms-Exch-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-ELC-Folder,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-Mailbox-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-Transport-Rule-Collection,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-UM-IP-Gateway,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:defaultHidingValue
+defaultHidingValue: TRUE
+-
+
+
+dn: CN=ms-Exch-Department,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchDepartment
+-
+
+
+dn: CN=ms-Exch-Purported-Search-UI,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Version,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Content-Type,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 10
+-
+
+
+dn: CN=ms-Exch-Message-Classification-Banner,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 1024
+-
+
+
+dn: CN=ms-Exch-OWA-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 1024
+-
+
+
+dn: CN=ms-Exch-UM-Pilot-Identifier,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 64
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-SCL-Delete-Threshold,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-SCL-Quarantine-Threshold,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-SCL-Reject-Threshold,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Safe-Recipients-Hash,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Safe-Senders-Hash,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-UM-Audio-Codec,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-UM-Pin-Checksum,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Resource-Search-Properties,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 7
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLastAppliedRecipientFilter
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientFilterFlags
+-
+
+
+dn: CN=Contact,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMasterAccountHistory
+-
+
+
+dn: CN=Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMasterAccountHistory
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchHABShowInDepartments
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLDeleteThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLJunkThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLQuarantineThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneSCLRejectThreshold
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientDisplayType
+-
+
+

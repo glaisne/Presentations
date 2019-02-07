@@ -1,0 +1,238 @@
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCoManagedObjectsBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEnableModeration
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchModeratedByLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchModeratedObjectsBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchModerationFlags
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAPolicy
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSignupAddresses
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchWindowsLiveID
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEdgeSyncCookies
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEdgeSyncSourceGuid
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientValidatorCookies
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsAddressBookRootsLink
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsGlobalAddressListsLink
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsTemplateRootsLink
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCustomerFeedbackEnabled
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchApprovalApplicationLink
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFileShareWitness
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFileShareWitnessDirectory
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMDBAvailabilityGroupName
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-Sender-Filter-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMessageHygieneRecipientBlockedSenderAction
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABANRProperties
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABDetailsProperties
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABMaxBinarySize
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABMaxMVBinarySize
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABMaxMVStringSize
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABMaxStringSize
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOABTruncatedProperties
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCustomerFeedbackURL
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchIndustry
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMaxSignupAddressesPerUser
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSignupAddressesEnabled
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapProtocolFlags
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapProtocolFlags
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+

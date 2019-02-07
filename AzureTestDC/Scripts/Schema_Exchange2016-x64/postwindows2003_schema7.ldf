@@ -1,0 +1,544 @@
+dn: CN=ms-Exch-Chat-Channel-Join-Message,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Join-Message
+adminDisplayName: ms-Exch-Chat-Channel-Join-Message
+attributeID: 1.2.840.113556.1.4.7000.102.8030
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelJoinMessage
+name: ms-Exch-Chat-Channel-Join-Message
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: POctlpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Key,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Key
+adminDisplayName: ms-Exch-Chat-Channel-Key
+attributeID: 1.2.840.113556.1.4.7000.102.8021
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelKey
+name: ms-Exch-Chat-Channel-Key
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: dINKlpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Language,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Language
+adminDisplayName: ms-Exch-Chat-Channel-Language
+attributeID: 1.2.840.113556.1.4.7000.102.8028
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelLanguage
+name: ms-Exch-Chat-Channel-Language
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: rB9nlpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-LCID,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-LCID
+adminDisplayName: ms-Exch-Chat-Channel-LCID
+attributeID: 1.2.840.113556.1.4.7000.102.8029
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelLCID
+name: ms-Exch-Chat-Channel-LCID
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 5LuDlpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Limit,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Limit
+adminDisplayName: ms-Exch-Chat-Channel-Limit
+attributeID: 1.2.840.113556.1.4.7000.102.8010
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelLimit
+name: ms-Exch-Chat-Channel-Limit
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: HFiglpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Mode,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Mode
+adminDisplayName: ms-Exch-Chat-Channel-Mode
+attributeID: 1.2.840.113556.1.4.7000.102.8006
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelMode
+name: ms-Exch-Chat-Channel-Mode
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: +pG6lpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Name,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Name
+adminDisplayName: ms-Exch-Chat-Channel-Name
+attributeID: 1.2.840.113556.1.4.7000.102.8019
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelName
+name: ms-Exch-Chat-Channel-Name
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Mi7XlpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Owner-Key,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Owner-Key
+adminDisplayName: ms-Exch-Chat-Channel-Owner-Key
+attributeID: 1.2.840.113556.1.4.7000.102.8022
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelOwnerKey
+name: ms-Exch-Chat-Channel-Owner-Key
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: asrzlpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Part-Message,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Part-Message
+adminDisplayName: ms-Exch-Chat-Channel-Part-Message
+attributeID: 1.2.840.113556.1.4.7000.102.8031
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelPartMessage
+name: ms-Exch-Chat-Channel-Part-Message
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: /MgSl5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-PICS,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-PICS
+adminDisplayName: ms-Exch-Chat-Channel-PICS
+attributeID: 1.2.840.113556.1.4.7000.102.8027
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelPICS
+name: ms-Exch-Chat-Channel-PICS
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 2gItl5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Subject,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Subject
+adminDisplayName: ms-Exch-Chat-Channel-Subject
+attributeID: 1.2.840.113556.1.4.7000.102.8025
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelSubject
+name: ms-Exch-Chat-Channel-Subject
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Ep9Jl5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Channel-Topic,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Channel-Topic
+adminDisplayName: ms-Exch-Chat-Channel-Topic
+attributeID: 1.2.840.113556.1.4.7000.102.8024
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatChannelTopic
+name: ms-Exch-Chat-Channel-Topic
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Sjtml5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Class-Ident-Mask,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Class-Ident-Mask
+adminDisplayName: ms-Exch-Chat-Class-Ident-Mask
+attributeID: 1.2.840.113556.1.4.7000.102.8032
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatClassIdentMask
+name: ms-Exch-Chat-Class-Ident-Mask
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: gteCl5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Class-IP,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Class-IP
+adminDisplayName: ms-Exch-Chat-Class-IP
+attributeID: 1.2.840.113556.1.4.7000.102.8033
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatClassIP
+name: ms-Exch-Chat-Class-IP
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: FNahl5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Client-Port,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Client-Port
+adminDisplayName: ms-Exch-Chat-Client-Port
+attributeID: 1.2.840.113556.1.4.7000.102.8007
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatClientPort
+name: ms-Exch-Chat-Client-Port
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: THK+l5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-DNS-Reverse-Mode,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-DNS-Reverse-Mode
+adminDisplayName: ms-Exch-Chat-DNS-Reverse-Mode
+attributeID: 1.2.840.113556.1.4.7000.102.8013
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatDNSReverseMode
+name: ms-Exch-Chat-DNS-Reverse-Mode
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: hA7bl5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Duration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Duration
+adminDisplayName: ms-Exch-Chat-Duration
+attributeID: 1.2.840.113556.1.4.7000.102.8042
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatDuration
+name: ms-Exch-Chat-Duration
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Fg36l5Ow0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Enable-Anonymous,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Enable-Anonymous
+adminDisplayName: ms-Exch-Chat-Enable-Anonymous
+attributeID: 1.2.840.113556.1.4.7000.102.8011
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatEnableAnonymous
+name: ms-Exch-Chat-Enable-Anonymous
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: qAsZmJOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Enable-Authenticated,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Enable-Authenticated
+adminDisplayName: ms-Exch-Chat-Enable-Authenticated
+attributeID: 1.2.840.113556.1.4.7000.102.8012
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatEnableAuthenticated
+name: ms-Exch-Chat-Enable-Authenticated
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 4Kc1mJOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Input-Flood-Limit,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Input-Flood-Limit
+adminDisplayName: ms-Exch-Chat-Input-Flood-Limit
+attributeID: 1.2.840.113556.1.4.7000.102.8038
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatInputFloodLimit
+name: ms-Exch-Chat-Input-Flood-Limit
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: qkJxmJOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Max-Anonymous,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Max-Anonymous
+adminDisplayName: ms-Exch-Chat-Max-Anonymous
+attributeID: 1.2.840.113556.1.4.7000.102.8015
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatMaxAnonymous
+name: ms-Exch-Chat-Max-Anonymous
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: OjdpmZOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Max-Connections,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Max-Connections
+adminDisplayName: ms-Exch-Chat-Max-Connections
+attributeID: 1.2.840.113556.1.4.7000.102.8014
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatMaxConnections
+name: ms-Exch-Chat-Max-Connections
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: ctOFmZOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Max-Memberships,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Max-Memberships
+adminDisplayName: ms-Exch-Chat-Max-Memberships
+attributeID: 1.2.840.113556.1.4.7000.102.8016
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatMaxMemberships
+name: ms-Exch-Chat-Max-Memberships
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: BNKkmZOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Message-Lag,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Message-Lag
+adminDisplayName: ms-Exch-Chat-Message-Lag
+attributeID: 1.2.840.113556.1.4.7000.102.8034
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatMessageLag
+name: ms-Exch-Chat-Message-Lag
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: KM/imZOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-MOTD,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-MOTD
+adminDisplayName: ms-Exch-Chat-MOTD
+attributeID: 1.2.840.113556.1.4.7000.102.8004
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatMOTD
+name: ms-Exch-Chat-MOTD
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: YGv/mZOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Network-Mode,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Network-Mode
+adminDisplayName: ms-Exch-Chat-Network-Mode
+attributeID: 1.2.840.113556.1.4.7000.102.8045
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatNetworkMode
+name: ms-Exch-Chat-Network-Mode
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: mP58kZ6w0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Network-Name,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Network-Name
+adminDisplayName: ms-Exch-Chat-Network-Name
+attributeID: 1.2.840.113556.1.4.7000.102.8001
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatNetworkName
+name: ms-Exch-Chat-Network-Name
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 8mkempOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Nick-Delay,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Nick-Delay
+adminDisplayName: ms-Exch-Chat-Nick-Delay
+attributeID: 1.2.840.113556.1.4.7000.102.8036
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatNickDelay
+name: ms-Exch-Chat-Nick-Delay
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: hGg9mpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Output-Saturation,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Output-Saturation
+adminDisplayName: ms-Exch-Chat-Output-Saturation
+attributeID: 1.2.840.113556.1.4.7000.102.8039
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatOutputSaturation
+name: ms-Exch-Chat-Output-Saturation
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: FmdcmpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Ping-Delay,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Ping-Delay
+adminDisplayName: ms-Exch-Chat-Ping-Delay
+attributeID: 1.2.840.113556.1.4.7000.102.8037
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatPingDelay
+name: ms-Exch-Chat-Ping-Delay
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: qGV7mpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Protection-Level,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Protection-Level
+adminDisplayName: ms-Exch-Chat-Protection-Level
+attributeID: 1.2.840.113556.1.4.7000.102.8035
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatProtectionLevel
+name: ms-Exch-Chat-Protection-Level
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: OmSampOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Chat-Server-Port,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Chat-Server-Port
+adminDisplayName: ms-Exch-Chat-Server-Port
+attributeID: 1.2.840.113556.1.4.7000.102.8008
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchChatServerPort
+name: ms-Exch-Chat-Server-Port
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: cgC3mpOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+

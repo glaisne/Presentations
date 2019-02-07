@@ -1,0 +1,317 @@
+dn: CN=ms-Exch-Exchange-Assistance,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWALightHelpURL
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExchangeRPCServiceArrayBL
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailTipsSettings
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailTipsSettings
+-
+
+
+dn: CN=ms-Exch-Role,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRoleBL
+-
+
+
+dn: CN=ms-Exch-Scope,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchConfigRestrictionBL
+-
+
+
+dn: CN=ms-Exch-Scope,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDomainRestrictionBL
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution
+adminDisplayName: ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution
+attributeID: 1.2.840.113556.1.4.7000.102.51147
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchAllowHeuristicADCallingLineIdResolution
+name: ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: +p/WbXs0Lkq3ONWslQZBsA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-System-Address-List,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-System-Address-List
+adminDisplayName: ms-Exch-System-Address-List
+attributeID: 1.2.840.113556.1.4.7000.102.51148
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSystemAddressList
+name: ms-Exch-System-Address-List
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: vx/oIuwzH0qEvwTCiTcvfw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Calling-Line-ID-Formats,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Calling-Line-ID-Formats
+adminDisplayName: ms-Exch-UM-Calling-Line-ID-Formats
+attributeID: 1.2.840.113556.1.4.7000.102.51146
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMCallingLineIDFormats
+name: ms-Exch-UM-Calling-Line-ID-Formats
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 128
+schemaIdGuid:: wJe5egrR7ke0XdeczgtO7g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Calling-Line-IDs,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Calling-Line-IDs
+adminDisplayName: ms-Exch-UM-Calling-Line-IDs
+attributeID: 1.2.840.113556.1.4.7000.102.51145
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMCallingLineIDs
+name: ms-Exch-UM-Calling-Line-IDs
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 128
+schemaIdGuid:: G+5FFiHMH0CX0hZKeHcwEw==
+searchFlags: 1
+
+
+dn: CN=ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts
+adminDisplayName: ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts
+attributeID: 1.2.840.113556.1.4.7000.102.51144
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMEquivalentDialPlanPhoneContexts
+name: ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: dpV4GxZ2ZEmx5fHOS9FPdg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Protect-Authenticated-Voice-Mail,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Protect-Authenticated-Voice-Mail
+adminDisplayName: ms-Exch-UM-Protect-Authenticated-Voice-Mail
+attributeID: 1.2.840.113556.1.4.7000.102.51064
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMProtectAuthenticatedVoiceMail
+name: ms-Exch-UM-Protect-Authenticated-Voice-Mail
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: sWlCKRODkk2zzBqrXOlBpA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Protect-Unauthenticated-Voice-Mail,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Protect-Unauthenticated-Voice-Mail
+adminDisplayName: ms-Exch-UM-Protect-Unauthenticated-Voice-Mail
+attributeID: 1.2.840.113556.1.4.7000.102.51063
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMProtectUnauthenticatedVoiceMail
+name: ms-Exch-UM-Protect-Unauthenticated-Voice-Mail
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: XLuCh37eN0SmzXOcT7skmA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Protected-Voice-Mail-Text,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Protected-Voice-Mail-Text
+adminDisplayName: ms-Exch-UM-Protected-Voice-Mail-Text
+attributeID: 1.2.840.113556.1.4.7000.102.51066
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMProtectedVoiceMailText
+name: ms-Exch-UM-Protected-Voice-Mail-Text
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: lGNO9XKitU6j8qyBFVo9Bw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Require-Protected-Play-On-Phone,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Require-Protected-Play-On-Phone
+adminDisplayName: ms-Exch-UM-Require-Protected-Play-On-Phone
+attributeID: 1.2.840.113556.1.4.7000.102.51065
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMRequireProtectedPlayOnPhone
+name: ms-Exch-UM-Require-Protected-Play-On-Phone
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 3YH6Zes4+kOwceHpzMGWjg==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSystemAddressList
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMCallingLineIDs
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSetupStatus
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAllowHeuristicADCallingLineIdResolution
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMCallingLineIDFormats
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMEquivalentDialPlanPhoneContexts
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMProtectAuthenticatedVoiceMail
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMProtectUnauthenticatedVoiceMail
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMProtectedVoiceMailText
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMRequireProtectedPlayOnPhone
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Aggregation-Subscription-Credential,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Aggregation-Subscription-Credential
+adminDisplayName: ms-Exch-Aggregation-Subscription-Credential
+attributeID: 1.2.840.113556.1.4.7000.102.51149
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: msExchAggregationSubscriptionCredential
+name: ms-Exch-Aggregation-Subscription-Credential
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: mIZWhMt/zkiQ/3AEJ9kNMA==
+searchFlags: 0
+
+

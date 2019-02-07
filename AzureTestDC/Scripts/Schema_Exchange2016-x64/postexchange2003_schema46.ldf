@@ -1,0 +1,359 @@
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Edge-Sync-Service-Config,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Service-Config
+adminDisplayName: ms-Exch-Edge-Sync-Service-Config
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50126
+lDAPDisplayName: msExchEdgeSyncServiceConfig
+name: ms-Exch-Edge-Sync-Service-Config
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: uhsOGfN7bU+pOzp/N1wj2Q==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: site
+mayContain: msExchEdgeSyncConfigurationSyncInterval
+mayContain: msExchEdgeSyncCookieValidDuration
+mayContain: msExchEdgeSyncFailoverDCInterval
+mayContain: msExchEdgeSyncLockDuration
+mayContain: msExchEdgeSyncLockRenewalDuration
+mayContain: msExchEdgeSyncLogEnabled
+mayContain: msExchEdgeSyncLogLevel
+mayContain: msExchEdgeSyncLogMaxAge
+mayContain: msExchEdgeSyncLogMaxDirectorySize
+mayContain: msExchEdgeSyncLogMaxFileSize
+mayContain: msExchEdgeSyncLogPath
+mayContain: msExchEdgeSyncOptionDuration
+mayContain: msExchEdgeSyncRecipientSyncInterval
+
+
+dn: CN=ms-Exch-Fed-Trust,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Fed-Trust
+adminDisplayName: ms-Exch-Fed-Trust
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50135
+lDAPDisplayName: msExchFedTrust
+name: ms-Exch-Fed-Trust
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: I1pMKSzQ9EGrKRgxWOvFkw==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: container
+possSuperiors: msExchContainer
+mayContain: msExchFedApplicationId
+mayContain: msExchFedApplicationURI
+mayContain: msExchFedMetadataEPR
+mayContain: msExchFedMetadataPollInterval
+mayContain: msExchFedMetadataPutEPR
+mayContain: msExchFedOrgCertificate
+mayContain: msExchFedOrgPrevCertificate
+mayContain: msExchFedOrgPrevPrivCertificate
+mayContain: msExchFedOrgPrivCertificate
+mayContain: msExchFedPolicyReferenceURI
+mayContain: msExchFedTokenIssuerCertReference
+mayContain: msExchFedTokenIssuerCertificate
+mayContain: msExchFedTokenIssuerEPR
+mayContain: msExchFedTokenIssuerMetadataEPR
+mayContain: msExchFedTokenIssuerPrevCertReference
+mayContain: msExchFedTokenIssuerPrevCertificate
+mayContain: msExchFedTokenIssuerType
+mayContain: msExchFedTokenIssuerURI
+mayContain: msExchFedWebRequestorRedirectEPR
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Edge-Sync-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Connector
+adminDisplayName: ms-Exch-Edge-Sync-Connector
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50130
+lDAPDisplayName: msExchEdgeSyncConnector
+name: ms-Exch-Edge-Sync-Connector
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 2
+rDNAttID: cn
+schemaIdGuid:: 0pWkmjjJ3U+OIhrMVS0/aw==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: msExchEdgeSyncServiceConfig
+mayContain: Enabled
+mayContain: msExchEdgeSyncProviderAssemblyPath
+mayContain: msExchEdgeSyncSynchronizationProvider
+
+
+dn: CN=ms-Exch-Fed-OrgId,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Fed-OrgId
+adminDisplayName: ms-Exch-Fed-OrgId
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50134
+lDAPDisplayName: msExchFedOrgId
+name: ms-Exch-Fed-OrgId
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: JdXWnKcif0+dRD1of0fO+Q==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: container
+possSuperiors: msExchContainer
+mayContain: msExchFedAcceptedDomainBL
+mayContain: msExchFedAccountNamespace
+mayContain: msExchFedClientTrust
+mayContain: msExchFedDelegationTrust
+mayContain: msExchFedIsEnabled
+mayContain: msExchFedOrgAdminContact
+mayContain: msExchFedOrgApprovalContact
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Edge-Sync-Mserv-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Edge-Sync-Mserv-Connector
+adminDisplayName: ms-Exch-Edge-Sync-Mserv-Connector
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50131
+lDAPDisplayName: msExchEdgeSyncMservConnector
+name: ms-Exch-Edge-Sync-Mserv-Connector
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: kbn7axvxn0q4XmQC4z9TkA==
+subClassOf: msExchEdgeSyncConnector
+mayContain: msExchEdgeSyncMservBackupLeaseLocation
+mayContain: msExchEdgeSyncMservLocalCertificate
+mayContain: msExchEdgeSyncMservPrimaryLeaseLocation
+mayContain: msExchEdgeSyncMservProvisionUrl
+mayContain: msExchEdgeSyncMservRemoteCertificate
+mayContain: msExchEdgeSyncMservSettingUrl
+
+
+dn: CN=ms-Exch-Fed-Sharing-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Fed-Sharing-Relationship
+adminDisplayName: ms-Exch-Fed-Sharing-Relationship
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50136
+lDAPDisplayName: msExchFedSharingRelationship
+name: ms-Exch-Fed-Sharing-Relationship
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: J0YTW3jOCE2zG5dM3hmDGg==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: msExchFedOrgId
+mayContain: msExchFedDomainNames
+mayContain: msExchFedEnabledActions
+mayContain: msExchFedIsEnabled
+mayContain: msExchFedOrgAdminContact
+mayContain: msExchFedTargetApplicationURI
+mayContain: msExchFedTargetAutodiscoverEPR
+mayContain: msExchFedTargetSharingEPR
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Address-Rewrite-Configuration,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Auto-Discover-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Availability-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Availability-Foreign-Connector-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Certificate-Information,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Department,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-ECP-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-IM-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Mailbox-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-Content-Filter-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-IP-Allow-List-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-IP-Allow-List-Provider-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-IP-Block-List-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-IP-Block-List-Provider-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-Recipient-Filter-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-Sender-Filter-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-Sender-ID-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Mobile-Mailbox-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Mobile-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Multi-Media-User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-OAB-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Carrier,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Oma-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+

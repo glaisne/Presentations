@@ -1,0 +1,223 @@
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: businessRoles
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: telephoneAssistant
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: personalPager
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: employeeNumber
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-PhoneticCompanyName
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-PhoneticDepartment
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-PhoneticFirstName
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-PhoneticLastName
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-HABSeniorityIndex
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUserCulture
+-
+
+
+dn: CN=Organizational-Person,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msDS-PhoneticDisplayName
+-
+
+
+dn: CN=Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: activationSchedule
+-
+
+
+dn: CN=Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: activationStyle
+-
+
+
+dn: CN=Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: type
+-
+
+
+dn: CN=Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: networkAddress
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: defaultSecurityDescriptor
+defaultSecurityDescriptor: D:S:
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMasterService
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPolicyRoots
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsAddressBookRootsLink
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsGlobalAddressListsLink
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsTemplateRootsLink
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncNonRecipientCookie
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncRecipientCookie
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncReplayList
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExchangeServerLink
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: logRolloverInterval
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoredConfigurations
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoredServices
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringAvailabilityStyle
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringAvailabilityWindow
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringCachedViaMail
+-
+
+

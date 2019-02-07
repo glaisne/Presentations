@@ -1,0 +1,238 @@
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapX509CertificateName
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: portNumber
+-
+
+
+dn: CN=ms-Exch-Recipient-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLastAppliedRecipientFilter
+-
+
+
+dn: CN=ms-Exch-Recipient-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientFilterFlags
+-
+
+
+dn: CN=ms-Exch-Recipient-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSearchBase
+-
+
+
+dn: CN=ms-Exch-Recipient-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSearchScope
+-
+
+
+dn: CN=ms-Exch-Routing-SMTP-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPSendConnectorFQDN
+-
+
+
+dn: CN=ms-Exch-Routing-SMTP-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPSendExternallySecuredAs
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpReceiveConnectionInactivityTimeout
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveConnectorFQDN
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveDefaultAcceptedDomainLink
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveExternallySecuredAs
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveInboundSecurityFlag
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveMaxInboundConnectionsPercPerSource
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceivePostmasterAddress
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAttachmentFilteringAdminMessage
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: delivContLength
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchInternalSMTPServers
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMaxDumpsterSizePerStorageGroup
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMaxDumpsterTime
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSMCertPolicyOid
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipLimit
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRMSTemplatePath
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: submissionContLength
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportSettingsFlags
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMDisambiguationField
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMInfoAnnouncementFile
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMInfoAnnouncementStatus
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMOperatorExtension
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMQueryBaseDN
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPollInterval
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPromptPublishingPoint
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMDialPlanFlags
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMDialPlanURIType
+-
+
+

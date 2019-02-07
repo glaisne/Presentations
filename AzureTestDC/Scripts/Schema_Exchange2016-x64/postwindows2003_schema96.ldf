@@ -1,0 +1,224 @@
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchServerAssociationBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUserBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxMoveTargetMDBBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchArchiveDatabaseBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAvailabilityOrgWideAccountBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAvailabilityPerUserAccountBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsAllowedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsBlockedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsInternalDomainSuffixListBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsAddressBookRootsBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsGlobalAddressListsBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsTemplateRootsBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAAllowedFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAAllowedMimeTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWABlockedFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWABlockedMIMETypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAForceSaveFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAForceSaveMIMETypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWARemoteDocumentsAllowedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWARemoteDocumentsBlockedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWARemoteDocumentsInternalDomainSuffixListBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWATranscodingFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWATranscodingMimeTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchParentPlanBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRBACPolicyBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchServerSiteBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveDefaultAcceptedDomainBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionDLBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionOneOffBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionUserBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDelegateListBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDeviceAccessControlRuleBL
+-
+
+
