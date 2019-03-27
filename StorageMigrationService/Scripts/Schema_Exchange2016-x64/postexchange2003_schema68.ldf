@@ -1,0 +1,286 @@
+dn: CN=ms-Exch-Mailbox-Move-Target-User-Link,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mailbox-Move-Target-User-Link
+adminDisplayName: ms-Exch-Mailbox-Move-Target-User-Link
+attributeID: 1.2.840.113556.1.4.7000.102.51596
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchMailboxMoveTargetUserLink
+name: ms-Exch-Mailbox-Move-Target-User-Link
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1218
+schemaIdGuid:: RolxKZ9GokSGk3oeMokjwA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Mailbox-Move-Target-User-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mailbox-Move-Target-User-BL
+adminDisplayName: ms-Exch-Mailbox-Move-Target-User-BL
+attributeID: 1.2.840.113556.1.4.7000.102.51597
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchMailboxMoveTargetUserBL
+name: ms-Exch-Mailbox-Move-Target-User-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1219
+schemaIdGuid:: d+msGzJU1US3ltoPr0/siw==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-MRS-Request,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MRS-Request
+adminDisplayName: ms-Exch-MRS-Request
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50153
+lDAPDisplayName: msExchMRSRequest
+name: ms-Exch-MRS-Request
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: d8Gb4NRb0E63qbjOq5BGaA==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: msExchContainer
+mayContain: msExchMailboxMoveBatchName
+mayContain: msExchMailboxMoveFilePath
+mayContain: msExchMailboxMoveFlags
+mayContain: msExchMailboxMoveRemoteHostName
+mayContain: msExchMailboxMoveRequestGuid
+mayContain: msExchMailboxMoveSourceMDBLink
+mayContain: msExchMailboxMoveSourceUserLink
+mayContain: msExchMailboxMoveStatus
+mayContain: msExchMailboxMoveStorageMDBLink
+mayContain: msExchMailboxMoveTargetMDBLink
+mayContain: msExchMailboxMoveTargetUserLink
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCapabilityIdentifiers
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRemoteRecipientType
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUCVoiceMailSettings
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchWhenMailboxCreated
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExternalDirectoryObjectId
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLastExchangeChangedTime
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncNonRecipientCookie
+-
+
+
+dn: CN=ms-Exch-Configuration-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncRecipientCookie
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDefaultPublicMDB
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExternalDirectoryOrganizationId
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMSOForwardSyncRecipientCookie
+-
+
+
+dn: CN=ms-Exch-ELC-Folder,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAuthoritativePolicyTagGUID
+-
+
+
+dn: CN=ms-Exch-ELC-Folder,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAuthoritativePolicyTagNote
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchArchiveAddress
+-
+
+
+dn: CN=ms-Exch-MDB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchArchiveQuota
+-
+
+
+dn: CN=ms-Exch-MDB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchArchiveWarnQuota
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAVAuthenticationService
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDistributionGroupDefaultOU
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDistributionGroupNameBlockedWordsList
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDistributionGroupNamingPolicy
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSIPAccessService
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAIMCertificateThumbprint
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAIMServerName
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapLogFilePath
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapLogFileRolloverFrequency
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-IMAP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapPerLogFileSizeQuota
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapLogFilePath
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapLogFileRolloverFrequency
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-POP-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPopImapPerLogFileSizeQuota
+-
+
+

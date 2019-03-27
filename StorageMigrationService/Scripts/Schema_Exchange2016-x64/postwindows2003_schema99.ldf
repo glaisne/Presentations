@@ -1,0 +1,259 @@
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchMultiMediaUser
+-
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchCertificateInformation
+-
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchIMRecipient
+-
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchOmaUser
+-
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchSystemObjectsContainer
+-
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchQueryBaseDN
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchControllingZone
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResourceGUID
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResourceProperties
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchConferenceMailboxBL
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: kMServer
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchIMAPOWAURLPrefixOverride
+-
+
+
+dn: CN=User,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOriginatingForest
+-
+
+
+dn: CN=ms-Exch-Exchange-Assistance,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchExchangeAssistance
+-
+
+dn: CN=ms-Exch-Role,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchRole
+-
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: container
+-
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchConfigurationContainer
+-
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPurportedSearchUI
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEnableInternalEvaluator
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSearchBase
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSearchScope
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAddressListOU
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMinAdminVersion
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchQueryFilter
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchLastAppliedRecipientFilter
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientFilterFlags
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchQueryFilterMetadata
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSystemAddressList
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAddressListsBL
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAllRoomListBL
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchGlobalAddressListBL
+-
+
+
+dn: CN=ms-Exch-Department,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchDepartment
+-
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchOWAVirtualDirectory
+-
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Schema-Version-Pt,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Schema-Version-Pt
+adminDisplayName: ms-Exch-Schema-Version-Pt
+attributeID: 1.2.840.113556.1.4.7000.102.97
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSchemaVersionPt
+name: ms-Exch-Schema-Version-Pt
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 1
+schemaIdGuid:: 1ZiBX8nnYEWxZgjcfPwXwQ==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+

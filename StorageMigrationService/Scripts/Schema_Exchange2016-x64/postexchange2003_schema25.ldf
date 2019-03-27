@@ -1,0 +1,370 @@
+dn: CN=ms-Exch-HAB-Child-Departments-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-HAB-Child-Departments-BL
+adminDisplayName: ms-Exch-HAB-Child-Departments-BL
+attributeID: 1.2.840.113556.1.4.7000.102.50828
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchHABChildDepartmentsBL
+mapiId: 35993
+name: ms-Exch-HAB-Child-Departments-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1095
+schemaIdGuid:: LKFTNo305UaDtA6vauHvZw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Mobile-Remote-Documents-Allowed-Servers,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mobile-Remote-Documents-Allowed-Servers
+adminDisplayName: ms-Exch-Mobile-Remote-Documents-Allowed-Servers
+attributeID: 1.2.840.113556.1.4.7000.102.50790
+attributeSyntax: 2.5.5.14
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchMobileRemoteDocumentsAllowedServers
+name: ms-Exch-Mobile-Remote-Documents-Allowed-Servers
+oMSyntax: 127
+oMObjectClass:: KoZIhvcUAQEBDA==
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1096
+schemaIdGuid:: 1P1+3jchNEK4AjKVizkeQA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Mobile-Remote-Documents-Blocked-Servers,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mobile-Remote-Documents-Blocked-Servers
+adminDisplayName: ms-Exch-Mobile-Remote-Documents-Blocked-Servers
+attributeID: 1.2.840.113556.1.4.7000.102.50791
+attributeSyntax: 2.5.5.14
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchMobileRemoteDocumentsBlockedServers
+name: ms-Exch-Mobile-Remote-Documents-Blocked-Servers
+oMSyntax: 127
+oMObjectClass:: KoZIhvcUAQEBDA==
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1098
+schemaIdGuid:: QOUxVjLz0UiVc4vCpHbxjQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Mobile-Remote-Documents-Internal-Domain-Suffix-List,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mobile-Remote-Documents-Internal-Domain-Suffix-List
+adminDisplayName: ms-Exch-Mobile-Remote-Documents-Internal-Domain-Suffix-List
+attributeID: 1.2.840.113556.1.4.7000.102.50792
+attributeSyntax: 2.5.5.14
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchMobileRemoteDocumentsInternalDomainSuffixList
+name: ms-Exch-Mobile-Remote-Documents-Internal-Domain-Suffix-List
+oMSyntax: 127
+oMObjectClass:: KoZIhvcUAQEBDA==
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1100
+schemaIdGuid:: UJOXWvwOD0CSIvxDjRd87A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Server-Site,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Server-Site
+adminDisplayName: ms-Exch-Server-Site
+attributeID: 1.2.840.113556.1.4.7000.102.50837
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchServerSite
+name: ms-Exch-Server-Site
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1102
+schemaIdGuid:: s2fKhRWlv0G3j8MqaaAA9g==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Accepted-Domain,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Accepted-Domain
+adminDisplayName: ms-Exch-Accepted-Domain
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50089
+lDAPDisplayName: msExchAcceptedDomain
+name: ms-Exch-Accepted-Domain
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: xq9xnUAsI0yM1+VbfTEpvQ==
+subClassOf: top
+possSuperiors: msExchContainer
+mayContain: msExchAcceptedDomainFlags
+mayContain: msExchAcceptedDomainName
+mayContain: msExchEncryptedTLSP12
+mayContain: msExchMLSDomainGatewaySMTPAddress
+mayContain: msExchMLSEncryptedDecryptionP12Current
+mayContain: msExchMLSEncryptedDecryptionP12Previous
+mayContain: msExchMLSEncryptedRecoveryP12Current
+mayContain: msExchMLSEncryptedRecoveryP12Previous
+mayContain: msExchMLSEncryptedSigningP12Current
+mayContain: msExchMLSEncryptedSigningP12Previous
+
+
+dn: CN=ms-Exch-Availability-Foreign-Connector-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Availability-Foreign-Connector-Virtual-Directory
+adminDisplayName: ms-Exch-Availability-Foreign-Connector-Virtual-Directory
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50092
+lDAPDisplayName: msExchAvailabilityForeignConnectorVirtualDirectory
+name: ms-Exch-Availability-Foreign-Connector-Virtual-Directory
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: odTDYwjy0UmtXq5zOQEimg==
+subClassOf: msExchVirtualDirectory
+mayContain: msExchAvailabilityForeignConnectorDomain
+mayContain: msExchAvailabilityForeignConnectorType
+
+
+dn: CN=ms-Exch-Department,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Department
+adminDisplayName: ms-Exch-Department
+defaultSecurityDescriptor: D:(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;DA)(A;;RPWPCRCCDCLCLORCWOWDSDDTSW;;;SY)(A;;RPLCLORC;;;AU)(OA;;CR;a1990816-4298-11d1-ade2-00c04fd8d5cd;;AU)
+governsID: 1.2.840.113556.1.5.7000.62.50091
+lDAPDisplayName: msExchDepartment
+name: ms-Exch-Department
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: CD+TVGDz5kWHMtFuhGIq9w==
+subClassOf: organizationalUnit
+possSuperiors: msExchContainer
+mayContain: msDS-PhoneticDisplayName
+mayContain: msExchHABChildDepartmentsBL
+mayContain: msExchHABChildDepartmentsLink
+mayContain: msExchHABRootDepartmentBL
+mayContain: msExchHABShowInDepartmentsBL
+
+
+dn: CN=ms-Exch-Rpc-Http-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Rpc-Http-Virtual-Directory
+adminDisplayName: ms-Exch-Rpc-Http-Virtual-Directory
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50090
+lDAPDisplayName: msExchRpcHttpVirtualDirectory
+name: ms-Exch-Rpc-Http-Virtual-Directory
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: qT14pfA4UU+O19W9m/sP3g==
+subClassOf: msExchVirtualDirectory
+possSuperiors: container
+mayContain: msExchRpcHttpFlags
+
+
+dn: CN=ms-Exch-System-Mailbox,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-System-Mailbox
+adminDisplayName: ms-Exch-System-Mailbox
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50093
+lDAPDisplayName: msExchSystemMailbox
+name: ms-Exch-System-Mailbox
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: k6rxnByzJUedUKt6sdPKHg==
+subClassOf: top
+auxiliaryClass: mailRecipient
+auxiliaryClass: msExchBaseClass
+auxiliaryClass: msExchMailStorage
+possSuperiors: msExchSystemObjectsContainer
+mayContain: msExchMinAdminVersion
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Accepted-Domain,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Address-Rewrite-Entry,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Agent,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Auto-Discover-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Availability-Address-Space,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-DSN-Message,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-ELC-Content-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-ELC-Folder,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Classification,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-IP-Allow-List-Provider,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Message-Hygiene-IP-Block-List-Provider,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Resource-Schema,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Transport-Rule,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Transport-Rule-Collection,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-Uce,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-Hunt-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+
+dn: CN=ms-Exch-UM-IP-Gateway,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: auxiliaryClass
+auxiliaryClass: msExchBaseClass
+-
+
+

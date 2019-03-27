@@ -1,0 +1,263 @@
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-SMTP-Domain,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Protocol-Cfg-SMTP-Domain
+adminDisplayName: ms-Exch-Protocol-Cfg-SMTP-Domain
+defaultHidingValue: TRUE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.5006
+lDAPDisplayName: protocolCfgSMTPDomain
+name: ms-Exch-Protocol-Cfg-SMTP-Domain
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: lCjYM4Kp0hGp/wDAT47t2A==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: protocolCfgSMTPDomainContainer
+mayContain: characterSet
+mayContain: contentType
+mayContain: msExchDefaultDomain
+mayContain: msExchRoutingAcceptMessageType
+mayContain: msExchRoutingDisplaySenderEnabled
+mayContain: sendTNEF
+mayContain: msExchSmtpAuthorizedTRNAccounts
+mayContain: msExchSmtpDomainString
+mayContain: msExchSmtpDropDirectory
+mayContain: msExchSmtpOutboundSecurityFlag
+mayContain: msExchSmtpOutboundSecurityPassword
+mayContain: msExchSmtpOutboundSecurityUserName
+mayContain: msExchSmtpSmartHost
+mayContain: msExchSecurityPassword
+mayContain: msExchEncryptedPassword
+
+
+dn: CN=ms-Exch-Protocol-Cfg-SMTP-IP-Address,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Protocol-Cfg-SMTP-IP-Address
+adminDisplayName: ms-Exch-Protocol-Cfg-SMTP-IP-Address
+defaultHidingValue: TRUE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.5009
+lDAPDisplayName: msExchProtocolCfgSMTPIPAddress
+name: ms-Exch-Protocol-Cfg-SMTP-IP-Address
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: 1jF7i56w0hGqBgDAT47t2A==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: msExchProtocolCfgSMTPIPAddressContainer
+mayContain: msExchIPAddress
+mayContain: msExchTurfList
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchExchangeTransportCfgContainer
+-
+
+dn: CN=ms-Exch-Exchange-Transport-Cfg-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: lDAPDisplayName
+lDAPDisplayName: msExchExchangeTransportCfgContainer
+-
+
+
+dn: CN=ms-Exch-Exchange-Transport-Cfg-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchExchangeServer
+-
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: assistant
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: altRecipient
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: authOrig
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: autoReplyMessage
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: delivContLength
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: deliverAndRedirect
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: dLMemRejectPerms
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: dLMemSubmitPerms
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: enabledProtocols
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExpansionServerName
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: expirationTime
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: folderPathname
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: formData
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: forwardingAddress
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: homeMTA
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: internetEncoding
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: languageCode
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: language
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: mailNickname
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: mAPIRecipient
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: pOPCharacterSet
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: pOPContentFormat
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: protocolSettings
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: publicDelegates
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: replicationSensitivity
+-
+
+

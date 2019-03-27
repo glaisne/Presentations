@@ -1,0 +1,447 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "NSGSourceIP": {
+            "type": "string",
+            "metadata": {
+                "description": "Source IP to allow in NSG rules"
+            }
+        },
+        "adVMName": {
+            "defaultValue": "adVM01",
+            "type": "string"
+        },
+        "location": {
+            "type": "string",
+            "allowedValues": [
+                "West US",
+                "East US",
+                "West Europe",
+                "East Asia",
+                "Southeast Asia"
+            ],
+            "metadata": {
+                "description": "The region to deploy the resources into"
+            }
+        },
+        "virtualNetworks_adVNET_name": {
+            "defaultValue": "adVNET",
+            "type": "string"
+        },
+        "networkInterfaces_adNic_name": {
+            "defaultValue": "adVM01Nic01",
+            "type": "string"
+        },
+        "publicIPAddresses_adPublicIP_name": {
+            "defaultValue": "adPublicIP",
+            "type": "string"
+        },
+        "subnets_adSubnet_name": {
+            "defaultValue": "adSubnet",
+            "type": "string"
+        },
+        "inboundNatRules_adRDP_name": {
+            "defaultValue": "adRDP",
+            "type": "string"
+        },
+        "inboundNatRules_adWinRM_name": {
+            "defaultValue": "adWinRM",
+            "type": "string"
+        },
+        "WindowsServerVersion": {
+            "defaultValue": "2019-Datacenter",
+            "type": "string",
+            "allowedValues": [
+                "2019-Datacenter",
+                "2016-Datacenter"
+            ],
+            "metadata": {
+                "description": "The version of the Windows Server Operating System"
+            }
+        },
+        "adminUsername": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Administrator of the new VM and Domain"
+            },
+            "defaultValue": "gene"
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "The password for the Administrator account of the new VM and Domain"
+            }
+        },
+        "addnsName": {
+            "type": "string",
+            "metadata": {
+                "description": "The DNS prefix for the public IP address"
+            }
+        },
+        "KeyVaultName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of the Key Vault."
+            }
+        },
+        "CertificateUrl": {
+            "type": "string",
+            "metadata": {
+                "description": "Certificate URL within the Key Vault"
+            }
+        },
+        "schedules_shutdown_computevm_testdc_name": {
+            "defaultValue": "shutdown-computevm-testdc",
+            "type": "String"
+        },
+        "StorageAllowedIP": {
+            "type": "string",
+            "metadata": {
+                "description": "IPAddress that is allwed to access the StorageAccount"
+            }
+        },
+        "storageAccountName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of the storage account used for DSC resources"
+            }
+        },
+        "storageAccountType": {
+            "type": "string",
+            "metadata": {
+                "description": "The type of Azrue storage to use"
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "[parameters('storageAccountName')]",
+            "location": "[parameters('location')]",
+            "apiVersion": "2018-07-01",
+            "sku": {
+                "name": "[parameters('storageAccountType')]"
+            },
+            "kind": "StorageV2",
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]",
+                            "action": "Allow",
+                            "state": "Succeeded"
+                        }
+                    ],
+                    "ipRules": [
+                        {
+                            "value": "[parameters('StorageAllowedIP')]",
+                            "action": "Allow"
+                        }
+                    ],
+                    "defaultAction": "Deny"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[parameters('adVMName')]",
+            "apiVersion": "2017-12-01",
+            "location": "[parameters('location')]",
+            "scale": null,
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2_v2"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "[parameters('WindowsServerVersion')]",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "osdisk",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "diskSizeGB": 127
+                    },
+                    "dataDisks": [
+                        {
+                            "lun": 0,
+                            "name": "[concat(parameters('adVMName'),'-data-disk')]",
+                            "createOption": "Empty",
+                            "caching": "None",
+                            "diskSizeGB": 100
+                        }
+                    ]
+                },
+                "osProfile": {
+                    "computerName": "[parameters('adVMName')]",
+                    "adminUsername": "[parameters('adminUsername')]",
+                    "adminPassword": "[parameters('adminPassword')]",
+                    "secrets": [
+                        {
+                            "sourceVault": {
+                                "id": "[resourceId('Microsoft.KeyVault/vaults', parameters('KeyVaultName'))]"
+                            },
+                            "vaultCertificates": [
+                                {
+                                    "certificateUrl": "[parameters('CertificateUrl')]",
+                                    "certificateStore": "My"
+                                }
+                            ]
+                        }
+                    ],
+                    "windowsConfiguration": {
+                        "provisionVMAgent": true,
+                        "enableAutomaticUpdates": true,
+                        "winRM": {
+                            "listeners": [
+                                {
+                                    "protocol": "Http"
+                                },
+                                {
+                                    "protocol": "Https",
+                                    "certificateUrl": "[parameters('CertificateUrl')]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_adNic_name'))]"
+                        }
+                    ]
+                },
+                "licenseType": "Windows_Server"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_adNic_name'))]"
+            ]
+        },
+        {
+            "type": "microsoft.devtestlab/schedules",
+            "name": "[parameters('schedules_shutdown_computevm_testdc_name')]",
+            "apiVersion": "2016-05-15",
+            "location": "eastus",
+            "scale": null,
+            "properties": {
+                "status": "Enabled",
+                "taskType": "ComputeVmShutdownTask",
+                "dailyRecurrence": {
+                    "time": "1700"
+                },
+                "timeZoneId": "Eastern Standard Time",
+                "notificationSettings": {
+                    "status": "Disabled",
+                    "timeInMinutes": 30
+                },
+                "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('adVMName'))]",
+                "provisioningState": "Succeeded",
+                "uniqueIdentifier": "5b9eed52-b7be-4938-967b-bf98736507e8"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('adVMName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "[parameters('networkInterfaces_adNic_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "[parameters('location')]",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "150b3e76-4dec-4c1c-a390-3a8d78af91e3",
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "etag": "W/\"e0d7dec6-b7da-45f2-8eb0-676baf3da789\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAddress": "10.0.0.4",
+                            "privateIPAllocationMethod": "Static",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_adPublicIP_name'))]"
+                            },
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4"
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": [],
+                    "appliedDnsServers": [],
+                    "internalDomainNameSuffix": "p452azolqpcuzjklxt1lqipzob.bx.internal.cloudapp.net"
+                },
+                "macAddress": "00-0D-3A-4D-D8-44",
+                "enableAcceleratedNetworking": false,
+                "enableIPForwarding": false,
+                "primary": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "sku": {
+                "name": "Basic",
+                "tier": "Regional"
+            },
+            "name": "[parameters('publicIPAddresses_adPublicIP_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "[parameters('location')]",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "publicIPAddressVersion": "IPv4",
+                "publicIPAllocationMethod": "Dynamic",
+                "dnsSettings": {
+                    "domainNameLabel": "[parameters('addnsName')]"
+                },
+                "ipTags": []
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[parameters('virtualNetworks_adVNET_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "[parameters('location')]",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "65c0bf7f-83cb-4cc5-a54b-bcf6b821f971",
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.0.0.0/16"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "adSubnet",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "addressPrefix": "10.0.0.0/24",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'),'-nsg'))]"
+                            },
+                            "serviceEndpoints": [
+                                {
+                                    "provisioningState": "Succeeded",
+                                    "service": "Microsoft.Storage",
+                                    "locations": [
+                                        "eastus",
+                                        "westus"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "virtualNetworkPeerings": [],
+                "enableDdosProtection": false,
+                "enableVmProtection": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'),'-nsg'))]"
+            ]
+        },
+        {
+            "apiVersion": "2017-10-01",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[concat(parameters('virtualNetworks_adVNET_name'),'-nsg')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "Allow-RDP",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3389",
+                            "sourceAddressPrefix": "[parameters('NSGSourceIP')]",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "Allow-WinRM",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "5986",
+                            "sourceAddressPrefix": "[parameters('NSGSourceIP')]",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 110,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "[concat(parameters('virtualNetworks_adVNET_name'), '/', parameters('subnets_adSubnet_name'))]",
+            "apiVersion": "2018-02-01",
+            "scale": null,
+            "location": "[parameters('location')]",
+            "properties": {
+                "provisioningState": "Succeeded",
+                "addressPrefix": "10.0.0.0/24",
+                "serviceEndpoints": [
+                    {
+                        "provisioningState": "Succeeded",
+                        "service": "Microsoft.Storage",
+                        "locations": [
+                            "eastus",
+                            "westus"
+                        ]
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_adVNET_name'))]"
+            ]
+        }
+    ]
+}

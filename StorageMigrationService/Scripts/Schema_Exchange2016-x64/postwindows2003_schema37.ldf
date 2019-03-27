@@ -1,0 +1,555 @@
+dn: CN=ms-Exch-Transport-Max-Pickup-Directory-Header-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Pickup-Directory-Header-Size
+adminDisplayName: ms-Exch-Transport-Max-Pickup-Directory-Header-Size
+attributeID: 1.2.840.113556.1.4.7000.102.50583
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxPickupDirectoryHeaderSize
+name: ms-Exch-Transport-Max-Pickup-Directory-Header-Size
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 9VZZQfmG7UW86MfzsgmkNA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Pickup-Directory-Message-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Pickup-Directory-Message-Size
+adminDisplayName: ms-Exch-Transport-Max-Pickup-Directory-Message-Size
+attributeID: 1.2.840.113556.1.4.7000.102.50582
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxPickupDirectoryMessageSize
+name: ms-Exch-Transport-Max-Pickup-Directory-Message-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 7Nw3AeTbkk+s7VlLqsoMrQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Pickup-Directory-Recipients,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Pickup-Directory-Recipients
+adminDisplayName: ms-Exch-Transport-Max-Pickup-Directory-Recipients
+attributeID: 1.2.840.113556.1.4.7000.102.50584
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxPickupDirectoryRecipients
+name: ms-Exch-Transport-Max-Pickup-Directory-Recipients
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Vav2z5HiL0+cAeAiS9J8iQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Queue-Idle-Time,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Queue-Idle-Time
+adminDisplayName: ms-Exch-Transport-Max-Queue-Idle-Time
+attributeID: 1.2.840.113556.1.4.7000.102.50636
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxQueueIdleTime
+name: ms-Exch-Transport-Max-Queue-Idle-Time
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: BMBLnSaWXE6AZSvcXp3XDQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Receive-Protocol-Log-Age,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Receive-Protocol-Log-Age
+adminDisplayName: ms-Exch-Transport-Max-Receive-Protocol-Log-Age
+attributeID: 1.2.840.113556.1.4.7000.102.50569
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxReceiveProtocolLogAge
+name: ms-Exch-Transport-Max-Receive-Protocol-Log-Age
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: i2wuZ6bIb0SWZwQ0wTZCaA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Receive-Protocol-Log-Directory-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Receive-Protocol-Log-Directory-Size
+adminDisplayName: ms-Exch-Transport-Max-Receive-Protocol-Log-Directory-Size
+attributeID: 1.2.840.113556.1.4.7000.102.50571
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxReceiveProtocolLogDirectorySize
+name: ms-Exch-Transport-Max-Receive-Protocol-Log-Directory-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 6G3cLtQXA0WVQVns/WWR/w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Receive-Protocol-Log-File-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Receive-Protocol-Log-File-Size
+adminDisplayName: ms-Exch-Transport-Max-Receive-Protocol-Log-File-Size
+attributeID: 1.2.840.113556.1.4.7000.102.50570
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxReceiveProtocolLogFileSize
+name: ms-Exch-Transport-Max-Receive-Protocol-Log-File-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: vslaKJjWY0+1XSPhwQPMTQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Send-Protocol-Log-Age,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Send-Protocol-Log-Age
+adminDisplayName: ms-Exch-Transport-Max-Send-Protocol-Log-Age
+attributeID: 1.2.840.113556.1.4.7000.102.50572
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxSendProtocolLogAge
+name: ms-Exch-Transport-Max-Send-Protocol-Log-Age
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: XHLf2d1ZO0i7mxNrCwbXng==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Send-Protocol-Log-Directory-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Send-Protocol-Log-Directory-Size
+adminDisplayName: ms-Exch-Transport-Max-Send-Protocol-Log-Directory-Size
+attributeID: 1.2.840.113556.1.4.7000.102.50574
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxSendProtocolLogDirectorySize
+name: ms-Exch-Transport-Max-Send-Protocol-Log-Directory-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 8onGv/NsLEqAWs7WH1rUwA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Max-Send-Protocol-Log-File-Size,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Max-Send-Protocol-Log-File-Size
+adminDisplayName: ms-Exch-Transport-Max-Send-Protocol-Log-File-Size
+attributeID: 1.2.840.113556.1.4.7000.102.50573
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMaxSendProtocolLogFileSize
+name: ms-Exch-Transport-Max-Send-Protocol-Log-File-Size
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: RK8mNSz5v0+hVpF0sZ4p6w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Message-Expiration-Timeout,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Message-Expiration-Timeout
+adminDisplayName: ms-Exch-Transport-Message-Expiration-Timeout
+attributeID: 1.2.840.113556.1.4.7000.102.50632
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMessageExpirationTimeout
+name: ms-Exch-Transport-Message-Expiration-Timeout
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: gQg3PzF2P0ap7F7yQZqZpw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Message-Retry-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Message-Retry-Interval
+adminDisplayName: ms-Exch-Transport-Message-Retry-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.50566
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMessageRetryInterval
+name: ms-Exch-Transport-Message-Retry-Interval
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: TgeI4OuUVk+ikLp5BMsP8w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Message-Tracking-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Message-Tracking-Path
+adminDisplayName: ms-Exch-Transport-Message-Tracking-Path
+attributeID: 1.2.840.113556.1.4.7000.102.50596
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportMessageTrackingPath
+name: ms-Exch-Transport-Message-Tracking-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 2048
+schemaIdGuid:: jMvmhVB2tka+QAIS85CGhA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Outbound-Connection-Failure-Retry-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Outbound-Connection-Failure-Retry-Interval
+adminDisplayName: ms-Exch-Transport-Outbound-Connection-Failure-Retry-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.50565
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportOutboundConnectionFailureRetryInterval
+name: ms-Exch-Transport-Outbound-Connection-Failure-Retry-Interval
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 4QeTn6Zh/kSC/TF9erWkyw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Outbound-Protocol-Logging-Level,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Outbound-Protocol-Logging-Level
+adminDisplayName: ms-Exch-Transport-Outbound-Protocol-Logging-Level
+attributeID: 1.2.840.113556.1.4.7000.102.50691
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportOutboundProtocolLoggingLevel
+name: ms-Exch-Transport-Outbound-Protocol-Logging-Level
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: aON10tfHxki+dA02jm7zdg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Per-Queue-Message-Dehydration-Threshold,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Per-Queue-Message-Dehydration-Threshold
+adminDisplayName: ms-Exch-Transport-Per-Queue-Message-Dehydration-Threshold
+attributeID: 1.2.840.113556.1.4.7000.102.50638
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportPerQueueMessageDehydrationThreshold
+name: ms-Exch-Transport-Per-Queue-Message-Dehydration-Threshold
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Ou0SAsmwuEe0n23/zWc1BA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Pickup-Directory-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Pickup-Directory-Path
+adminDisplayName: ms-Exch-Transport-Pickup-Directory-Path
+attributeID: 1.2.840.113556.1.4.7000.102.50581
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportPickupDirectoryPath
+name: ms-Exch-Transport-Pickup-Directory-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 2048
+schemaIdGuid:: i4TlMyR0cEGejMkM4NSnZQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Poison-Message-Threshold,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Poison-Message-Threshold
+adminDisplayName: ms-Exch-Transport-Poison-Message-Threshold
+attributeID: 1.2.840.113556.1.4.7000.102.50634
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportPoisonMessageThreshold
+name: ms-Exch-Transport-Poison-Message-Threshold
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: l6iDGOUN4U+V8lcMdMBGQg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Receive-Protocol-Log-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Receive-Protocol-Log-Path
+adminDisplayName: ms-Exch-Transport-Receive-Protocol-Log-Path
+attributeID: 1.2.840.113556.1.4.7000.102.50568
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportReceiveProtocolLogPath
+name: ms-Exch-Transport-Receive-Protocol-Log-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 2048
+schemaIdGuid:: 3ngWZ13Vbkuz/5AKYwHPAg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Rule-Priority,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Rule-Priority
+adminDisplayName: ms-Exch-Transport-Rule-Priority
+attributeID: 1.2.840.113556.1.4.7000.102.50460
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportRulePriority
+name: ms-Exch-Transport-Rule-Priority
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: YzZ8+yy890uCDgPW1IHpXQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Rule-Xml,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Rule-Xml
+adminDisplayName: ms-Exch-Transport-Rule-Xml
+attributeID: 1.2.840.113556.1.4.7000.102.50461
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportRuleXml
+name: ms-Exch-Transport-Rule-Xml
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 40960
+schemaIdGuid:: hxBg+r3ZKU++D63t+S1D5w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Security-Descriptor,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Security-Descriptor
+adminDisplayName: ms-Exch-Transport-Security-Descriptor
+attributeID: 1.2.840.113556.1.4.7000.102.50692
+attributeSyntax: 2.5.5.15
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportSecurityDescriptor
+name: ms-Exch-Transport-Security-Descriptor
+oMSyntax: 66
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: kN2vZa0zb0+fFym5mMOJVw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Send-Protocol-Log-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Send-Protocol-Log-Path
+adminDisplayName: ms-Exch-Transport-Send-Protocol-Log-Path
+attributeID: 1.2.840.113556.1.4.7000.102.50567
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportSendProtocolLogPath
+name: ms-Exch-Transport-Send-Protocol-Log-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 2048
+schemaIdGuid:: 2QDAPiRrRUSjETE2Nd41LA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Total-Queue-Message-Dehydration-Threshold,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Total-Queue-Message-Dehydration-Threshold
+adminDisplayName: ms-Exch-Transport-Total-Queue-Message-Dehydration-Threshold
+attributeID: 1.2.840.113556.1.4.7000.102.50637
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportTotalQueueMessageDehydrationThreshold
+name: ms-Exch-Transport-Total-Queue-Message-Dehydration-Threshold
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: UBfBIPDRQEK4MlBya281HA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Transient-Failure-Retry-Count,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Transient-Failure-Retry-Count
+adminDisplayName: ms-Exch-Transport-Transient-Failure-Retry-Count
+attributeID: 1.2.840.113556.1.4.7000.102.50564
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportTransientFailureRetryCount
+name: ms-Exch-Transport-Transient-Failure-Retry-Count
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: nlekQbRNo0OTGUtTe04w8w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Transient-Failure-Retry-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Transient-Failure-Retry-Interval
+adminDisplayName: ms-Exch-Transport-Transient-Failure-Retry-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.50563
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportTransientFailureRetryInterval
+name: ms-Exch-Transport-Transient-Failure-Retry-Interval
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: hI0w3Y/YBUCB4Oicm5d4og==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Allowed-In-Country-Groups,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Allowed-In-Country-Groups
+adminDisplayName: ms-Exch-UM-Allowed-In-Country-Groups
+attributeID: 1.2.840.113556.1.4.7000.102.50443
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMAllowedInCountryGroups
+name: ms-Exch-UM-Allowed-In-Country-Groups
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 32
+schemaIdGuid:: fA7tx6ocqkKfo5x5htRy4w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Allowed-International-Groups,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Allowed-International-Groups
+adminDisplayName: ms-Exch-UM-Allowed-International-Groups
+attributeID: 1.2.840.113556.1.4.7000.102.50444
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMAllowedInternationalGroups
+name: ms-Exch-UM-Allowed-International-Groups
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 32
+schemaIdGuid:: dN7pv6p4KEiVBy1TlfL6WA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-ASR-Enabled,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-ASR-Enabled
+adminDisplayName: ms-Exch-UM-ASR-Enabled
+attributeID: 1.2.840.113556.1.4.7000.102.50424
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMASREnabled
+name: ms-Exch-UM-ASR-Enabled
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: WSWHOV57X0KGI5XhTMT7FQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Available-In-Country-Groups,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Available-In-Country-Groups
+adminDisplayName: ms-Exch-UM-Available-In-Country-Groups
+attributeID: 1.2.840.113556.1.4.7000.102.50441
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMAvailableInCountryGroups
+name: ms-Exch-UM-Available-In-Country-Groups
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 256
+schemaIdGuid:: bHcK2CahMUaMgLRPTCyIbg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Available-International-Groups,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Available-International-Groups
+adminDisplayName: ms-Exch-UM-Available-International-Groups
+attributeID: 1.2.840.113556.1.4.7000.102.50442
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMAvailableInternationalGroups
+name: ms-Exch-UM-Available-International-Groups
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 256
+schemaIdGuid:: p6+gdoFwUkigAPOec/KnPQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Call-Someone-Enabled,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Call-Someone-Enabled
+adminDisplayName: ms-Exch-UM-Call-Someone-Enabled
+attributeID: 1.2.840.113556.1.4.7000.102.50428
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMCallSomeoneEnabled
+name: ms-Exch-UM-Call-Someone-Enabled
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: MO3v09JnGUe5zTyzyVqWYw==
+searchFlags: 0
+
+

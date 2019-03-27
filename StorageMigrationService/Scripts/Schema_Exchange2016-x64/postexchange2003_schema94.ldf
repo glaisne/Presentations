@@ -1,0 +1,527 @@
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Anonymous-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Anonymous-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-Anonymous-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52042
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchAnonymousThrottlingPolicyStateEx
+name: ms-Exch-Anonymous-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: FD6zeICBUU+b66MwIyk2sw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Canary-Data-0,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Canary-Data-0
+adminDisplayName: ms-Exch-Canary-Data-0
+attributeID: 1.2.840.113556.1.4.7000.102.52051
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCanaryData0
+name: ms-Exch-Canary-Data-0
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 50000
+schemaIdGuid:: ozyg68m2DkW92znZFULHag==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Canary-Data-1,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Canary-Data-1
+adminDisplayName: ms-Exch-Canary-Data-1
+attributeID: 1.2.840.113556.1.4.7000.102.52052
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCanaryData1
+name: ms-Exch-Canary-Data-1
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 50000
+schemaIdGuid:: a2kp7ia73k2AIsX2I1w4PQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Canary-Data-2,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Canary-Data-2
+adminDisplayName: ms-Exch-Canary-Data-2
+attributeID: 1.2.840.113556.1.4.7000.102.52053
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCanaryData2
+name: ms-Exch-Canary-Data-2
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 50000
+schemaIdGuid:: l22hjOLhck+RFRLpxrMUOw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Correlation-Id,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Correlation-Id
+adminDisplayName: ms-Exch-Correlation-Id
+attributeID: 1.2.840.113556.1.4.7000.102.52065
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCorrelationId
+name: ms-Exch-Correlation-Id
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 16
+rangeUpper: 16
+schemaIdGuid:: zBzJ/w1SPkWLXoImKSwlDQ==
+searchFlags: 9
+
+
+dn: CN=ms-Exch-EAS-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-EAS-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-EAS-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52043
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEASThrottlingPolicyStateEx
+name: ms-Exch-EAS-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: p4mZU+EebEGXDJlGmL/0AA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-EWS-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-EWS-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-EWS-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52044
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEWSThrottlingPolicyStateEx
+name: ms-Exch-EWS-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: tEiXBGXvz0CEI5Q1Es6Smw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-General-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-General-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-General-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52045
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchGeneralThrottlingPolicyStateEx
+name: ms-Exch-General-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: 60Zqk+H98ka6fQI7HQ0GVQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-IMAP-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-IMAP-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-IMAP-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52046
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchIMAPThrottlingPolicyStateEx
+name: ms-Exch-IMAP-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: dhaXk3fVkU2rzmONOSg7zw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-OWA-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-OWA-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-OWA-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52047
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchOWAThrottlingPolicyStateEx
+name: ms-Exch-OWA-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: yoZNdqQMx0uRCdgPBNR6EQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-POP-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-POP-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-POP-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52048
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchPOPThrottlingPolicyStateEx
+name: ms-Exch-POP-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: pEfbAUIVCU6Tq/MmNfQIoA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Powershell-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Powershell-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-Powershell-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52049
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchPowershellThrottlingPolicyStateEx
+name: ms-Exch-Powershell-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: ns4fk6OBH0CT4wmfS7ELAA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-RCA-Throttling-Policy-State-Ex,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-RCA-Throttling-Policy-State-Ex
+adminDisplayName: ms-Exch-RCA-Throttling-Policy-State-Ex
+attributeID: 1.2.840.113556.1.4.7000.102.52050
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRCAThrottlingPolicyStateEx
+name: ms-Exch-RCA-Throttling-Policy-State-Ex
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: 6p5BzjjeLkmFzPwVbMCx2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Completion-Target-Vector,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Completion-Target-Vector
+adminDisplayName: ms-Exch-Relocate-Tenant-Completion-Target-Vector
+attributeID: 1.2.840.113556.1.4.7000.102.52063
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantCompletionTargetVector
+name: ms-Exch-Relocate-Tenant-Completion-Target-Vector
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 10240
+schemaIdGuid:: 5sYx6k3jd0KjGSX3R8REUw==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Flags
+adminDisplayName: ms-Exch-Relocate-Tenant-Flags
+attributeID: 1.2.840.113556.1.4.7000.102.52061
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantFlags
+name: ms-Exch-Relocate-Tenant-Flags
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: +6pgZJ1qAUunroKyhFqEaA==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Safe-Lockdown-Schedule,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Safe-Lockdown-Schedule
+adminDisplayName: ms-Exch-Relocate-Tenant-Safe-Lockdown-Schedule
+attributeID: 1.2.840.113556.1.4.7000.102.52059
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantSafeLockdownSchedule
+name: ms-Exch-Relocate-Tenant-Safe-Lockdown-Schedule
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 4096
+schemaIdGuid:: FCJ32P1p20Sdcmd8UCiROA==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Source-Forest,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Source-Forest
+adminDisplayName: ms-Exch-Relocate-Tenant-Source-Forest
+attributeID: 1.2.840.113556.1.4.7000.102.52058
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantSourceForest
+name: ms-Exch-Relocate-Tenant-Source-Forest
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: lSkCxDW5tkSZDLbjnZa05g==
+searchFlags: 9
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Start-Lockdown,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Start-Lockdown
+adminDisplayName: ms-Exch-Relocate-Tenant-Start-Lockdown
+attributeID: 1.2.840.113556.1.4.7000.102.52055
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.11
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantStartLockdown
+name: ms-Exch-Relocate-Tenant-Start-Lockdown
+oMSyntax: 24
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: fnK+sFzy7UecrOnbXt0tig==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Start-Retired,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Start-Retired
+adminDisplayName: ms-Exch-Relocate-Tenant-Start-Retired
+attributeID: 1.2.840.113556.1.4.7000.102.52056
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.11
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantStartRetired
+name: ms-Exch-Relocate-Tenant-Start-Retired
+oMSyntax: 24
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: rQpl3X9AAUiCI/fcTdYPrA==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Start-Sync,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Start-Sync
+adminDisplayName: ms-Exch-Relocate-Tenant-Start-Sync
+attributeID: 1.2.840.113556.1.4.7000.102.52054
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.11
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantStartSync
+name: ms-Exch-Relocate-Tenant-Start-Sync
+oMSyntax: 24
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: vsLC+TPohUyi08nSiy3DcA==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Status,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Status
+adminDisplayName: ms-Exch-Relocate-Tenant-Status
+attributeID: 1.2.840.113556.1.4.7000.102.52060
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantStatus
+name: ms-Exch-Relocate-Tenant-Status
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: lsdryWM4pEC2vexqE3EQDg==
+searchFlags: 9
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Target-Forest,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Target-Forest
+adminDisplayName: ms-Exch-Relocate-Tenant-Target-Forest
+attributeID: 1.2.840.113556.1.4.7000.102.52057
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRelocateTenantTargetForest
+name: ms-Exch-Relocate-Tenant-Target-Forest
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: BR0JC1MYxUCsQLSRiKK7Dg==
+searchFlags: 9
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Transition-Counter,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Relocate-Tenant-Transition-Counter
+adminDisplayName: ms-Exch-Relocate-Tenant-Transition-Counter
+attributeID: 1.2.840.113556.1.4.7000.102.52062
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: msExchRelocateTenantTransitionCounter
+name: ms-Exch-Relocate-Tenant-Transition-Counter
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: mzuizWbCz0eUufkKSvcRCw==
+searchFlags: 8
+
+
+dn: CN=ms-Exch-Sync-Cookie,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Sync-Cookie
+adminDisplayName: ms-Exch-Sync-Cookie
+attributeID: 1.2.840.113556.1.4.7000.102.52064
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSyncCookie
+name: ms-Exch-Sync-Cookie
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 20480
+schemaIdGuid:: orJeINtf4UC/KufVukb2IA==
+searchFlags: 8
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Account-Forest,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchContainer
+-
+
+
+dn: CN=ms-Exch-Group-External-Member-Count,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Group-Member-Count,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCanaryData0
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCanaryData1
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCanaryData2
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCorrelationId
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantCompletionTargetVector
+-
+
+

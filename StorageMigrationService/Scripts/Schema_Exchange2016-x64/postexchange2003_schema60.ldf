@@ -1,0 +1,283 @@
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrgFederatedMailbox
+-
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMFaxServerURI
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchArchiveDatabaseBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAvailabilityOrgWideAccountBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAvailabilityPerUserAccountBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsAllowedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsBlockedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileRemoteDocumentsInternalDomainSuffixListBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsAddressBookRootsBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsGlobalAddressListsBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationsTemplateRootsBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAAllowedFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAAllowedMimeTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWABlockedFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWABlockedMIMETypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAForceSaveFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAForceSaveMIMETypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWARemoteDocumentsAllowedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWARemoteDocumentsBlockedServersBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWARemoteDocumentsInternalDomainSuffixListBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWATranscodingFileTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWATranscodingMimeTypesBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchParentPlanBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRBACPolicyBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchServerSiteBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSMTPReceiveDefaultAcceptedDomainBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionDLBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionOneOffBL
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionUserBL
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Allow-Cross-Site-RPC-Client-Access,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Allow-Cross-Site-RPC-Client-Access
+adminDisplayName: ms-Exch-Allow-Cross-Site-RPC-Client-Access
+attributeID: 1.2.840.113556.1.4.7000.102.51525
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchAllowCrossSiteRPCClientAccess
+name: ms-Exch-Allow-Cross-Site-RPC-Client-Access
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: eHwkwZWUVEW80VfPN7TZ0Q==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Data-Move-Replication-Constraint,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Data-Move-Replication-Constraint
+adminDisplayName: ms-Exch-Data-Move-Replication-Constraint
+attributeID: 1.2.840.113556.1.4.7000.102.51553
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchDataMoveReplicationConstraint
+name: ms-Exch-Data-Move-Replication-Constraint
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: dGJHV0LrvkK9eWOmkXReeg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Device-Access-Rule-Characteristic,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Device-Access-Rule-Characteristic
+adminDisplayName: ms-Exch-Device-Access-Rule-Characteristic
+attributeID: 1.2.840.113556.1.4.7000.102.51498
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchDeviceAccessRuleCharacteristic
+name: ms-Exch-Device-Access-Rule-Characteristic
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: FPEFdJhv3EyKDjabgFGWOw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Device-Access-Rule-Query-String,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Device-Access-Rule-Query-String
+adminDisplayName: ms-Exch-Device-Access-Rule-Query-String
+attributeID: 1.2.840.113556.1.4.7000.102.51497
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchDeviceAccessRuleQueryString
+name: ms-Exch-Device-Access-Rule-Query-String
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: Gq6tTLCj5UyzoxhJV+RJLw==
+searchFlags: 0
+
+
