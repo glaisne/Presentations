@@ -16,9 +16,8 @@
 # https://docs.microsoft.com/en-us/azure/virtual-machines/windows/key-vault-setup?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json
 # https://docs.microsoft.com/en-us/azure/virtual-machines/windows/winrm?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json
 
-#todo:
-# - Call the PushDSCExtension as a job
-# - Store each unique DSC configuration in a unique container.
+#todo:  Call the PushDSCExtension as a job
+#todo:  Store each unique DSC configuration in a unique container.
 
 
 #-----------------------------
@@ -94,8 +93,9 @@ function GetMyIp()
 
 
 $SubscriptionName = 'Pay-As-You-Go'
+$SubscriptionName = 'Visual Studio Enterprise - MPN'
 
-$Attempt = 'e'
+$Attempt = 'j'
 $purpose = 'BAWSUG Presentation' # removed the etag
 
 $TemplateFile = "$pwd\azuredeploy.json"
@@ -243,18 +243,18 @@ catch
 # push the DSC Extension
 # Note: Hasn't been working. will be good to come back to this at
 #       another point
-$params = @{
-    StorageRG          = $rgname
-    StorageAccountName = $saname
-    VMName             = $adVMName
-    VMResourceGroup    = $rgname
-    location           = $location
-    Force              = $True
-    DSCScriptFile      = "$pwd\CreateADDomainWithData.ps1"
-    DSCDataFile        = "$pwd\CreateADDomainWithData.psd1"
-}
-Write-Verbose "[$(Get-Date -format G)] Pushing the DSC configuration to Azure Storage."
-.\PushDSCExtension.ps1 @params
+# $params = @{
+#     StorageRG          = $rgname
+#     StorageAccountName = $saname
+#     VMName             = $adVMName
+#     VMResourceGroup    = $rgname
+#     location           = $location
+#     Force              = $True
+#     DSCScriptFile      = "$pwd\CreateADDomainWithData.ps1"
+#     DSCDataFile        = "$pwd\CreateADDomainWithData.psd1"
+# }
+# Write-Verbose "[$(Get-Date -format G)] Pushing the DSC configuration to Azure Storage."
+# .\PushDSCExtension.ps1 @params
 
 
 #
@@ -280,64 +280,64 @@ $Session = GetPSSession -IPAddress $IP -credential $cred
 
 
 # Setup the DSC file environment
-# Write-Verbose "[$(Get-Date -format G)] Setting up DSC files"
-# invoke-command {mkdir c:\DSC} -Session $session
-# invoke-command {dir WSMan:\localhost | ft -auto} -session $Session
-# Write-Verbose "[$(Get-Date -format G)] Configuring wsman"
-# invoke-command {set-item wsman:\localhost\MaxEnvelopeSizekb -value 50000} -session $session
-# Write-Verbose "[$(Get-Date -format G)] Copying DSC files to server"
-# Get-ChildItem .\CreateADDomainWithData.ps* | copy-item -ToSession $session -Destination c:\DSC\
+Write-Verbose "[$(Get-Date -format G)] Setting up DSC files"
+invoke-command {mkdir c:\DSC} -Session $session
+invoke-command {dir WSMan:\localhost | ft -auto} -session $Session
+Write-Verbose "[$(Get-Date -format G)] Configuring wsman"
+invoke-command {set-item wsman:\localhost\MaxEnvelopeSizekb -value 50000} -session $session
+Write-Verbose "[$(Get-Date -format G)] Copying DSC files to server"
+Get-ChildItem .\CreateADDomainWithData.ps* | copy-item -ToSession $session -Destination c:\DSC\
 # SetupScripts
-# invoke-command {mkdir c:\DSC\Scripts} -Session $session
-# Get-ChildItem .\SetupScripts\*.*  | copy-item -ToSession $session -Destination c:\DSC\scripts
+invoke-command {mkdir c:\DSC\Scripts} -Session $session
+Get-ChildItem .\SetupScripts\*.*  | copy-item -ToSession $session -Destination c:\DSC\scripts
 # invoke-command {c:\dsc\Scripts\Install-vscode.ps1 -AdditionalExtensions @('wesbos.theme-cobalt2','alefragnani.bookmarks','aaron-bond.better-comments')} -session $session
 # Scripts
 # invoke-command {mkdir c:\Scripts} -Session $session
-# compress-archive -Path .\scripts\* -DestinationPath .\scripts.zip -CompressionLevel optimal
-# copy-item .\scripts.zip -ToSession $session -Destination c:\ # -exclude "get-*File.ps1", "get-function*.ps1" -Recurse
-# invoke-command {expand-archive -Path c:\scripts.zip -DestinationPath c:\scripts} -Session $session
-# invoke-command {remove-item c:\scripts.zip -force}
-# remove-item .\scripts.zip -force
+compress-archive -Path .\scripts\* -DestinationPath .\scripts.zip -CompressionLevel optimal
+copy-item .\scripts.zip -ToSession $session -Destination c:\ # -exclude "get-*File.ps1", "get-function*.ps1" -Recurse
+invoke-command {expand-archive -Path c:\scripts.zip -DestinationPath c:\scripts} -Session $session
+invoke-command {remove-item c:\scripts.zip -force}
+remove-item .\scripts.zip -force
 # Modules
 
 # Binary files
-# invoke-command {mkdir c:\DSC\bin} -Session $session
-# copy-item .\bin\* -ToSession $session -Destination c:\DSC\bin -Recurse
-# invoke-command {Expand-Archive -path 'C:\DSC\bin\AdExplorer.zip' -DestinationPath 'c:\DSC\bin\' -force} -session $session
+invoke-command {mkdir c:\DSC\bin} -Session $session
+copy-item .\bin\* -ToSession $session -Destination c:\DSC\bin -Recurse
+invoke-command {Expand-Archive -path 'C:\DSC\bin\AdExplorer.zip' -DestinationPath 'c:\DSC\bin\' -force} -session $session
 # invoke-command {powershell -Command "Expand-Archive -path C:\DSC\bin\AdExplorer.zip -DestinationPath c:\DSC\bin\ -force"} -session $session
 # Downloads and installs
-# Write-Verbose "[$(Get-Date -format G)] Install DSC requirements"
-# Write-Verbose "[$(Get-Date -format G)]  - Nuget"
-# invoke-command {install-packageProvider -Name 'Nuget' -Force} -session $session
-# invoke-command {set-packagesource -Name psgallery -Trusted } -session $session
+Write-Verbose "[$(Get-Date -format G)] Install DSC requirements"
+Write-Verbose "[$(Get-Date -format G)]  - Nuget"
+invoke-command {install-packageProvider -Name 'Nuget' -Force} -session $session
+invoke-command {set-packagesource -Name psgallery -Trusted } -session $session
 <#
 * Fix pester not installing 
   - The version '4.4.0' of the module 'Pester' being installed is not catalog signed. Ensure that the version '4.4.0' of the module 'Pester' has the catalog file 'Pester.cat' and signed with the same publisher 'CN=Microsoft Root Certificate Authority 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US' as the previously-installed module '4.4.0' with version '3.4.0' under the directory 'C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0'. If you still want to install or update, use -SkipPublisherCheck parameter.
 #>
-# Write-Verbose "[$(Get-Date -format G)]  - Pester"
-# invoke-command {install-module -Name Pester -Repository PSGallery -RequiredVersion '4.4.0' -AllowClobber -Force -SkipPublisherCheck } -session $Session
-# Write-Verbose "[$(Get-Date -format G)]  - xActiveDirectory"
-# invoke-command {install-module -Name xActiveDirectory -Repository PSGallery -RequiredVersion '2.19.0.0' -AllowClobber -Force } -session $Session
-# Write-Verbose "[$(Get-Date -format G)]  - xStorage"
-# invoke-command {install-module -Name xStorage -Repository PSGallery -RequiredVersion '3.4.0.0' -AllowClobber -Force } -session $Session
-# Write-Verbose "[$(Get-Date -format G)]  - xRemoteDesktopAdmin"
-# invoke-command {install-module -Name xRemoteDesktopAdmin -Repository PSGallery -RequiredVersion '1.1.0.0' -AllowClobber -Force } -session $Session
-# Write-Verbose "[$(Get-Date -format G)]  - DSC"
-# invoke-command {install-windowsfeature DSC-Service } -session $session
-# Write-Verbose "[$(Get-Date -format G)]  - chocolatey"
-# invoke-command {find-packageprovider chocolatey | install-packageprovider -Force} -session $Session
-# invoke-command {set-packagesource -Name chocolatey -Trusted } -session $session
-# invoke-command {find-package dotnet4.5.2 | install-package -Verbose} -session $session
-# invoke-command {set-packagesource -Name chocolatey -Trusted:$false } -session $session
+Write-Verbose "[$(Get-Date -format G)]  - Pester"
+invoke-command {install-module -Name Pester -Repository PSGallery -RequiredVersion '4.4.0' -AllowClobber -Force -SkipPublisherCheck } -session $Session
+Write-Verbose "[$(Get-Date -format G)]  - xActiveDirectory"
+invoke-command {install-module -Name xActiveDirectory -Repository PSGallery -RequiredVersion '2.19.0.0' -AllowClobber -Force } -session $Session
+Write-Verbose "[$(Get-Date -format G)]  - xStorage"
+invoke-command {install-module -Name xStorage -Repository PSGallery -RequiredVersion '3.4.0.0' -AllowClobber -Force } -session $Session
+Write-Verbose "[$(Get-Date -format G)]  - xRemoteDesktopAdmin"
+invoke-command {install-module -Name xRemoteDesktopAdmin -Repository PSGallery -RequiredVersion '1.1.0.0' -AllowClobber -Force } -session $Session
+Write-Verbose "[$(Get-Date -format G)]  - DSC"
+invoke-command {install-windowsfeature DSC-Service } -session $session
+Write-Verbose "[$(Get-Date -format G)]  - chocolatey"
+invoke-command {find-packageprovider chocolatey | install-packageprovider -Force} -session $Session
+invoke-command {set-packagesource -Name chocolatey -Trusted } -session $session
+invoke-command {find-package dotnet4.5.2 | install-package -Verbose} -session $session
+invoke-command {set-packagesource -Name chocolatey -Trusted:$false } -session $session
 # invoke-command {find-script install-vscode | save-script -Path c:\DSC\scripts\  } -session $Session
 # invoke-command {unblock-file 'c:\DSC\Scripts\install-vscode.ps1' <# might need one of these: -confirm:$false -force #>} -session $session
 # invoke-command {c:\dsc\Scripts\Install-vscode.ps1 -AdditionalExtensions @('wesbos.theme-cobalt2', 'alefragnani.bookmarks', 'aaron-bond.better-comments')} -session $session
 
 
 # Create the DSC MOF file
-# Write-Verbose "[$(Get-Date -format G)] Create DSC MOF files"
-# invoke-command  -Session $session {. c:\dsc\CreateADDomainWithData.ps1 -DomainName $using:FQDN -DomainNetbiosName $using:NetBiosDomainName -AdminCreds $using:cred } # -ArgumentList $FQDN, $NetBiosDomainName, $cred
-# invoke-command  -Session $session {createADDomainWithData -ConfigurationData c:\dsc\createADDomainWithData.psd1 -OutputPath 'c:\DSC\CreateADDomainWithData' -DomainName $Using:FQDN -DomainNetbiosName $Using:NetBiosDomainName -AdminCreds $Using:cred } # -ArgumentList $FQDN, $NetBiosDomainName, $cred
+Write-Verbose "[$(Get-Date -format G)] Create DSC MOF files"
+invoke-command  -Session $session {. c:\dsc\CreateADDomainWithData.ps1 -DomainName $using:FQDN -DomainNetbiosName $using:NetBiosDomainName -AdminCreds $using:cred } # -ArgumentList $FQDN, $NetBiosDomainName, $cred
+invoke-command  -Session $session {createADDomainWithData -ConfigurationData c:\dsc\createADDomainWithData.psd1 -OutputPath 'c:\DSC\CreateADDomainWithData' -DomainName $Using:FQDN -DomainNetbiosName $Using:NetBiosDomainName -AdminCreds $Using:cred } # -ArgumentList $FQDN, $NetBiosDomainName, $cred
 
 # invoke-command -Session $session -ScriptBlock {
 #     Write-host -fore yellow "[$(Get-Date -format G)] Dot-Sourcing the DSC file (c:\dsc\CreateADDomainWithData.ps1)"
@@ -348,11 +348,11 @@ $Session = GetPSSession -IPAddress $IP -credential $cred
 
 # Configure the LCM
 # See https://www.jacobbenson.io/index.php/2015/02/21/exploring-the-powershell-dsc-xpendingreboot-resource/
-# Write-Verbose "[$(Get-Date -format G)] Configuring the LCM"
-# invoke-command {Set-DscLocalConfigurationManager 'c:\dsc\CreateADDomainWithData\' -Verbose} -session $session
+Write-Verbose "[$(Get-Date -format G)] Configuring the LCM"
+invoke-command {Set-DscLocalConfigurationManager 'c:\dsc\CreateADDomainWithData\' -Verbose} -session $session
 
 # Start the DSC configuration
-# Write-Verbose "[$(Get-Date -format G)] Start DSC Configuration"
+Write-Verbose "[$(Get-Date -format G)] Start DSC Configuration"
 # It seems someimes this fails or runs successfully and doesn't do anything.
 # I think it is because the system may not see the F: drive. I'm building this loop
 # to try and solve this issue.
@@ -362,34 +362,34 @@ $Session = GetPSSession -IPAddress $IP -credential $cred
 # {
 #     $sw.Reset()
 #     $sw.Start()
-#    invoke-command {Start-DscConfiguration -Path 'c:\dsc\CreateADDomainWithData\' -Wait -Verbose} -session $session
+   invoke-command {Start-DscConfiguration -Path 'c:\dsc\CreateADDomainWithData\' -Wait -Verbose} -session $session
 #     $sw.stop()
 #     Start-Sleep -s 15
 #     $TryCount++
 # }
 
-# Write-Verbose "[$(Get-Date -format G)] Waiting 5min."
-# Start-sleep -s (5 * 60)
+Write-Verbose "[$(Get-Date -format G)] Waiting 5min."
+Start-sleep -s (5 * 60)
 
 # sometimes the DSC takes so long, that we need to get a new session.
-# $Session = GetPSSession -IPAddress $IP -credential $cred
+$Session = GetPSSession -IPAddress $IP -credential $cred
 
-# Write-Verbose "[$(Get-Date -format G)] Validate domain"
-# invoke-command {Get-ADDomain |fl * -force} -session $session
+Write-Verbose "[$(Get-Date -format G)] Validate domain"
+invoke-command {Get-ADDomain |fl * -force} -session $session
 
-# Write-Verbose "[$(Get-Date -format G)] Calling Create-NeededGroups.ps1"
-# invoke-command {&"C:\DSC\Scripts\create-NeededGroups.ps1"} -session $session
+Write-Verbose "[$(Get-Date -format G)] Calling Create-NeededGroups.ps1"
+invoke-command {&"C:\DSC\Scripts\create-NeededGroups.ps1"} -session $session
 
-# # Run the invoke-Pester tests
-# Write-Verbose "[$(Get-Date -format G)] Invoking SchemaFiles pester tests"
-# invoke-command {Invoke-pester c:\Scripts\Pester\SchemaFiles.Tests.ps1} -session $session
+# Run the invoke-Pester tests
+Write-Verbose "[$(Get-Date -format G)] Invoking SchemaFiles pester tests"
+invoke-command {Invoke-pester c:\Scripts\Pester\SchemaFiles.Tests.ps1} -session $session
 
-# # Extend the schema
-# Write-Verbose "[$(Get-Date -format G)] Updating the Schema"
-# invoke-Command {&"c:\Scripts\Schema_Exchange2016-x64\importSchema_new.bat"} -session $session
+# Extend the schema
+Write-Verbose "[$(Get-Date -format G)] Updating the Schema"
+invoke-Command {&"c:\Scripts\Schema_Exchange2016-x64\importSchema_new.bat"} -session $session
 
-# Write-Verbose "[$(Get-Date -format G)] Invoking AD pester tests"
-# invoke-command {Invoke-pester c:\Scripts\Pester\ADEnvironment.Tests.ps1} -session $session
+Write-Verbose "[$(Get-Date -format G)] Invoking AD pester tests"
+invoke-command {Invoke-pester c:\Scripts\Pester\ADEnvironment.Tests.ps1} -session $session
 
 # RDP either way
 Start-Process -FilePath mstsc.exe -ArgumentList "/v:$DNSFQDN /f"

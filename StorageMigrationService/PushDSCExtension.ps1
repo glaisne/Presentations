@@ -30,9 +30,9 @@ Note: the IP Address of the system running this command will need to be added to
 Note: Use -Force to overwrite the config.
 #>
 $params = @{
-    ConfigurationPath = $DSCScriptFile
+    ConfigurationPath     = $DSCScriptFile
     ConfigurationDataPath = $DSCDataFile
-    ResourceGroupName = $StorageRG
+    ResourceGroupName     = $StorageRG
     StorageAccountName    = $StorageAccountName
 }
 Publish-AzureRmVMDscConfiguration @params -Force
@@ -41,10 +41,11 @@ Publish-AzureRmVmDscConfiguration uploads the .ps1 and any dsc resourceses speci
     uploaded to the storage account under the 'windows-powershell-dsc' container.
 #>
 
-$hash = @{
-    domainname   = 'one.com'
-    AdminCreds = $(Get-Credential gene -Message 'New Domain admin password')
-}
+# $hash = @{
+#     domainname        = 'one.com'
+#     DomainNetbiosName = 'one'
+#     AdminCreds        = $(Get-Credential gene -Message 'New Domain admin password')
+# }
 
 $params = @{
     ResourceGroupName         = $VMResourceGroup
@@ -57,7 +58,7 @@ $params = @{
     Version                   = '2.76'
     Location                  = $location
     AutoUpdate                = $true
-    ConfigurationArgument     = $hash
+#    ConfigurationArgument     = $hash
     ArchiveResourceGroupName  = $StorageRG
     force                     = $true
     DataCollection            = 'Enable'

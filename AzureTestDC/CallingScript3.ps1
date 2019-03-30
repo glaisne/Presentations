@@ -106,6 +106,14 @@ if ($KeyVaultName -notmatch '^[a-zA-Z0-9-]{3,24}$')
     Throw "the KeyVaultName string variable does not match '^[a-zA-Z0-9-]{3,24}$'"
 }
 
+# Delete any already existin KeyVaults
+# When this script is run repeatedly, it creates a new keyvault
+$ExistingKeyVaults = Get-AzureRmKeyVault |? {$_.Name -match "Vault-$($rgname.replace('.',''))-\d\d\d\d" -and $_.ResourceGroupNAme -eq $rgname}
+foreach ($ExistingKeyVault in $ExistingKeyVaults)
+{
+    Remove-AzureRmKeyVault -VaultName $ExistingKeyVault.Name -ResourceGroupName $ExistingKeyVault.ResourceGroupName -Verbose
+}
+
 $certificateName = "Azure-$rgname-SSCert" # SSCert = 'Self-Signed Certificate'
 
 
