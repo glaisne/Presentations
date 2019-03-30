@@ -8,20 +8,6 @@ Describe 'Test AD Environment Tests' {
             $EA7 | Should -Not -BeNullOrEmpty
 
         }
-        
-        IT 'hrupdate user exists' {
-            $user = $null
-            $user = get-aduser hradupdate -ErrorAction 'Stop'
-            $user | should -Not -BeNullOrEmpty
-            $user.Enabled | should be $true
-
-        }
-
-        IT 'hrupdate user''s password is correct' {
-            $secpasswd = ConvertTo-SecureString 'Password!101' -AsPlainText -Force
-            $mycreds = New-Object System.Management.Automation.PSCredential ('hradupdate', $secpasswd)
-            get-aduser hradupdate -Credential $mycreds | should -Not -BeNullOrEmpty
-        }
     }
         
     Context 'Applications' {

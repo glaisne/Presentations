@@ -95,7 +95,7 @@ function GetMyIp()
 $SubscriptionName = 'Pay-As-You-Go'
 $SubscriptionName = 'Visual Studio Enterprise - MPN'
 
-$Attempt = 'j'
+$Attempt = 'g'
 $purpose = 'BAWSUG Presentation' # removed the etag
 
 $TemplateFile = "$pwd\azuredeploy.json"
@@ -104,9 +104,27 @@ $rgname = "StorMigSvc$Attempt" # working on better OUs & Autoshutdown
 $saname = "genesyssa$Attempt"     # Lowercase required
 $saType = 'Standard_LRS'
 $addnsName = "genesysaddc$Attempt"     # Lowercase required
+$sourcednsName = "genesyssource$Attempt"
+$targetdnsName = "genesystarget$Attempt"
 $adVMName = 'TestDC'
 $location = 'East US'
 $KeyVaultName = "Vault-$($rgname.replace('.',''))-$(get-random -min 1000 -max 9999)"  # Must match pattern '^[a-zA-Z0-9-]{3,24}$'
+
+if ($addnsName -notmatch '^[a-z][a-z0-9-]{1,61}[a-z0-9]$')
+{
+    Throw '$addnsName does not match ^[a-z][a-z0-9-]{1,61}[a-z0-9]$'
+}
+
+
+if ($sourcednsName -notmatch '^[a-z][a-z0-9-]{1,61}[a-z0-9]$')
+{
+    Throw '$sourcednsName does not match ^[a-z][a-z0-9-]{1,61}[a-z0-9]$'
+}
+
+if ($targetdnsName -notmatch '^[a-z][a-z0-9-]{1,61}[a-z0-9]$')
+{
+    Throw '$targetdnsName does not match ^[a-z][a-z0-9-]{1,61}[a-z0-9]$'
+}
 
 if ($KeyVaultName -notmatch '^[a-zA-Z0-9-]{3,24}$')
 {
@@ -142,7 +160,14 @@ if (-not $(get-module azurerm))
 # Authenticate to your Azure account
 # Login-AzureRmAccount
 
-Select-AzureRmSubscription -SubscriptionName $SubscriptionName
+try
+{
+    Select-AzureRmSubscription -SubscriptionName $SubscriptionName -ErrorAction 'Stop'
+}
+catch
+{
+    throw $_
+}
 
 # Check that the public dns $addnsName is available
 if (Test-AzureRmDnsAvailability -DomainNameLabel $addnsName -Location $Location)
@@ -213,6 +238,8 @@ $MyParams = @{
     location           = $location
     adVMName           = $adVMName
     addnsName          = $addnsName
+    sourcednsName      = $sourcednsName
+    targetdnsName      = $targetdnsName
     StorageAllowedIP   = $LocalIP
     StorageAccountName = $saname
     storageAccountType = $saType
@@ -263,76 +290,108 @@ catch
 
 
 # Find the VM IP and FQDN
-$PublicAddress = (Get-AzureRmPublicIpAddress -ResourceGroupName $rgname)[0]
-$IP = $PublicAddress.IpAddress
-$DNSFQDN = $PublicAddress.DnsSettings.Fqdn
+$PublicAddresses = Get-AzureRmPublicIpAddress -ResourceGroupName $rgname
+$IP = $PublicAddresses.IpAddress
+$DNSFQDN = $PublicAddresses.DnsSettings.Fqdn
 
 $VP = $VerbosePreference
 $VerbosePreference = 'Continue'
 
-# Get a PS Session to the VM
-$Session = GetPSSession -IPAddress $IP -credential $cred
+foreach ($PublicAddress in $PublicAddresses)
+{
+    $IP = $PublicAddress.IpAddress
+    $DNSFQDN = $PublicAddress.DnsSettings.Fqdn
 
 
-#
-#    Push DSC Configuration to VM
-#
+    # Get a PS Session to the VM
+    $Session = GetPSSession -IPAddress $IP -credential $cred
 
 
-# Setup the DSC file environment
-Write-Verbose "[$(Get-Date -format G)] Setting up DSC files"
-invoke-command {mkdir c:\DSC} -Session $session
-invoke-command {dir WSMan:\localhost | ft -auto} -session $Session
-Write-Verbose "[$(Get-Date -format G)] Configuring wsman"
-invoke-command {set-item wsman:\localhost\MaxEnvelopeSizekb -value 50000} -session $session
-Write-Verbose "[$(Get-Date -format G)] Copying DSC files to server"
-Get-ChildItem .\CreateADDomainWithData.ps* | copy-item -ToSession $session -Destination c:\DSC\
-# SetupScripts
-invoke-command {mkdir c:\DSC\Scripts} -Session $session
-Get-ChildItem .\SetupScripts\*.*  | copy-item -ToSession $session -Destination c:\DSC\scripts
-# invoke-command {c:\dsc\Scripts\Install-vscode.ps1 -AdditionalExtensions @('wesbos.theme-cobalt2','alefragnani.bookmarks','aaron-bond.better-comments')} -session $session
-# Scripts
-# invoke-command {mkdir c:\Scripts} -Session $session
-compress-archive -Path .\scripts\* -DestinationPath .\scripts.zip -CompressionLevel optimal
-copy-item .\scripts.zip -ToSession $session -Destination c:\ # -exclude "get-*File.ps1", "get-function*.ps1" -Recurse
-invoke-command {expand-archive -Path c:\scripts.zip -DestinationPath c:\scripts} -Session $session
-invoke-command {remove-item c:\scripts.zip -force}
-remove-item .\scripts.zip -force
-# Modules
+    #
+    #    Push DSC Configuration to VM
+    #
 
-# Binary files
-invoke-command {mkdir c:\DSC\bin} -Session $session
-copy-item .\bin\* -ToSession $session -Destination c:\DSC\bin -Recurse
-invoke-command {Expand-Archive -path 'C:\DSC\bin\AdExplorer.zip' -DestinationPath 'c:\DSC\bin\' -force} -session $session
-# invoke-command {powershell -Command "Expand-Archive -path C:\DSC\bin\AdExplorer.zip -DestinationPath c:\DSC\bin\ -force"} -session $session
-# Downloads and installs
-Write-Verbose "[$(Get-Date -format G)] Install DSC requirements"
-Write-Verbose "[$(Get-Date -format G)]  - Nuget"
-invoke-command {install-packageProvider -Name 'Nuget' -Force} -session $session
-invoke-command {set-packagesource -Name psgallery -Trusted } -session $session
-<#
-* Fix pester not installing 
-  - The version '4.4.0' of the module 'Pester' being installed is not catalog signed. Ensure that the version '4.4.0' of the module 'Pester' has the catalog file 'Pester.cat' and signed with the same publisher 'CN=Microsoft Root Certificate Authority 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US' as the previously-installed module '4.4.0' with version '3.4.0' under the directory 'C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0'. If you still want to install or update, use -SkipPublisherCheck parameter.
-#>
-Write-Verbose "[$(Get-Date -format G)]  - Pester"
-invoke-command {install-module -Name Pester -Repository PSGallery -RequiredVersion '4.4.0' -AllowClobber -Force -SkipPublisherCheck } -session $Session
-Write-Verbose "[$(Get-Date -format G)]  - xActiveDirectory"
-invoke-command {install-module -Name xActiveDirectory -Repository PSGallery -RequiredVersion '2.19.0.0' -AllowClobber -Force } -session $Session
-Write-Verbose "[$(Get-Date -format G)]  - xStorage"
-invoke-command {install-module -Name xStorage -Repository PSGallery -RequiredVersion '3.4.0.0' -AllowClobber -Force } -session $Session
-Write-Verbose "[$(Get-Date -format G)]  - xRemoteDesktopAdmin"
-invoke-command {install-module -Name xRemoteDesktopAdmin -Repository PSGallery -RequiredVersion '1.1.0.0' -AllowClobber -Force } -session $Session
-Write-Verbose "[$(Get-Date -format G)]  - DSC"
-invoke-command {install-windowsfeature DSC-Service } -session $session
-Write-Verbose "[$(Get-Date -format G)]  - chocolatey"
-invoke-command {find-packageprovider chocolatey | install-packageprovider -Force} -session $Session
-invoke-command {set-packagesource -Name chocolatey -Trusted } -session $session
-invoke-command {find-package dotnet4.5.2 | install-package -Verbose} -session $session
-invoke-command {set-packagesource -Name chocolatey -Trusted:$false } -session $session
-# invoke-command {find-script install-vscode | save-script -Path c:\DSC\scripts\  } -session $Session
-# invoke-command {unblock-file 'c:\DSC\Scripts\install-vscode.ps1' <# might need one of these: -confirm:$false -force #>} -session $session
-# invoke-command {c:\dsc\Scripts\Install-vscode.ps1 -AdditionalExtensions @('wesbos.theme-cobalt2', 'alefragnani.bookmarks', 'aaron-bond.better-comments')} -session $session
 
+    #
+    # Setup the DSC file environment
+    Write-Verbose "[$(Get-Date -format G)] Setting up DSC files"
+    Invoke-Command { mkdir c:\DSC } -Session $session
+    Invoke-Command { Get-ChildItem WSMan:\localhost | Format-Table -auto } -session $Session
+    Write-Verbose "[$(Get-Date -format G)] Configuring wsman"
+    Invoke-Command { Set-Item wsman:\localhost\MaxEnvelopeSizekb -value 50000 } -session $session
+    #------------------------------------
+    # todo: This needs to be updated for each VM
+    Write-Verbose "[$(Get-Date -format G)] Copying DSC files to server"
+    Get-ChildItem .\CreateADDomainWithData.ps* | Copy-Item -ToSession $session -Destination c:\DSC\
+    #------------------------------------
+
+
+    #
+    #    SetupScripts
+    #
+
+
+    Invoke-Command { mkdir c:\DSC\Scripts } -Session $session
+    Get-ChildItem .\SetupScripts\*.* | Copy-Item -ToSession $session -Destination c:\DSC\scripts
+    # invoke-command {c:\dsc\Scripts\Install-vscode.ps1 -AdditionalExtensions @('wesbos.theme-cobalt2','alefragnani.bookmarks','aaron-bond.better-comments')} -session $session
+
+
+    #
+    # Scripts
+    #
+
+
+    # invoke-command {mkdir c:\Scripts} -Session $session
+    Compress-Archive -Path .\scripts\* -DestinationPath .\scripts.zip -CompressionLevel optimal
+    Copy-Item .\scripts.zip -ToSession $session -Destination c:\ # -exclude "get-*File.ps1", "get-function*.ps1" -Recurse
+    Invoke-Command { Expand-Archive -Path c:\scripts.zip -DestinationPath c:\scripts } -Session $session
+    Invoke-Command { Remove-Item c:\scripts.zip -force }
+    Remove-Item .\scripts.zip -force
+    # Modules
+
+    #
+    #    Binary files
+    #
+
+
+    Invoke-Command { mkdir c:\DSC\bin } -Session $session
+    Copy-Item .\bin\* -ToSession $session -Destination c:\DSC\bin -Recurse
+    Invoke-Command { Expand-Archive -path 'C:\DSC\bin\AdExplorer.zip' -DestinationPath 'c:\DSC\bin\' -force } -session $session
+    # invoke-command {powershell -Command "Expand-Archive -path C:\DSC\bin\AdExplorer.zip -DestinationPath c:\DSC\bin\ -force"} -session $session
+
+    #
+    #    Downloads and installs
+    #
+
+
+    Write-Verbose "[$(Get-Date -format G)] Install DSC requirements"
+    Write-Verbose "[$(Get-Date -format G)]  - Nuget"
+    Invoke-Command { Install-PackageProvider -Name 'Nuget' -Force } -session $session
+    Invoke-Command { Set-PackageSource -Name psgallery -Trusted } -session $session
+    <#
+    * Fix pester not installing 
+    - The version '4.4.0' of the module 'Pester' being installed is not catalog signed. Ensure that the version '4.4.0' of the module 'Pester' has the catalog file 'Pester.cat' and signed with the same publisher 'CN=Microsoft Root Certificate Authority 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US' as the previously-installed module '4.4.0' with version '3.4.0' under the directory 'C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0'. If you still want to install or update, use -SkipPublisherCheck parameter.
+    #>
+    Write-Verbose "[$(Get-Date -format G)]  - Pester"
+    Invoke-Command { Install-Module -Name Pester -Repository PSGallery -RequiredVersion '4.4.0' -AllowClobber -Force -SkipPublisherCheck } -session $Session
+    Write-Verbose "[$(Get-Date -format G)]  - xActiveDirectory"
+    Invoke-Command { Install-Module -Name xActiveDirectory -Repository PSGallery -RequiredVersion '2.19.0.0' -AllowClobber -Force } -session $Session
+    Write-Verbose "[$(Get-Date -format G)]  - xStorage"
+    Invoke-Command { Install-Module -Name xStorage -Repository PSGallery -RequiredVersion '3.4.0.0' -AllowClobber -Force } -session $Session
+    Write-Verbose "[$(Get-Date -format G)]  - xRemoteDesktopAdmin"
+    Invoke-Command { Install-Module -Name xRemoteDesktopAdmin -Repository PSGallery -RequiredVersion '1.1.0.0' -AllowClobber -Force } -session $Session
+    Write-Verbose "[$(Get-Date -format G)]  - DSC"
+    Invoke-Command { install-windowsfeature DSC-Service } -session $session
+    Write-Verbose "[$(Get-Date -format G)]  - chocolatey"
+    Invoke-Command { Find-PackageProvider chocolatey | Install-PackageProvider -Force } -session $Session
+    Invoke-Command { Set-PackageSource -Name chocolatey -Trusted } -session $session
+    Invoke-Command { Find-Package dotnet4.5.2 | Install-Package -Verbose } -session $session
+    Invoke-Command { Set-PackageSource -Name chocolatey -Trusted:$false } -session $session
+    # invoke-command {find-script install-vscode | save-script -Path c:\DSC\scripts\  } -session $Session
+    # invoke-command {unblock-file 'c:\DSC\Scripts\install-vscode.ps1' <# might need one of these: -confirm:$false -force #>} -session $session
+    # invoke-command {c:\dsc\Scripts\Install-vscode.ps1 -AdditionalExtensions @('wesbos.theme-cobalt2', 'alefragnani.bookmarks', 'aaron-bond.better-comments')} -session $session
+
+}
 
 # Create the DSC MOF file
 Write-Verbose "[$(Get-Date -format G)] Create DSC MOF files"
@@ -368,8 +427,8 @@ Write-Verbose "[$(Get-Date -format G)] Start DSC Configuration"
 #     $TryCount++
 # }
 
-Write-Verbose "[$(Get-Date -format G)] Waiting 5min."
-Start-sleep -s (5 * 60)
+# Write-Verbose "[$(Get-Date -format G)] Waiting 5min."
+# Start-sleep -s (5 * 60)
 
 # sometimes the DSC takes so long, that we need to get a new session.
 $Session = GetPSSession -IPAddress $IP -credential $cred
