@@ -66,6 +66,14 @@
             "defaultValue": "adSubnet",
             "type": "string"
         },
+        "subnets_SourceSubnet_name": {
+            "defaultValue": "SourceSubnet",
+            "type": "string"
+        },
+        "subnets_TargetSubnet_name": {
+            "defaultValue": "TargetSubnet",
+            "type": "string"
+        },
         "inboundNatRules_adRDP_name": {
             "defaultValue": "adRDP",
             "type": "string"
@@ -490,13 +498,13 @@
                         "etag": "W/\"e0d7dec6-b7da-45f2-8eb0-676baf3da789\"",
                         "properties": {
                             "provisioningState": "Succeeded",
-                            "privateIPAddress": "10.0.0.5",
+                            "privateIPAddress": "10.0.1.4",
                             "privateIPAllocationMethod": "Static",
                             "publicIPAddress": {
                                 "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_sourcePublicIP_name'))]"
                             },
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_SourceSubnet_name'))]"
                             },
                             "primary": true,
                             "privateIPAddressVersion": "IPv4"
@@ -514,7 +522,7 @@
                 "primary": true
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_SourceSubnet_name'))]"
             ]
         },
         {
@@ -532,13 +540,13 @@
                         "etag": "W/\"e0d7dec6-b7da-45f2-8eb0-676baf3da789\"",
                         "properties": {
                             "provisioningState": "Succeeded",
-                            "privateIPAddress": "10.0.0.6",
+                            "privateIPAddress": "10.0.2.4",
                             "privateIPAllocationMethod": "Static",
                             "publicIPAddress": {
                                 "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_targetPublicIP_name'))]"
                             },
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_TargetSubnet_name'))]"
                             },
                             "primary": true,
                             "privateIPAddressVersion": "IPv4"
@@ -556,7 +564,7 @@
                 "primary": true
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_adSubnet_name'))]"
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_adVNET_name'), parameters('subnets_TargetSubnet_name'))]"
             ]
         },
         {
@@ -636,12 +644,6 @@
                         "10.0.0.0/16"
                     ]
                 },
-                "dhcpOptions": {
-                    "dnsServers": [
-                        "10.0.0.4",
-                        "8.8.8.8"
-                    ]
-                },
                 "subnets": [
                     {
                         "name": "[parameters('subnets_adSubnet_name')]",
@@ -662,6 +664,46 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "name": "[parameters('subnets_SourceSubnet_name')]",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "addressPrefix": "10.0.1.0/24",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'), '-source','-nsg'))]"
+                            },
+                            "serviceEndpoints": [
+                                {
+                                    "provisioningState": "Succeeded",
+                                    "service": "Microsoft.Storage",
+                                    "locations": [
+                                        "eastus",
+                                        "westus"
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "[parameters('subnets_TargetSubnet_name')]",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "addressPrefix": "10.0.2.0/24",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'), '-target','-nsg'))]"
+                            },
+                            "serviceEndpoints": [
+                                {
+                                    "provisioningState": "Succeeded",
+                                    "service": "Microsoft.Storage",
+                                    "locations": [
+                                        "eastus",
+                                        "westus"
+                                    ]
+                                }
+                            ]
+                        }
                     }
                 ],
                 "virtualNetworkPeerings": [],
@@ -669,13 +711,107 @@
                 "enableVmProtection": false
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'),'-nsg'))]"
+                "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'),'-nsg'))]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'), '-target','-nsg'))]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworks_adVNET_name'), '-source','-nsg'))]"
             ]
         },
         {
             "apiVersion": "2017-10-01",
             "type": "Microsoft.Network/networkSecurityGroups",
             "name": "[concat(parameters('virtualNetworks_adVNET_name'),'-nsg')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "Allow-RDP",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3389",
+                            "sourceAddressPrefix": "[parameters('NSGSourceIP')]",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "Allow-WinRM",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "5986",
+                            "sourceAddressPrefix": "[parameters('NSGSourceIP')]",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 110,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "2017-10-01",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[concat(parameters('virtualNetworks_adVNET_name'), '-source','-nsg')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "Allow-RDP",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3389",
+                            "sourceAddressPrefix": "[parameters('NSGSourceIP')]",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "Allow-WinRM",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "5986",
+                            "sourceAddressPrefix": "[parameters('NSGSourceIP')]",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 110,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "apiVersion": "2017-10-01",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[concat(parameters('virtualNetworks_adVNET_name'), '-target','-nsg')]",
             "location": "[parameters('location')]",
             "properties": {
                 "securityRules": [
@@ -727,6 +863,54 @@
             "properties": {
                 "provisioningState": "Succeeded",
                 "addressPrefix": "10.0.0.0/24",
+                "serviceEndpoints": [
+                    {
+                        "provisioningState": "Succeeded",
+                        "service": "Microsoft.Storage",
+                        "locations": [
+                            "eastus",
+                            "westus"
+                        ]
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_adVNET_name'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "[concat(parameters('virtualNetworks_adVNET_name'), '/', parameters('subnets_SourceSubnet_name'))]",
+            "apiVersion": "2018-02-01",
+            "scale": null,
+            "location": "[parameters('location')]",
+            "properties": {
+                "provisioningState": "Succeeded",
+                "addressPrefix": "10.0.1.0/24",
+                "serviceEndpoints": [
+                    {
+                        "provisioningState": "Succeeded",
+                        "service": "Microsoft.Storage",
+                        "locations": [
+                            "eastus",
+                            "westus"
+                        ]
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_adVNET_name'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "[concat(parameters('virtualNetworks_adVNET_name'), '/', parameters('subnets_TargetSubnet_name'))]",
+            "apiVersion": "2018-02-01",
+            "scale": null,
+            "location": "[parameters('location')]",
+            "properties": {
+                "provisioningState": "Succeeded",
+                "addressPrefix": "10.0.2.0/24",
                 "serviceEndpoints": [
                     {
                         "provisioningState": "Succeeded",
