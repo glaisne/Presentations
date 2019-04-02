@@ -35,6 +35,7 @@ configuration target
         {
             Name       = "Target"
             DomainName = $domainName
+            Credential = $DomainCredentials  
         }
     }
 }

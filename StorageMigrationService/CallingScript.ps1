@@ -95,7 +95,7 @@ function GetMyIp()
 $SubscriptionName = 'Pay-As-You-Go'
 $SubscriptionName = 'Visual Studio Enterprise - MPN'
 
-$Attempt = 'a'
+$Attempt = 'd'
 $purpose = 'BAWSUG Presentation' # removed the etag
 
 $TemplateFile = "$pwd\azuredeploy.json"
@@ -579,8 +579,8 @@ foreach ($PublicAddress in $PublicAddresses)
         'sourcePublicIP'
         {
             Write-Verbose "[$(Get-Date -format G)] Create DSC MOF files"
-            Invoke-Command  -Session $session { . c:\dsc\Source.ps1 -DomainCredentials $using:cred } 
-            Invoke-Command  -Session $session { Source -OutputPath 'c:\DSC\Source' -DomainCredentials $Using:cred } 
+            Invoke-Command  -Session $session { . c:\dsc\Source.ps1 -DomainCredentials $( [System.Management.Automation.PSCredential]::new("one\$(($using:cred).username)", $(($using:cred).password) ) ) } 
+            Invoke-Command  -Session $session { Source -ConfigurationData c:\dsc\source.psd1 -OutputPath 'c:\DSC\Source' -DomainCredentials $( [System.Management.Automation.PSCredential]::new("one\$(($using:cred).username)", $(($using:cred).password) ) ) } 
 
             Write-Verbose "[$(Get-Date -format G)] Configuring the LCM"
             Invoke-Command { Set-DscLocalConfigurationManager 'c:\dsc\Source\' -Verbose } -session $session
@@ -596,8 +596,8 @@ foreach ($PublicAddress in $PublicAddresses)
         'targetPublicIP'
         {
             Write-Verbose "[$(Get-Date -format G)] Create DSC MOF files"
-            Invoke-Command  -Session $session { . c:\dsc\Target.ps1 -DomainCredentials $using:cred } 
-            Invoke-Command  -Session $session { Target -ConfigurationData c:\dsc\Target.psd1 -OutputPath 'c:\DSC\Target' -DomainCredentials $Using:cred } 
+            Invoke-Command  -Session $session { . c:\dsc\Target.ps1 -DomainCredentials $( [System.Management.Automation.PSCredential]::new("one\$(($using:cred).username)", $(($using:cred).password) ) ) } 
+            Invoke-Command  -Session $session { Target -ConfigurationData c:\dsc\Target.psd1 -OutputPath 'c:\DSC\Target' -DomainCredentials $( [System.Management.Automation.PSCredential]::new("one\$(($using:cred).username)", $(($using:cred).password) ) ) } 
 
             Write-Verbose "[$(Get-Date -format G)] Configuring the LCM"
             Invoke-Command { Set-DscLocalConfigurationManager 'c:\dsc\Target\' -Verbose } -session $session

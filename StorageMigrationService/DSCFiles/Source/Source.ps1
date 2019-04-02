@@ -35,6 +35,7 @@ configuration source
         {
             Name       = "Source"
             DomainName = $domainName
+            Credential = $DomainCredentials  
         }
     }
 }

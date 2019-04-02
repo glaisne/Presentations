@@ -54,7 +54,6 @@ $Folderpaths = foreach ($rootfolder in $root)
 }
 
 $Folderpaths = $folderpaths | sort -Unique
-$folderpaths
 
 foreach ($folderpath in $folderpaths)
 {
