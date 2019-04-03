@@ -476,6 +476,8 @@ foreach ($PublicAddress in $PublicAddresses)
     #    Downloads and installs
     #
 
+    # todo: try moving this section to the setup.ps1 script file to be copied to each system
+
 
     Write-Verbose "[$(Get-Date -format G)] Install DSC requirements"
     Write-Verbose "[$(Get-Date -format G)]  - Nuget"
@@ -485,8 +487,6 @@ foreach ($PublicAddress in $PublicAddresses)
     * Fix pester not installing 
     - The version '4.4.0' of the module 'Pester' being installed is not catalog signed. Ensure that the version '4.4.0' of the module 'Pester' has the catalog file 'Pester.cat' and signed with the same publisher 'CN=Microsoft Root Certificate Authority 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US' as the previously-installed module '4.4.0' with version '3.4.0' under the directory 'C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0'. If you still want to install or update, use -SkipPublisherCheck parameter.
     #>
-    
-
     Write-Verbose "[$(Get-Date -format G)]  - Pester"
     Invoke-Command { $null = Install-Module -Name Pester -Repository PSGallery -AllowClobber -Force -SkipPublisherCheck } -session $Session
     Write-Verbose "[$(Get-Date -format G)]  - PSDscResources"
@@ -587,11 +587,11 @@ foreach ($PublicAddress in $PublicAddresses)
             
             Write-Verbose "[$(Get-Date -format G)] Start DSC Configuration"
             Invoke-Command { Start-DscConfiguration -Path 'c:\dsc\Source\' -Wait -Verbose } -session $session
+
+            if ($Session.State -ne 'Opened') { $Session = GetPSSession -IPAddress $IP -credential $cred }
             
             Write-Verbose "[$(Get-Date -format G)] Create folder structure to be migrated"
             Invoke-Command { &"c:\scripts\MakeshareTree.ps1" } -session $session
-
-            if ($Session.State -ne 'Opened') { $Session = GetPSSession -IPAddress $IP -credential $cred }
         }
         'targetPublicIP'
         {
@@ -604,6 +604,8 @@ foreach ($PublicAddress in $PublicAddresses)
             
             Write-Verbose "[$(Get-Date -format G)] Start DSC Configuration"
             Invoke-Command { Start-DscConfiguration -Path 'c:\dsc\Target\' -Wait -Verbose } -session $session
+
+            if ($Session.State -ne 'Opened') { $Session = GetPSSession -IPAddress $IP -credential $cred }
             
             Write-Verbose "[$(Get-Date -format G)] Install prerequsits for migrating files"
             Invoke-Command { &"c:\scripts\StorageMigrationSetup.ps1" } -session $session
