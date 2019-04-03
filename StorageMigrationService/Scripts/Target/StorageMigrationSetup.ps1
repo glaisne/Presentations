@@ -1,3 +1,4 @@
+install-windowsfeature sms
 install-windowsfeature SMS-Proxy -IncludeAllSubFeature -IncludeManagementTools
 
 # Firewall rules

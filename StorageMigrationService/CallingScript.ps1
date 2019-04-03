@@ -92,10 +92,10 @@ function GetMyIp()
 #-----------------------------
 
 
-$SubscriptionName = 'Pay-As-You-Go'
 $SubscriptionName = 'Visual Studio Enterprise - MPN'
+$SubscriptionName = 'Pay-As-You-Go'
 
-$Attempt = 'e'
+$Attempt = 'a'
 $purpose = 'BAWSUG Presentaton' # removed the etag
 
 $TemplateFile = "$pwd\azuredeploy.json"
@@ -559,8 +559,7 @@ foreach ($PublicAddress in $PublicAddresses)
 
             if ($Session.State -ne 'Opened') { $Session = GetPSSession -IPAddress $IP -credential $cred }
 
-            Write-Verbose "[$(Get-Date -format G)] Calling Create-NeededGroups.ps1"
-            Invoke-Command { &"c:\scripts\create-NeededGroups.ps1" } -session $session
+            start-sleep -s 20
 
             # Run the invoke-Pester tests
             Write-Verbose "[$(Get-Date -format G)] Invoking SchemaFiles pester tests"
