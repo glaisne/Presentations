@@ -46,4 +46,24 @@ Describe 'DSC' {
             $version.major -ge 0 -or ($version.major -eq 0 -and $version.Minor -ge 4) | should be $True
         }
     }
+    
+    Context 'Demo Setup' {
+        It 'SMS-Proxy is installed' {
+            (get-windowsfeature sms-proxy).installed | Should be $true
+        }
+        It 'File and Printer Sharing (SMB-In)' {
+            (get-netfirewallrule -DisplayName 'File and Printer Sharing (SMB-In)').Enabled -eq $true
+        }
+        It 'Netlogon Service (NP-In)' {
+            (get-netfirewallrule -DisplayName 'Netlogon Service (NP-In)').Enabled -eq $true
+        }
+        It 'Windows Management Instrumentation (DCOM-In)' {
+            (get-netfirewallrule -DisplayName 'Windows Management Instrumentation (DCOM-In)').Enabled -eq $true
+        }
+        It 'File and Printer Sharing (SMB-In)' {
+            (get-netfirewallrule -DisplayName 'Windows Management Instrumentation (WMI-In)').Enabled -eq $true
+        }
+    }
 }
+
+
