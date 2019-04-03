@@ -95,8 +95,8 @@ function GetMyIp()
 $SubscriptionName = 'Pay-As-You-Go'
 $SubscriptionName = 'Visual Studio Enterprise - MPN'
 
-$Attempt = 'd'
-$purpose = 'BAWSUG Presentation' # removed the etag
+$Attempt = 'e'
+$purpose = 'BAWSUG Presentaton' # removed the etag
 
 $TemplateFile = "$pwd\azuredeploy.json"
 $Location = 'east us'
