@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vaultName": {
+            "value": "vault716"
+        },
+        "vaultRG": {
+            "value": "postgreSQL"
+        },
+        "vaultSubID": {
+            "value": "96105bd0-b016-4802-b122-3bd1d0215c0e"
+        },
+        "vaultLocation": {
+            "value": "eastus"
+        },
+        "policyName": {
+            "value": "DailyPolicy"
+        },
+        "schedule": {
+            "value": {
+                "scheduleRunFrequency": "Daily",
+                "scheduleRunDays": null,
+                "scheduleRunTimes": [
+                    "2019-02-26T19:30:00.000Z"
+                ],
+                "schedulePolicyType": "SimpleSchedulePolicy"
+            }
+        },
+        "retention": {
+            "value": {
+                "dailySchedule": {
+                    "retentionTimes": [
+                        "2019-02-26T19:30:00.000Z"
+                    ],
+                    "retentionDuration": {
+                        "count": 180,
+                        "durationType": "Days"
+                    }
+                },
+                "weeklySchedule": null,
+                "monthlySchedule": null,
+                "yearlySchedule": null,
+                "retentionPolicyType": "LongTermRetentionPolicy"
+            }
+        },
+        "timeZone": {
+            "value": "UTC"
+        },
+        "fabricName": {
+            "value": "Azure"
+        },
+        "protectionContainers": {
+            "value": [
+                "iaasvmcontainer;iaasvmcontainerv2;postgreSQL;MyubuntuVM"
+            ]
+        },
+        "protectedItems": {
+            "value": [
+                "vm;iaasvmcontainerv2;postgreSQL;MyubuntuVM"
+            ]
+        },
+        "sourceResourceIds": {
+            "value": [
+                "/subscriptions/96105bd0-b016-4802-b122-3bd1d0215c0e/resourceGroups/postgreSQL/providers/Microsoft.Compute/virtualMachines/MyubuntuVM"
+            ]
+        }
+    }
+}

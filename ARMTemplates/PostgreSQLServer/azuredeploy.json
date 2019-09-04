@@ -1,0 +1,312 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+            "type": "string",
+            "metadata": {
+                "description": "User name for the Virtual Machine."
+            }
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "Password for the Virtual Machine."
+            }
+        },
+        "vmName": {
+            "defaultValue": "MyUbuntuVM",
+            "type": "string"
+        },
+        "dnsNamePrefix": {
+            "defaultValue": "pgsqlrestoretest",
+            "type": "string",
+            "metadata": {
+                "description": "DNS Name for the publicly accessible node. Must be lowercase. It should match with the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$ or it will raise an error."
+            }
+        },
+        "vmSize": {
+            "defaultValue": "Standard_A1",
+            "allowedValues": [
+                "Standard_A1",
+                "Standard_A2",
+                "Standard_A3",
+                "Standard_D1",
+                "Standard_D3",
+                "Standard_D4"
+            ],
+            "type": "string",
+            "metadata": {
+                "description": "The size of the virtual machines used when provisioning"
+            }
+        },
+        "ubuntuOSVersion": {
+            "defaultValue": "14.04.5-LTS",
+            "allowedValues": [
+                "12.04.5-LTS",
+                "14.04.5-LTS",
+                "15.10"
+            ],
+            "type": "string",
+            "metadata": {
+                "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values: 12.04.5-LTS, 14.04.5-LTS, 15.10."
+            }
+        },
+        "location": {
+            "defaultValue": "[resourceGroup().location]",
+            "type": "string",
+            "metadata": {
+                "description": "Location for all resources."
+            }
+        },
+        "vaultName": {
+            "defaultValue": "vault716",
+            "type": "string"
+        },
+        "vaultLocation": {
+            "defaultValue": "[resourceGroup().location]",
+            "type": "string"
+        },
+        "policyName": {
+            "defaultValue": "DailyPolicy",
+            "type": "string"
+        },
+        "schedule": {
+            "defaultValue": {
+                "scheduleRunFrequency": "Daily",
+                "scheduleRunDays": null,
+                "scheduleRunTimes": [
+                    "2019-02-26T19:30:00.000Z"
+                ],
+                "schedulePolicyType": "SimpleSchedulePolicy"
+            },
+            "type": "object"
+        },
+        "retention": {
+            "defaultValue": {
+                "dailySchedule": {
+                    "retentionTimes": [
+                        "2019-02-26T19:30:00.000Z"
+                    ],
+                    "retentionDuration": {
+                        "count": 180,
+                        "durationType": "Days"
+                    }
+                },
+                "weeklySchedule": null,
+                "monthlySchedule": null,
+                "yearlySchedule": null,
+                "retentionPolicyType": "LongTermRetentionPolicy"
+            },
+            "type": "object"
+        },
+        "timeZone": {
+            "defaultValue": "UTC",
+            "type": "string"
+        }
+    },
+    "variables": {
+        "imagePublisher": "Canonical",
+        "imageOffer": "UbuntuServer",
+        "nicName": "myVMNic",
+        "addressPrefix": "10.0.0.0/16",
+        "subnetName": "Subnet",
+        "subnetPrefix": "10.0.0.0/24",
+        "storageAccountName": "[toLower(substring(concat(uniquestring(resourceGroup().id), 'standardsa'), 0, 15))]",
+        "storageAccountType": "Standard_LRS",
+        "storageAccountKind": "StorageV2",
+        "storageAccountAccessTier": "Cool",
+        "publicIPAddressName": "myPublicIP",
+        "publicIPAddressType": "Dynamic",
+        "virtualNetworkName": "MyVNET",
+        "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+        "protectedItems": [
+            "[concat('vm;iaasvmcontainerv2;', resourceGroup().name, ';', parameters('vmName'))]"
+        ],
+        "sourceResourceIds": [
+            "[resourceId('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
+        ],
+        "fabricName": "Azure",
+        "protectionContainers": [
+                "[concat('iaasvmcontainer;iaasvmcontainerv2;', resourceGroup().name, ';', parameters('vmName'))]"
+            ]
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "[variables('storageAccountType')]"
+            },
+            "kind": "[variables('storageAccountKind')]",
+            "name": "[variables('storageAccountName')]",
+            "apiVersion": "2018-07-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "accessTier": "[variables('storageAccountAccessTier')]",
+                "supportsHttpsTrafficOnly": true
+            }
+        },
+        {
+            "type": "Microsoft.Network/publicIPAddresses",
+            "name": "[variables('publicIPAddressName')]",
+            "apiVersion": "2015-06-15",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+                "dnsSettings": {
+                    "domainNameLabel": "[parameters('dnsNamePrefix')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[variables('virtualNetworkName')]",
+            "apiVersion": "2015-06-15",
+            "location": "[parameters('location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('addressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('subnetName')]",
+                        "properties": {
+                            "addressPrefix": "[variables('subnetPrefix')]"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "[variables('nicName')]",
+            "apiVersion": "2015-06-15",
+            "location": "[parameters('location')]",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
+                            },
+                            "subnet": {
+                                "id": "[variables('subnetRef')]"
+                            }
+                        }
+                    }
+                ]
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
+                "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[parameters('vmName')]",
+            "apiVersion": "2017-03-30",
+            "location": "[parameters('location')]",
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "[parameters('vmSize')]"
+                },
+                "osProfile": {
+                    "computerName": "[parameters('vmName')]",
+                    "adminUsername": "[parameters('adminUsername')]",
+                    "adminPassword": "[parameters('adminPassword')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "[variables('imagePublisher')]",
+                        "offer": "[variables('imageOffer')]",
+                        "sku": "[parameters('ubuntuOSVersion')]",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "name": "[concat(parameters('vmName'),'_OSDisk')]",
+                        "caching": "ReadWrite",
+                        "createOption": "FromImage"
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
+                        }
+                    ]
+                }
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[concat(parameters('vmName'),'/newuserscript')]",
+            "apiVersion": "2015-06-15",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "fileUris": [
+                        "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/postgresql-standalone-server-ubuntu/install_postgresql.sh"
+                    ],
+                    "commandToExecute": "bash install_postgresql.sh"
+                }
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults",
+            "sku": {
+                "name": "RS0",
+                "tier": "Standard"
+            },
+            "name": "[parameters('vaultName')]",
+            "apiVersion": "2016-06-01",
+            "location": "[parameters('vaultLocation')]",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "name": "[concat(parameters('vaultName'), '/', parameters('policyName'))]",
+            "apiVersion": "2016-06-01",
+            "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": "[parameters('schedule')]",
+                "retentionPolicy": "[parameters('retention')]",
+                "timeZone": "[parameters('timeZone')]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults', '/', parameters('vaultName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+            "name": "[concat(parameters('vaultName'), '/', variables('fabricName'), '/',variables('protectionContainers')[copyIndex()], '/', variables('protectedItems')[copyIndex()])]",
+            "apiVersion": "2016-06-01",
+            "copy": {
+                "name": "protectedItemsCopy",
+                "count": "[length(variables('protectedItems'))]"
+            },
+            "properties": {
+                "protectedItemType": "Microsoft.Compute/virtualMachines",
+                "policyId": "[resourceId('Microsoft.RecoveryServices/vaults/backupPolicies', parameters('vaultName'), parameters('policyName'))]",
+                "sourceResourceId": "[variables('sourceResourceIds')[copyIndex()]]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults', '/', parameters('vaultName'), '/backupPolicies/', parameters('policyName'))]",
+                "[concat('Microsoft.Compute/virtualMachines/', parameters('vmName'))]"
+            ]
+        }
+    ]
+}

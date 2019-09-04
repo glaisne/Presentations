@@ -1,0 +1,86 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vaultName": {
+            "type": "String"
+        },
+        "vaultRG": {
+            "type": "String"
+        },
+        "vaultSubID": {
+            "type": "String"
+        },
+        "vaultLocation": {
+            "type": "String"
+        },
+        "policyName": {
+            "type": "String"
+        },
+        "schedule": {
+            "type": "Object"
+        },
+        "retention": {
+            "type": "Object"
+        },
+        "timeZone": {
+            "type": "String"
+        },
+        "fabricName": {
+            "type": "String"
+        },
+        "protectionContainers": {
+            "type": "Array"
+        },
+        "protectedItems": {
+            "type": "Array"
+        },
+        "sourceResourceIds": {
+            "type": "Array"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.RecoveryServices/vaults",
+            "sku": {
+                "name": "RS0",
+                "tier": "Standard"
+            },
+            "name": "[parameters('vaultName')]",
+            "apiVersion": "2016-06-01",
+            "location": "[parameters('vaultLocation')]",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "name": "[concat(parameters('vaultName'), '/', parameters('policyName'))]",
+            "apiVersion": "2016-06-01",
+            "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": "[parameters('schedule')]",
+                "retentionPolicy": "[parameters('retention')]",
+                "timeZone": "[parameters('timeZone')]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults', '/', parameters('vaultName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+            "name": "[concat(parameters('vaultName'), '/', parameters('fabricName'), '/',parameters('protectionContainers')[copyIndex()], '/', parameters('protectedItems')[copyIndex()])]",
+            "apiVersion": "2016-06-01",
+            "copy": {
+                "name": "protectedItemsCopy",
+                "count": "[length(variables('protectedItems'))]"
+            },
+            "properties": {
+                "protectedItemType": "Microsoft.ClassicCompute/virtualMachines",
+                "policyId": "[resourceId('Microsoft.RecoveryServices/vaults/backupPolicies', parameters('vaultName'), parameters('policyName'))]",
+                "sourceResourceId": "[parameters('sourceResourceIds')[copyIndex()]]"
+            },
+            "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults', '/', parameters('vaultName'), '/backupPolicies/', parameters('policyName'))]"
+            ]
+        }
+    ]
+}
