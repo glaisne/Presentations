@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "Gene"
+    },
+    "adminPassword": {
+      "value": "Password!101"
+    },
+    "location": {
+        "value": "East US"
+    },
+    "VMSize": {
+      "value": "Standard_A2"
+    },
+    "VMName": {
+        "value": null
+    },
+    "ImageVersion": {
+      "value": "2019.0.20181107"
+    },
+    "dnsLabelPrefix": {
+      "value": "gene"
+    },
+    "KeyVaultName": {
+        "value": null
+    },
+    "CertificateUrl": {
+        "value": null
+    },
+    "NSGSourceIP": {
+      "value": null
+    }
+  }
+}

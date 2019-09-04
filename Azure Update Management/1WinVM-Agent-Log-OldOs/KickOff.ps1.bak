@@ -1,0 +1,192 @@
+<############################################################
+This arm template is for a VM which is configured with 
+the VMAgent and a Log Analytic. The Agent is configured
+to send update inforamtion to the Log Analytic
+
+# Extension Install reference:
+# https://github.com/Azure/azure-quickstart-templates/tree/master/201-oms-extension-windows-vm
+
+#############################################################>
+
+
+#-----------------------------
+# Variables
+#-----------------------------
+
+
+$SubscriptionName = 'Visual Studio Enterprise'
+
+$Attempt = 'c'
+$purpose = 'Create ARM Template with agent and log' # removed the etag
+
+$TemplateFile = "$pwd\azuredeploy.json"
+$rgname = "ARMTempUpdate$Attempt" # working on better OUs & Autoshutdown
+#$saname = "genesyssa$Attempt"     # Lowercase required
+$VMName = 'Server'
+$location = 'East US'
+$KeyVaultName = "$($rgname.replace('.',''))-$(get-random -min 1000 -max 9999)-kv"  # Must match pattern '^[a-zA-Z0-9-]{3,24}$'
+$certificateName = "Azure-$rgname-SSCert" # SSCert = 'Self-Signed Certificate'
+$adminUsername = 'Gene'
+$WindowsOSVersion = '2019-Datacenter'
+$LogAnalyticName = "$($rgname.replace('.',''))-$(get-random -min 1000 -max 9999)-la"
+
+
+if ($keyVaultName -notmatch '^[a-zA-Z0-9-]{3,24}$')
+{
+    Throw "The keyVaultName odes not match the pattern '^[a-zA-Z0-9-]{3,24}$'"
+}
+
+if ($VMName.length -gt 15)
+{
+    Throw "VMName ($VMName) is longer than 15 characters."
+}
+
+#-----------------------------
+# Functions
+#-----------------------------
+
+
+function GetMyIp()
+{
+    # Get local IP Address
+    $url = "http://checkip.dyndns.com"
+    $r = Invoke-WebRequest $url
+    $r.ParsedHtml.getElementsByTagName("body")[0].innertext.trim().split(' ')[-1]
+}
+
+
+#-----------------------------
+# Main
+#-----------------------------
+
+
+#
+#    Setup Azure Environment
+#
+
+
+# Import AzureRM modules for the given version manifest in the AzureRM module
+if (-not $(get-module AzureRm))
+{
+    Import-Module AzureRm -Verbose
+}
+
+# Authenticate to your Azure account
+# Login-AzureRmAccount
+
+Select-AzureRmSubscription -SubscriptionName $SubscriptionName
+
+# Create the new resource group.
+if (-not [string]::isnullorempty($purpose))
+{
+    New-AzureRmResourceGroup -Name $rgname -Location $Location -Verbose -Tag @{purpose = $purpose}
+}
+else
+{
+    New-AzureRmResourceGroup -Name $rgname -Location $Location -Verbose 
+}
+
+# Create a Key Vault
+$NewVault = New-AzureRmKeyVault -VaultName $KeyVaultName -ResourceGroupName $rgname -Location $location -EnabledForDeployment -EnabledForTemplateDeployment
+
+Write-Warning "[$(Get-Date -format G)] message"
+
+#
+#    Create Certificate
+#
+
+
+# Create a self-signed certificate to add to the Key Vault
+$certificatefilePath = "$env:temp\$certificateName_$(get-date -f 'MMddyyyyHHmmss')$Attempt.pfx"
+$thumbprint = (New-SelfSignedCertificate -DnsName $certificateName -CertStoreLocation Cert:\CurrentUser\My -KeySpec KeyExchange).Thumbprint
+$cert = (Get-ChildItem -Path cert:\CurrentUser\My\$thumbprint)
+$cred = $([System.Management.Automation.PSCredential]::new('gene', $(ConvertTo-SecureString -String 'Password!101' -AsPlainText -Force)))
+#$password = convertto-securestring -string $($cred.GetNetworkCredential().Password) -AsPlainText -Force
+$password = $cred.Password
+
+# $password = Read-Host -Prompt "Please enter the certificate password." -AsSecureString
+Export-PfxCertificate -Cert $cert -FilePath $certificatefilePath -Password $password -Force
+
+# Upload the self-signed certificate to the Key Vault
+$fileContentBytes = Get-Content $certificatefilePath -Encoding Byte
+$fileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
+
+$jsonObject = @"
+{
+  "data": "$filecontentencoded",
+  "dataType" :"pfx",
+  "password": "$($cred.GetNetworkCredential().Password)"
+}
+"@
+
+$jsonObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($jsonObject)
+$jsonEncoded = [System.Convert]::ToBase64String($jsonObjectBytes)
+
+# Add the secret to the KeyVault
+$secret = ConvertTo-SecureString -String $jsonEncoded -AsPlainText -Force
+$SecretName = "$($rgname.replace('.',''))`-Secret"
+$newSecret = Set-AzureKeyVaultSecret -VaultName $KeyVaultName -Name $SecretName -SecretValue $secret
+
+
+
+#
+#    Setup Arm Template
+#
+
+
+# Get local public IP Address
+$LocalIP = GetMyIp
+
+# Parameters for the template and configuration
+$MyParams = @{
+    # storageAccount_name = $saname
+    location        = $location
+    VMName          = $VMName
+    CertificateUrl  = $newSecret.id
+    KeyVaultName    = $KeyVaultName
+    NSGSourceIP     = $LocalIP
+    adminUsername   = $adminUsername
+    dnsLabelPrefix  = "$VMName$(get-random -min 1000 -max 9999)".toLower()
+    LogAnalyticName = $LogAnalyticName
+}
+
+if ($WindowsOSVersion)
+{
+    $MyParams.Add('WindowsOSVersion', $WindowsOSVersion)
+}
+
+if ($MyParams['dnsLabelPrefix'] -cnotmatch '^[a-z][a-z0-9-]{1,61}[a-z0-9]$')
+{
+    Throw 'dnsLabelPrefix does not match "^[a-z][a-z0-9-]{1,61}[a-z0-9]$"'
+}
+
+# Splat the parameters on New-AzureRmResourceGroupDeployment
+$SplatParams = @{
+    TemplateFile            = $TemplateFile
+    ResourceGroupName       = $rgname
+    TemplateParameterObject = $MyParams
+    Name                    = 'Win2016VM'
+    adminPassword           = $Cred.Password
+}
+
+# test first
+
+$TestParams = $splatParams
+$TestParams.Remove('Name')
+# $TestParams.Remove('adminPassword')
+
+$global:results = Test-AzureRmResourceGroupDeployment @TestParams -Verbose
+
+$Global:results |fl * -force
+
+
+# One prompt for the domain admin password
+try
+{
+    New-AzureRmResourceGroupDeployment @SplatParams -Verbose -DeploymentDebugLogLevel All -ErrorAction Stop
+}
+catch
+{
+    throw $_
+}
+
