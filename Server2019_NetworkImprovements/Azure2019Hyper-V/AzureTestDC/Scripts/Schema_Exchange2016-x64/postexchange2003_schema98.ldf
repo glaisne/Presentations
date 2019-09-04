@@ -1,0 +1,312 @@
+dn: CN=ms-Exch-Transport-Rule,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: possSuperiors
+possSuperiors: msExchContainer
+-
+
+
+dn: CN=ms-Exch-Auth-Auth-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAuthApplicationIdentifier
+-
+
+
+dn: CN=ms-Exch-Auth-Auth-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAuthNextEffectiveDate
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchConfigurationXML
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationUpgradeRequest
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationUpgradeStatus
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchConfigurationXML
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMEnabledFlags
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: mDBOverHardQuotaLimit
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: mDBOverQuotaLimit
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: mDBStorageQuota
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOverallAgeLimit
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPublicFolderDeletedItemRetention
+-
+
+
+dn: CN=ms-Exch-Transport-Rule,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportRuleExpireTime
+-
+
+
+dn: CN=ms-Exch-Transport-Rule,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportRuleTargetLink
+-
+
+
+dn: CN=ms-Exch-Transport-Rule,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportRuleVersion
+-
+
+
+dn: CN=Top,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportRuleTargetBL
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Coexistence-Edge-Transport-Servers,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Coexistence-Edge-Transport-Servers
+adminDisplayName: ms-Exch-Coexistence-Edge-Transport-Servers
+attributeID: 1.2.840.113556.1.4.7000.102.52104
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchCoexistenceEdgeTransportServers
+name: ms-Exch-Coexistence-Edge-Transport-Servers
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: r77sx4GrMUeTGvTNMDJUQA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Database-Group,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Database-Group
+adminDisplayName: ms-Exch-Database-Group
+attributeID: 1.2.840.113556.1.4.7000.102.52102
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchDatabaseGroup
+name: ms-Exch-Database-Group
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 64
+schemaIdGuid:: 5UHRxtitC0uQL/QuwAQxyw==
+searchFlags: 1
+
+
+dn: CN=ms-Exch-Smtp-Tls-Senders-Certificate-Name,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Smtp-Tls-Senders-Certificate-Name
+adminDisplayName: ms-Exch-Smtp-Tls-Senders-Certificate-Name
+attributeID: 1.2.840.113556.1.4.7000.102.52103
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchSmtpTlsSendersCertificateName
+name: ms-Exch-Smtp-Tls-Senders-Certificate-Name
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: 8rZBgptFFUeVGbN8ln9IrA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-MDB-Availability-Group-Configuration-Link,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Availability-Group-Configuration-Link
+adminDisplayName: ms-Exch-MDB-Availability-Group-Configuration-Link
+attributeID: 1.2.840.113556.1.4.7000.102.52100
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchMDBAvailabilityGroupConfigurationLink
+name: ms-Exch-MDB-Availability-Group-Configuration-Link
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1264
+schemaIdGuid:: zOtGpECfDEqrOS2ph90mjQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-MDB-Availability-Group-Configuration-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Availability-Group-Configuration-BL
+adminDisplayName: ms-Exch-MDB-Availability-Group-Configuration-BL
+attributeID: 1.2.840.113556.1.4.7000.102.52101
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchMDBAvailabilityGroupConfigurationBL
+name: ms-Exch-MDB-Availability-Group-Configuration-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 1265
+schemaIdGuid:: bkYm/p+N8ku//ou6+Nfa5g==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group-Configuration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Availability-Group-Configuration
+adminDisplayName: ms-Exch-MDB-Availability-Group-Configuration
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50198
+lDAPDisplayName: msExchMDBAvailabilityGroupConfiguration
+name: ms-Exch-MDB-Availability-Group-Configuration
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: TgmKRbQegkmFlNqLJE9DvQ==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: msExchMDBAvailabilityGroupContainer
+mayContain: msExchConfigurationXML
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Smtp-Receive-Tls-Domain-Capabilities,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 1024
+-
+
+
+dn: CN=ms-Exch-Coexistence-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCoexistenceEdgeTransportServers
+-
+
+
+dn: CN=ms-Exch-MDB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDatabaseGroup
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMDBAvailabilityGroupConfigurationLink
+-
+
+
+dn: CN=ms-Exch-Protocol-Cfg-SIP-FE-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMEnabledFlags
+-
+
+
+dn: CN=ms-Exch-Routing-SMTP-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpTLSCertificate
+-
+
+
+dn: CN=ms-Exch-Routing-SMTP-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpTlsSendersCertificateName
+-
+
+
+dn: CN=ms-Exch-SMTP-Inbound-Connector,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSmtpTlsSendersCertificateName
+-
+
+

@@ -1,0 +1,224 @@
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringCachedViaRPC
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringMailUpdateInterval
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringMailUpdateUnits
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringRPCUpdateInterval
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: monitoringRPCUpdateUnits
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPolicyList
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPolicyOptionList
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: promoExpiration
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: securityProtocol
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: trackingLogPathName
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: type
+-
+
+
+dn: CN=Computer,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchComponentStates
+-
+
+
+dn: CN=Domain-DNS,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPolicyList
+-
+
+
+dn: CN=DSA,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: fileVersion
+-
+
+
+dn: CN=Group-Of-Names,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: dLMemberRule
+-
+
+
+dn: CN=Group-Of-Names,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: hideDLMembership
+-
+
+
+dn: CN=Group-Of-Names,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: oOFReplyToOriginator
+-
+
+
+dn: CN=Group-Of-Names,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: reportToOriginator
+-
+
+
+dn: CN=Group-Of-Names,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: reportToOwner
+-
+
+
+dn: CN=NTDS-DSA,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: deliveryMechanism
+-
+
+
+dn: CN=NTDS-DSA,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: diagnosticRegKey
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchConferenceZoneBL
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMCUHostsSitesBL
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportSiteFlags
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchVersion
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPartnerId
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMinorPartnerId
+-
+
+
+dn: CN=Site,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchResponsibleForSites
+-
+
+
+dn: CN=Sam-Domain,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAddGroupsToToken
+-
+
+
+dn: CN=Site-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCost
+-
+
+
+dn: CN=Site-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchVersion
+-
+
+
+dn: CN=Site-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: delivContLength
+-
+
+

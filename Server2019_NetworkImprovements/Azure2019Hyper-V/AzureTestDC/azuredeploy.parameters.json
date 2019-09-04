@@ -1,0 +1,58 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+          "value": "gene"
+        },
+        "adminPassword": {
+          "value": "Password!101"
+        },
+        "location": {
+            "value": "East US"
+        },
+        "adVMName": {
+            "value": null
+        },
+        "virtualNetworks_adVNET_name": {
+            "value": null
+        },
+        "networkInterfaces_adNic_name": {
+            "value": null
+        },
+        "publicIPAddresses_adPublicIP_name": {
+            "value": null
+        },
+        "schedules_shutdown_computevm_advm_name": {
+            "value": null
+        },
+        "subnets_adSubnet_name": {
+            "value": null
+        },
+        "extensions_CreateADForest_name": {
+            "value": null
+        },
+        "inboundNatRules_adRDP_name": {
+            "value": null
+        },
+        "inboundNatRules_adWinRM_name": {
+            "value": null
+        },
+        "addnsName": {
+          "value": null
+        },
+        "KeyVaultName": {
+            "value": null
+        },
+        "CertificateUrl": {
+            "value": null
+        },
+        "NSGSourceIP": {
+            "value": null
+        },
+        "schedules_shutdown_computevm_testdc_name": {
+            "Value": "shutdown-computevm-testdc",
+            "type": "String"
+        },
+    }
+}

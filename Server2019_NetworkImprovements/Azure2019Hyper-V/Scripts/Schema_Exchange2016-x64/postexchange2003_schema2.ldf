@@ -1,0 +1,441 @@
+dn: CN=ms-Exch-UM-IP-Gateway-Dial-Plan-Link,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-IP-Gateway-Dial-Plan-Link
+adminDisplayName: ms-Exch-UM-IP-Gateway-Dial-Plan-Link
+attributeID: 1.2.840.113556.1.4.7000.102.50394
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMIPGatewayDialPlanLink
+name: ms-Exch-UM-IP-Gateway-Dial-Plan-Link
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 2064
+schemaIdGuid:: rehsi3diHkW7VdO+O88uCQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-IP-Gateway-Dial-Plan-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-IP-Gateway-Dial-Plan-BL
+adminDisplayName: ms-Exch-UM-IP-Gateway-Dial-Plan-BL
+attributeID: 1.2.840.113556.1.4.7000.102.50395
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMIPGatewayDialPlanBL
+name: ms-Exch-UM-IP-Gateway-Dial-Plan-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 2065
+schemaIdGuid:: wgPKrSqB+kuIk16SRbS7zQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-IP-Gateway-Server-Link,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-IP-Gateway-Server-Link
+adminDisplayName: ms-Exch-UM-IP-Gateway-Server-Link
+attributeID: 1.2.840.113556.1.4.7000.102.50396
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMIPGatewayServerLink
+name: ms-Exch-UM-IP-Gateway-Server-Link
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 2066
+schemaIdGuid:: 9+sl3SLxq0qjKZFyFjLj+w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-IP-Gateway-Server-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-IP-Gateway-Server-BL
+adminDisplayName: ms-Exch-UM-IP-Gateway-Server-BL
+attributeID: 1.2.840.113556.1.4.7000.102.50397
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMIPGatewayServerBL
+name: ms-Exch-UM-IP-Gateway-Server-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 2067
+schemaIdGuid:: KMTP1IW7qkeOwSeM6siNaA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant-Dial-Plan-Link,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Auto-Attendant-Dial-Plan-Link
+adminDisplayName: ms-Exch-UM-Auto-Attendant-Dial-Plan-Link
+attributeID: 1.2.840.113556.1.4.7000.102.50398
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMAutoAttendantDialPlanLink
+name: ms-Exch-UM-Auto-Attendant-Dial-Plan-Link
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 2068
+schemaIdGuid:: zX1AHlR1zEqa19sAHcmVQg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant-Dial-Plan-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Auto-Attendant-Dial-Plan-BL
+adminDisplayName: ms-Exch-UM-Auto-Attendant-Dial-Plan-BL
+attributeID: 1.2.840.113556.1.4.7000.102.50399
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMAutoAttendantDialPlanBL
+name: ms-Exch-UM-Auto-Attendant-Dial-Plan-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID: 2069
+schemaIdGuid:: V6I75QAdZUKfIZ3CyzD+sg==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Recipient-Template
+adminDisplayName: ms-Exch-Recipient-Template
+defaultHidingValue: TRUE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50048
+lDAPDisplayName: msExchRecipientTemplate
+name: ms-Exch-Recipient-Template
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 2
+rDNAttID: cn
+schemaIdGuid:: dnI3BSo/ekyQ1hDaU+hKYg==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+mustContain: msExchRecipientTemplateFlags
+mayContain: msExchMinAdminVersion
+
+
+dn: CN=ms-Exch-Resource-Schema,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Resource-Schema
+adminDisplayName: ms-Exch-Resource-Schema
+defaultHidingValue: TRUE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50047
+lDAPDisplayName: msExchResourceSchema
+name: ms-Exch-Resource-Schema
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: EdNJrXyVzUO3zdAFqGir7g==
+subClassOf: top
+possSuperiors: container
+mayContain: msExchResourceLocationSchema
+mayContain: msExchResourcePropertySchema
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Auto-Attendant
+adminDisplayName: ms-Exch-UM-Auto-Attendant
+defaultHidingValue: FALSE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50054
+lDAPDisplayName: msExchUMAutoAttendant
+name: ms-Exch-UM-Auto-Attendant
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: 9ZuEoEF3IkSiLa6LCOFW3w==
+subClassOf: top
+possSuperiors: container
+mayContain: msExchUMAutoAttendantAfterHourFeatures
+mayContain: msExchUMAutoAttendantBusinessHourFeatures
+mayContain: msExchUMAutoAttendantBusinessHourSchedule
+mayContain: msExchUMAutoAttendantDialPlanLink
+mayContain: msExchUMAutoAttendantDialedNumbers
+mayContain: msExchUMAutoAttendantFlags
+mayContain: msExchUMAutoAttendantHolidaySchedule
+mayContain: msExchUMAutoAttendantTimeZone
+mayContain: msExchUMAvailableLanguages
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Dial-Plan
+adminDisplayName: ms-Exch-UM-Dial-Plan
+defaultHidingValue: FALSE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50052
+lDAPDisplayName: msExchUMDialPlan
+name: ms-Exch-UM-Dial-Plan
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: T9kP328SvUKgL6oLrFox1w==
+subClassOf: top
+possSuperiors: container
+mustContain: msExchUMNumberingPlanDigits
+mayContain: msExchUMAudioCodec
+mayContain: msExchUMAvailableLanguages
+mayContain: msExchUMAvailableTTSLanguages
+mayContain: msExchUMCallFailuresToDisconnect
+mayContain: msExchUMDefaultLanguage
+mayContain: msExchUMDefaultTTSLanguage
+mayContain: msExchUMDialByNamePrimary
+mayContain: msExchUMDialByNameSecondary
+mayContain: msExchUMFaxEnabled
+mayContain: msExchUMInputRetries
+mayContain: msExchUMInputTimeout
+mayContain: msExchUMIPGatewayDialPlanBL
+mayContain: msExchUMMaxCallDuration
+mayContain: msExchUMMaxRecordingDuration
+mayContain: msExchUMRecipientDialPlanBL
+mayContain: msExchUMRecordingIdleTimeout
+mayContain: msExchUMResetPasswordValue
+mayContain: msExchUMServerDialPlanBL
+mayContain: msExchUMTrunkAccessCode
+mayContain: msExchUMVoiceMailOriginator
+mayContain: msExchUMVoiceMailPilotNumbers
+
+
+dn: CN=ms-Exch-UM-IP-Gateway,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-IP-Gateway
+adminDisplayName: ms-Exch-UM-IP-Gateway
+defaultHidingValue: FALSE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50053
+lDAPDisplayName: msExchUMIPGateway
+name: ms-Exch-UM-IP-Gateway
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: UGN4L58GoUakoqkrvFQZFQ==
+subClassOf: top
+possSuperiors: container
+mayContain: msExchUMHuntGroupNumber
+mayContain: msExchUMIPGatewayAddress
+mayContain: msExchUMIPGatewayDialPlanLink
+mayContain: msExchUMIPGatewayServerLink
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Mailbox-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mailbox-Recipient-Template
+adminDisplayName: ms-Exch-Mailbox-Recipient-Template
+defaultHidingValue: FALSE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.2.50049
+lDAPDisplayName: msExchMailboxRecipientTemplate
+name: ms-Exch-Mailbox-Recipient-Template
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: lCZTeXBheU2ERHax0uEDiQ==
+subClassOf: msExchRecipientTemplate
+possSuperiors: container
+mayContain: msExchELCFolderLink
+mayContain: msExchMailboxTemplateBL
+
+
+dn: CN=ms-Exch-UM-Recipient-Template,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Recipient-Template
+adminDisplayName: ms-Exch-UM-Recipient-Template
+defaultHidingValue: FALSE
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50051
+lDAPDisplayName: msExchUMRecipientTemplate
+name: ms-Exch-UM-Recipient-Template
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: Sf8yxt3VmE6Uuu+ZK1SLHw==
+subClassOf: msExchRecipientTemplate
+possSuperiors: container
+mayContain: msExchUMEnabledFlags
+mayContain: msExchUMEnabledText
+mayContain: msExchUMFaxId
+mayContain: msExchUMFaxMessageText
+mayContain: msExchUMMaxGreetingDuration
+mayContain: msExchUMOperatorNumber
+mayContain: msExchUMPinPolicyAccountLockoutFailures
+mayContain: msExchUMPinPolicyDisallowCommonPatterns
+mayContain: msExchUMPinPolicyExpiryDays
+mayContain: msExchUMPinPolicyMinPasswordLength
+mayContain: msExchUMResetPINText
+mayContain: msExchUMTemplateBL
+mayContain: msExchUMVoiceMailText
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=Locale-ID,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-ADC-Global-Names,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-AL-Object-Version,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Alt-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Alt-Recipient-BL,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Assistant-Name,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Attribute-Certificate,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Auth-Orig,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Auth-Orig-BL,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-AutoReply,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-AutoReply-Message,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Conference-Mailbox-BL,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Controlling-Zone,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Custom-Proxy-Addresses,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Deleted-Item-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Deliv-Cont-Length,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Deliv-Ext-Cont-Types,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Deliver-And-Redirect,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+

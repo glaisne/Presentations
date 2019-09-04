@@ -1,0 +1,570 @@
+dn: CN=ms-Exch-Exchange-RPC-Service-Array-BL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Exchange-RPC-Service-Array-BL
+adminDisplayName: ms-Exch-Exchange-RPC-Service-Array-BL
+attributeID: 1.2.840.113556.1.4.7000.102.51062
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchExchangeRPCServiceArrayBL
+name: ms-Exch-Exchange-RPC-Service-Array-BL
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+linkID:1137
+schemaIdGuid:: Rg7BkJxSW0GN66w3+tEHVw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution
+adminDisplayName: ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution
+attributeID: 1.2.840.113556.1.4.7000.102.51147
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchAllowHeuristicADCallingLineIdResolution
+name: ms-Exch-Allow-Heuristic-AD-Calling-Line-Id-Resolution
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: +p/WbXs0Lkq3ONWslQZBsA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-System-Address-List,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-System-Address-List
+adminDisplayName: ms-Exch-System-Address-List
+attributeID: 1.2.840.113556.1.4.7000.102.51148
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSystemAddressList
+name: ms-Exch-System-Address-List
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: vx/oIuwzH0qEvwTCiTcvfw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Calling-Line-ID-Formats,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Calling-Line-ID-Formats
+adminDisplayName: ms-Exch-UM-Calling-Line-ID-Formats
+attributeID: 1.2.840.113556.1.4.7000.102.51146
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMCallingLineIDFormats
+name: ms-Exch-UM-Calling-Line-ID-Formats
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 128
+schemaIdGuid:: wJe5egrR7ke0XdeczgtO7g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Calling-Line-IDs,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Calling-Line-IDs
+adminDisplayName: ms-Exch-UM-Calling-Line-IDs
+attributeID: 1.2.840.113556.1.4.7000.102.51145
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMCallingLineIDs
+name: ms-Exch-UM-Calling-Line-IDs
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 128
+schemaIdGuid:: G+5FFiHMH0CX0hZKeHcwEw==
+searchFlags: 1
+
+
+dn: CN=ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts
+adminDisplayName: ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts
+attributeID: 1.2.840.113556.1.4.7000.102.51144
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchUMEquivalentDialPlanPhoneContexts
+name: ms-Exch-UM-Equivalent-Dial-Plan-Phone-Contexts
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: dpV4GxZ2ZEmx5fHOS9FPdg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Protect-Authenticated-Voice-Mail,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Protect-Authenticated-Voice-Mail
+adminDisplayName: ms-Exch-UM-Protect-Authenticated-Voice-Mail
+attributeID: 1.2.840.113556.1.4.7000.102.51064
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMProtectAuthenticatedVoiceMail
+name: ms-Exch-UM-Protect-Authenticated-Voice-Mail
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: sWlCKRODkk2zzBqrXOlBpA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Protect-Unauthenticated-Voice-Mail,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Protect-Unauthenticated-Voice-Mail
+adminDisplayName: ms-Exch-UM-Protect-Unauthenticated-Voice-Mail
+attributeID: 1.2.840.113556.1.4.7000.102.51063
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMProtectUnauthenticatedVoiceMail
+name: ms-Exch-UM-Protect-Unauthenticated-Voice-Mail
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: XLuCh37eN0SmzXOcT7skmA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Protected-Voice-Mail-Text,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Protected-Voice-Mail-Text
+adminDisplayName: ms-Exch-UM-Protected-Voice-Mail-Text
+attributeID: 1.2.840.113556.1.4.7000.102.51066
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMProtectedVoiceMailText
+name: ms-Exch-UM-Protected-Voice-Mail-Text
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 4096
+schemaIdGuid:: lGNO9XKitU6j8qyBFVo9Bw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-UM-Require-Protected-Play-On-Phone,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-UM-Require-Protected-Play-On-Phone
+adminDisplayName: ms-Exch-UM-Require-Protected-Play-On-Phone
+attributeID: 1.2.840.113556.1.4.7000.102.51065
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchUMRequireProtectedPlayOnPhone
+name: ms-Exch-UM-Require-Protected-Play-On-Phone
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 3YH6Zes4+kOwceHpzMGWjg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Aggregation-Subscription-Credential,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Aggregation-Subscription-Credential
+adminDisplayName: ms-Exch-Aggregation-Subscription-Credential
+attributeID: 1.2.840.113556.1.4.7000.102.51149
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: msExchAggregationSubscriptionCredential
+name: ms-Exch-Aggregation-Subscription-Credential
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: mIZWhMt/zkiQ/3AEJ9kNMA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Assembly,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Assembly
+adminDisplayName: ms-Exch-Assembly
+attributeID: 1.2.840.113556.1.4.7000.102.51137
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchAssembly
+name: ms-Exch-Assembly
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 255
+schemaIdGuid:: 6d9Wy2cu/EayMHrGxuFW4w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Class-Factory,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Class-Factory
+adminDisplayName: ms-Exch-Class-Factory
+attributeID: 1.2.840.113556.1.4.7000.102.51138
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchClassFactory
+name: ms-Exch-Class-Factory
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 512
+schemaIdGuid:: xXaeKud1tkmkTP7josCH2w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Cmdlet-Extension-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Cmdlet-Extension-Flags
+adminDisplayName: ms-Exch-Cmdlet-Extension-Flags
+attributeID: 1.2.840.113556.1.4.7000.102.51139
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCmdletExtensionFlags
+name: ms-Exch-Cmdlet-Extension-Flags
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: AGxiupneA0+l0vteSop2rQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-EAS-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-EAS-Throttling-Policy-State
+adminDisplayName: ms-Exch-EAS-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51155
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEASThrottlingPolicyState
+name: ms-Exch-EAS-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: 0D1wv8TS90+iYLg+lSIBLw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-EWS-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-EWS-Throttling-Policy-State
+adminDisplayName: ms-Exch-EWS-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51156
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchEWSThrottlingPolicyState
+name: ms-Exch-EWS-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: MkQY0NJ3FEqXJ67ajDhkCA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-General-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-General-Throttling-Policy-State
+adminDisplayName: ms-Exch-General-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51162
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchGeneralThrottlingPolicyState
+name: ms-Exch-General-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: rGC4ZC6cr066YXBE/qMNPQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-IMAP-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-IMAP-Throttling-Policy-State
+adminDisplayName: ms-Exch-IMAP-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51157
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchIMAPThrottlingPolicyState
+name: ms-Exch-IMAP-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: J8VqrQWDCU2H5wGKkSH12Q==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-OWA-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-OWA-Throttling-Policy-State
+adminDisplayName: ms-Exch-OWA-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51158
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchOWAThrottlingPolicyState
+name: ms-Exch-OWA-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: 28t6YBCTD0yc8E55UOWerg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-POP-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-POP-Throttling-Policy-State
+adminDisplayName: ms-Exch-POP-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51159
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchPOPThrottlingPolicyState
+name: ms-Exch-POP-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: /X5oPAiw6E6jCER2tJMlpQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Powershell-Throttling-Policy-State,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Powershell-Throttling-Policy-State
+adminDisplayName: ms-Exch-Powershell-Throttling-Policy-State
+attributeID: 1.2.840.113556.1.4.7000.102.51160
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchPowershellThrottlingPolicyState
+name: ms-Exch-Powershell-Throttling-Policy-State
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 512
+schemaIdGuid:: iNpgEyrT2UKheIDGGOz/RQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Provisioning-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Provisioning-Flags
+adminDisplayName: ms-Exch-Provisioning-Flags
+attributeID: 1.2.840.113556.1.4.7000.102.51143
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchProvisioningFlags
+name: ms-Exch-Provisioning-Flags
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: qQD+uFmOTU2JOYW3neTYzw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Send-As-Addresses,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Send-As-Addresses
+adminDisplayName: ms-Exch-Send-As-Addresses
+attributeID: 1.2.840.113556.1.4.7000.102.51150
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: msExchSendAsAddresses
+name: ms-Exch-Send-As-Addresses
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 2048
+schemaIdGuid:: SoyGuZSOlkyOWMjIRhW+kg==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Smtp-Receive-Max-Acknowledgement-Delay,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Smtp-Receive-Max-Acknowledgement-Delay
+adminDisplayName: ms-Exch-Smtp-Receive-Max-Acknowledgement-Delay
+attributeID: 1.2.840.113556.1.4.7000.102.51163
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSmtpReceiveMaxAcknowledgementDelay
+name: ms-Exch-Smtp-Receive-Max-Acknowledgement-Delay
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: XNoVBKJN4EyeboB93X4J7w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Throttling-Is-Default-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Throttling-Is-Default-Policy
+adminDisplayName: ms-Exch-Throttling-Is-Default-Policy
+attributeID: 1.2.840.113556.1.4.7000.102.51071
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchThrottlingIsDefaultPolicy
+name: ms-Exch-Throttling-Is-Default-Policy
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: Wg7IUS6tU0CI23R0e1I0aA==
+searchFlags: 3
+
+
+dn: CN=ms-Exch-Throttling-Policy-DN,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Throttling-Policy-DN
+adminDisplayName: ms-Exch-Throttling-Policy-DN
+attributeID: 1.2.840.113556.1.4.7000.102.51096
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchThrottlingPolicyDN
+name: ms-Exch-Throttling-Policy-DN
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: /aSHj8ENmUuLcqf61NJcHQ==
+searchFlags: 1
+
+
+dn: CN=ms-Exch-Transport-Delivery-Agent-Delivery-Protocol,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Delivery-Agent-Delivery-Protocol
+adminDisplayName: ms-Exch-Transport-Delivery-Agent-Delivery-Protocol
+attributeID: 1.2.840.113556.1.4.7000.102.51168
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportDeliveryAgentDeliveryProtocol
+name: ms-Exch-Transport-Delivery-Agent-Delivery-Protocol
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 256
+schemaIdGuid:: YGeH7ZpOu02144zmfDSlYA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Delivery-Agent-Max-Concurrent-Connections,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Delivery-Agent-Max-Concurrent-Connections
+adminDisplayName: ms-Exch-Transport-Delivery-Agent-Max-Concurrent-Connections
+attributeID: 1.2.840.113556.1.4.7000.102.51170
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportDeliveryAgentMaxConcurrentConnections
+name: ms-Exch-Transport-Delivery-Agent-Max-Concurrent-Connections
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: +R93rkkBkkC3c2Dzl679pA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Delivery-Agent-Max-Messages-Per-Connection,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Delivery-Agent-Max-Messages-Per-Connection
+adminDisplayName: ms-Exch-Transport-Delivery-Agent-Max-Messages-Per-Connection
+attributeID: 1.2.840.113556.1.4.7000.102.51169
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportDeliveryAgentMaxMessagesPerConnection
+name: ms-Exch-Transport-Delivery-Agent-Max-Messages-Per-Connection
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: VEo6sx5sV0OMWngH0rDPlw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Shadow-Heartbeat-Retry-Count,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Shadow-Heartbeat-Retry-Count
+adminDisplayName: ms-Exch-Transport-Shadow-Heartbeat-Retry-Count
+attributeID: 1.2.840.113556.1.4.7000.102.51167
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportShadowHeartbeatRetryCount
+name: ms-Exch-Transport-Shadow-Heartbeat-Retry-Count
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: KwXJtlYeL02C0vZts6uV7A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Shadow-Heartbeat-Timeout-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Shadow-Heartbeat-Timeout-Interval
+adminDisplayName: ms-Exch-Transport-Shadow-Heartbeat-Timeout-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.51166
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportShadowHeartbeatTimeoutInterval
+name: ms-Exch-Transport-Shadow-Heartbeat-Timeout-Interval
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: DI0XC4PFYUWK4QmW/wgLaw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Shadow-Message-AutoDiscard-Interval,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Shadow-Message-AutoDiscard-Interval
+adminDisplayName: ms-Exch-Transport-Shadow-Message-AutoDiscard-Interval
+attributeID: 1.2.840.113556.1.4.7000.102.51165
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportShadowMessageAutoDiscardInterval
+name: ms-Exch-Transport-Shadow-Message-AutoDiscard-Interval
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: hqKD8HemEUeuCk8van1cnA==
+searchFlags: 0
+
+

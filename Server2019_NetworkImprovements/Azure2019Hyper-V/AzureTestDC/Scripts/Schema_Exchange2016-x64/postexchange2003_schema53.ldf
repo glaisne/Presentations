@@ -1,0 +1,322 @@
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportServerStatisticsFileSize
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportServerStatisticsPath
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMSiteRedirectTarget
+-
+
+
+dn: CN=ms-Exch-Fed-Sharing-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFedLocalRecipientAddress
+-
+
+
+dn: CN=ms-Exch-Fed-Sharing-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFedRemoteTargetAddress
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMAddresses
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMMailboxOVALanguage
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMPhoneProvider
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAlternateFileShareWitness
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAlternateFileShareWitnessDirectory
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDatacenterActivationMode
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMDBAvailabilityGroupIPv4Addresses
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchStartedMailboxServers
+-
+
+
+dn: CN=ms-Exch-MDB-Availability-Group,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchStoppedMailboxServers
+-
+
+
+dn: CN=ms-Exch-Mobile-Mailbox-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMobileOTAUpdateMode
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationFlags
+-
+
+
+dn: CN=ms-Exch-Private-MDB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecoveryPointObjectiveInterADSite
+-
+
+
+dn: CN=ms-Exch-Private-MDB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecoveryPointObjectiveIntraADSite
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelationTags
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSharingRelationshipForExternalOrganizationEmail
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSupervisionListMaxLength
+-
+
+
+dn: CN=ms-Exch-Transport-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTransportSettingsAVFlags
+-
+
+
+dn: CN=ms-Exch-UM-Auto-Attendant,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMAutoAttendantPromptChangeKey
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMDialPlanDialedNumbers
+-
+
+
+dn: CN=ms-Exch-UM-Dial-Plan,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMDialPlanPromptChangeKey
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Assistants-Maintenance-Schedule,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Assistants-Maintenance-Schedule
+adminDisplayName: ms-Exch-Assistants-Maintenance-Schedule
+attributeID: 1.2.840.113556.1.4.7000.102.51395
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchAssistantsMaintenanceSchedule
+name: ms-Exch-Assistants-Maintenance-Schedule
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 84
+rangeUpper: 84
+schemaIdGuid:: dy18xIYYvEWSQJSvwNNwBw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Disabled,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Disabled
+adminDisplayName: ms-Exch-Calendar-Repair-Disabled
+attributeID: 1.2.840.113556.1.4.7000.102.51336
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairDisabled
+name: ms-Exch-Calendar-Repair-Disabled
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 3ZufRYwop0WrhWjWN/sztw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Flags
+adminDisplayName: ms-Exch-Calendar-Repair-Flags
+attributeID: 1.2.840.113556.1.4.7000.102.51340
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairFlags
+name: ms-Exch-Calendar-Repair-Flags
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: RO2PeuZyekijcA1yxsddbQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Interval-End-Window,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Interval-End-Window
+adminDisplayName: ms-Exch-Calendar-Repair-Interval-End-Window
+attributeID: 1.2.840.113556.1.4.7000.102.51337
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairIntervalEndWindow
+name: ms-Exch-Calendar-Repair-Interval-End-Window
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 3d+NWrCvn06+zYXhZhua6w==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Interval-Start-Window,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Interval-Start-Window
+adminDisplayName: ms-Exch-Calendar-Repair-Interval-Start-Window
+attributeID: 1.2.840.113556.1.4.7000.102.51338
+attributeSyntax: 2.5.5.16
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairIntervalStartWindow
+name: ms-Exch-Calendar-Repair-Interval-Start-Window
+oMSyntax: 65
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 55C4M7iRgEKKOzFjcBiOKw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Log-File-Age-Limit,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Log-File-Age-Limit
+adminDisplayName: ms-Exch-Calendar-Repair-Log-File-Age-Limit
+attributeID: 1.2.840.113556.1.4.7000.102.51341
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairLogFileAgeLimit
+name: ms-Exch-Calendar-Repair-Log-File-Age-Limit
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: rreGEPQ4KE+lPwCb2qPJLw==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Log-File-Size-Limit,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Log-File-Size-Limit
+adminDisplayName: ms-Exch-Calendar-Repair-Log-File-Size-Limit
+attributeID: 1.2.840.113556.1.4.7000.102.51342
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairLogFileSizeLimit
+name: ms-Exch-Calendar-Repair-Log-File-Size-Limit
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 4Fp3cvGYfUajU2SfC/LA9g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Calendar-Repair-Log-Path,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Calendar-Repair-Log-Path
+adminDisplayName: ms-Exch-Calendar-Repair-Log-Path
+attributeID: 1.2.840.113556.1.4.7000.102.51334
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchCalendarRepairLogPath
+name: ms-Exch-Calendar-Repair-Log-Path
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 260
+schemaIdGuid:: a3hHcH7ePEasLReoZwEAZA==
+searchFlags: 0
+
+

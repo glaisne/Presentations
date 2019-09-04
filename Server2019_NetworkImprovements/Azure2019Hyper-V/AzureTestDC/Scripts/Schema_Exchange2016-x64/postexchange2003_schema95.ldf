@@ -1,0 +1,307 @@
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantFlags
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantSafeLockdownSchedule
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantSourceForest
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantStartLockdown
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantStartRetired
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantStartSync
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantStatus
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantTargetForest
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRelocateTenantTransitionCounter
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSyncCookie
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAnonymousThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEASThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchEWSThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchGeneralThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchIMAPThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWAThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPOPThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchPowershellThrottlingPolicyStateEx
+-
+
+
+dn: CN=ms-Exch-Throttling-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRCAThrottlingPolicyStateEx
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Adfs-Authentication-Raw-Configuration,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Adfs-Authentication-Raw-Configuration
+adminDisplayName: ms-Exch-Adfs-Authentication-Raw-Configuration
+attributeID: 1.2.840.113556.1.4.7000.102.52066
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchAdfsAuthenticationRawConfiguration
+name: ms-Exch-Adfs-Authentication-Raw-Configuration
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 10240
+schemaIdGuid:: qv+lfuWK9UqPH+Uc0BvSfA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Service-End-Point-URL,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Service-End-Point-URL
+adminDisplayName: ms-Exch-Service-End-Point-URL
+attributeID: 1.2.840.113556.1.4.7000.102.52010
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.5
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchServiceEndPointURL
+name: ms-Exch-Service-End-Point-URL
+oMSyntax: 19
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 4096
+schemaIdGuid:: ikBVuPz74kCxOd7AxFonFw==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-Sync-Service-Instance-New-Tenant-Max-Version,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Sync-Service-Instance-New-Tenant-Max-Version
+adminDisplayName: ms-Exch-Sync-Service-Instance-New-Tenant-Max-Version
+attributeID: 1.2.840.113556.1.4.7000.102.52068
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSyncServiceInstanceNewTenantMaxVersion
+name: ms-Exch-Sync-Service-Instance-New-Tenant-Max-Version
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: w4sa789C0UekqKdpX1Az5A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Sync-Service-Instance-New-Tenant-Min-Version,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Sync-Service-Instance-New-Tenant-Min-Version
+adminDisplayName: ms-Exch-Sync-Service-Instance-New-Tenant-Min-Version
+attributeID: 1.2.840.113556.1.4.7000.102.52067
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchSyncServiceInstanceNewTenantMinVersion
+name: ms-Exch-Sync-Service-Instance-New-Tenant-Min-Version
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: cZ5cn0PVO0iwQBoxfjHTlA==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-MSO-Forward-Sync-Non-Recipient-Cookie,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 49152
+-
+
+
+dn: CN=ms-Exch-MSO-Forward-Sync-Recipient-Cookie,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 49152
+-
+
+
+dn: CN=ms-Exch-MSO-Sync-Service-Instance,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSyncServiceInstanceNewTenantMaxVersion
+-
+
+
+dn: CN=ms-Exch-MSO-Sync-Service-Instance,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSyncServiceInstanceNewTenantMinVersion
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAdfsAuthenticationRawConfiguration
+-
+
+
+dn: CN=ms-Exch-Organization-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchServiceEndPointURL
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Transport-Dumpster-Hold-Time,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Dumpster-Hold-Time
+adminDisplayName: ms-Exch-Transport-Dumpster-Hold-Time
+attributeID: 1.2.840.113556.1.4.7000.102.52069
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchTransportDumpsterHoldTime
+name: ms-Exch-Transport-Dumpster-Hold-Time
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: NHmyas1pnUW83ZMt9diYhQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Transport-Rule-Config,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Transport-Rule-Config
+adminDisplayName: ms-Exch-Transport-Rule-Config
+attributeID: 1.2.840.113556.1.4.7000.102.52072
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchTransportRuleConfig
+name: ms-Exch-Transport-Rule-Config
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 256
+schemaIdGuid:: DC12pIzf1EiiPM3uOEpF3Q==
+searchFlags: 16
+
+

@@ -1,0 +1,479 @@
+dn: CN=OM-Syntax,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Fax-Other,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Home-Other,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Mobile-Other,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Mobile-Primary,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Office-Other,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Pager-Other,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Phone-Pager-Primary,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Post-Office-Box,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Postal-Code,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Sub-Class-Of,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=WWW-Home-Page,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=WWW-Page-Other,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Assistant-Name,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Assistant-Name,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=Version-Number,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 8
+-
+
+
+dn: CN=Purported-Search,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 8
+-
+
+
+dn: CN=E-mail-Addresses,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 5
+-
+
+
+dn: CN=ms-Exch-LabeledURI,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-LabeledURI,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=Text-Country,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Locale-ID,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Address-Home,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Pwd-Last-Set,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=Object-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 9
+-
+
+
+dn: CN=State-Or-Province-Name,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 17
+-
+
+
+dn: CN=Alt-Security-Identities,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: searchFlags
+searchFlags: 9
+-
+
+
+dn: CN=Picture,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Custom-Attributes
+adminDisplayName: ms-Exch-Custom-Attributes
+defaultHidingValue: TRUE
+governsID: 1.2.840.113556.1.5.7000.62.6
+lDAPDisplayName: msExchCustomAttributes
+name: ms-Exch-Custom-Attributes
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 3
+rDNAttID: cn
+schemaIdGuid:: yCnmAIGp0hGp/wDAT47t2A==
+subClassOf: top
+mayContain: extensionAttribute1
+mayContain: extensionAttribute10
+mayContain: extensionAttribute11
+mayContain: extensionAttribute12
+mayContain: extensionAttribute13
+mayContain: extensionAttribute14
+mayContain: extensionAttribute15
+mayContain: extensionAttribute2
+mayContain: extensionAttribute3
+mayContain: extensionAttribute4
+mayContain: extensionAttribute5
+mayContain: extensionAttribute6
+mayContain: extensionAttribute7
+mayContain: extensionAttribute8
+mayContain: extensionAttribute9
+mayContain: msExchExtensionAttribute16
+mayContain: msExchExtensionAttribute17
+mayContain: msExchExtensionAttribute18
+mayContain: msExchExtensionAttribute19
+mayContain: msExchExtensionAttribute20
+mayContain: msExchExtensionAttribute21
+mayContain: msExchExtensionAttribute22
+mayContain: msExchExtensionAttribute23
+mayContain: msExchExtensionAttribute24
+mayContain: msExchExtensionAttribute25
+mayContain: msExchExtensionAttribute26
+mayContain: msExchExtensionAttribute27
+mayContain: msExchExtensionAttribute28
+mayContain: msExchExtensionAttribute29
+mayContain: msExchExtensionAttribute30
+mayContain: msExchExtensionAttribute31
+mayContain: msExchExtensionAttribute32
+mayContain: msExchExtensionAttribute33
+mayContain: msExchExtensionAttribute34
+mayContain: msExchExtensionAttribute35
+mayContain: msExchExtensionAttribute36
+mayContain: msExchExtensionAttribute37
+mayContain: msExchExtensionAttribute38
+mayContain: msExchExtensionAttribute39
+mayContain: msExchExtensionAttribute40
+mayContain: msExchExtensionAttribute41
+mayContain: msExchExtensionAttribute42
+mayContain: msExchExtensionAttribute43
+mayContain: msExchExtensionAttribute44
+mayContain: msExchExtensionAttribute45
+mayContain: msExchExtensionCustomAttribute1
+mayContain: msExchExtensionCustomAttribute2
+mayContain: msExchExtensionCustomAttribute3
+mayContain: msExchExtensionCustomAttribute4
+mayContain: msExchExtensionCustomAttribute5
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mail-Storage
+adminDisplayName: ms-Exch-Mail-Storage
+defaultHidingValue: TRUE
+governsID: 1.2.840.113556.1.5.7000.62.5
+lDAPDisplayName: msExchMailStorage
+name: ms-Exch-Mail-Storage
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 3
+rDNAttID: cn
+schemaIdGuid:: ACBlA4Gp0hGp/wDAT47t2A==
+subClassOf: top
+mayContain: garbageCollPeriod
+mayContain: autoReply
+mayContain: deletedItemFlags
+mayContain: homeMDB
+mayContain: msExchHomeServerName
+mayContain: mDBOverHardQuotaLimit
+mayContain: mDBOverQuotaLimit
+mayContain: mDBStorageQuota
+mayContain: mDBUseDefaults
+mayContain: msExchMailboxGuid
+mayContain: msExchUseOAB
+mayContain: msExchMailboxUrl
+mayContain: msExchPfRootUrl
+mayContain: msExchMailboxTemplateLink
+mayContain: msExchUMEnabledFlags
+mayContain: msExchUMFaxId
+mayContain: msExchUMMaxGreetingDuration
+mayContain: msExchUMOperatorNumber
+mayContain: msExchUMPinChecksum
+mayContain: msExchUMTemplateLink
+mayContain: msExchExternalOOFOptions
+mayContain: msExchMailboxOABVirtualDirectoriesLink
+mayContain: msExchMDBRulesQuota
+mayContain: msExchMobileAllowedDeviceIDs
+mayContain: msExchMobileDebugLogging
+mayContain: msExchMobileMailboxPolicyLink
+mayContain: msExchELCExpirySuspensionEnd
+mayContain: msExchELCExpirySuspensionStart
+mayContain: msExchELCMailboxFlags
+mayContain: msExchMobileMailboxFlags
+mayContain: msExchUMAudioCodec
+mayContain: msExchUMServerWritableFlags
+mayContain: msExchMaxBlockedSenders
+mayContain: msExchMaxSafeSenders
+mayContain: msExchUMEnabledFlags2
+mayContain: msExchApprovalApplicationLink
+mayContain: msExchAlternateMailboxes
+mayContain: msExchUMAddresses
+mayContain: msExchUMMailboxOVALanguage
+mayContain: msExchUMPhoneProvider
+mayContain: msExchMailboxMoveFlags
+mayContain: msExchMailboxMoveRemoteHostName
+mayContain: msExchMailboxMoveStatus
+mayContain: msExchMailboxMoveTargetMDBLink
+mayContain: msExchUMAudioCodec2
+mayContain: msExchArchiveDatabaseLink
+mayContain: msExchArchiveGUID
+mayContain: msExchArchiveName
+mayContain: msExchArchiveQuota
+mayContain: msExchArchiveWarnQuota
+mayContain: msExchPreviousHomeMDB
+mayContain: msExchDelegateListLink
+mayContain: msExchDumpsterQuota
+mayContain: msExchDumpsterWarningQuota
+mayContain: msExchMobileBlockedDeviceIDs
+mayContain: msExchArchiveAddress
+mayContain: msExchArchiveStatus
+mayContain: msExchPreviousMailboxGuid
+mayContain: msExchDisabledArchiveDatabaseLink
+mayContain: msExchDisabledArchiveGUID
+mayContain: msExchPreviousArchiveDatabase
+mayContain: msExchAddressBookPolicyLink
+mayContain: msExchTeamMailboxExpiration
+mayContain: msExchTeamMailboxOwners
+mayContain: msExchTeamMailboxSharePointLinkedBy
+mayContain: msExchTeamMailboxSharePointUrl
+mayContain: msExchTeamMailboxShowInClientList
+mayContain: msExchArchiveDatabaseLinkSL
+mayContain: msExchDisabledArchiveDatabaseLinkSL
+mayContain: msExchHomeMDBSL
+mayContain: msExchMailboxMoveTargetMDBLinkSL
+mayContain: msExchPreviousArchiveDatabaseSL
+mayContain: msExchPreviousHomeMDBSL
+mayContain: msExchArchiveRelease
+mayContain: msExchMailboxRelease
+mayContain: msExchCalendarLoggingQuota
+mayContain: msExchConfigurationXML
+mayContain: msExchOrganizationUpgradeRequest
+mayContain: msExchOrganizationUpgradeStatus
+mayContain: msExchMailboxContainerGuid
+mayContain: msExchUnifiedMailbox
+mayContain: msExchUserCulture
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Base-Class
+adminDisplayName: ms-Exch-Base-Class
+defaultHidingValue: TRUE
+governsID: 1.2.840.113556.1.5.7000.62.14
+lDAPDisplayName: msExchBaseClass
+name: ms-Exch-Base-Class
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 3
+rDNAttID: cn
+schemaIdGuid:: NCx42MpG0xGqcgDAT47t2A==
+subClassOf: top
+mayContain: legacyExchangeDN
+mayContain: msExchADCGlobalNames
+mayContain: msExchHideFromAddressLists
+mayContain: replicatedObjectVersion
+mayContain: replicationSignature
+mayContain: unmergedAtts
+mayContain: showInAddressBook
+mayContain: msExchUnmergedAttsPt
+mayContain: msExchALObjectVersion
+mayContain: heuristics
+mayContain: msExchInconsistentState
+mayContain: msExchVersion
+mayContain: msExchConfigurationUnitBL
+mayContain: msExchCU
+mayContain: msExchOURoot
+mayContain: msExchEdgeSyncCookies
+mayContain: msExchEdgeSyncSourceGuid
+mayContain: msExchRecipientValidatorCookies
+mayContain: msExchSetupStatus
+mayContain: msExchProvisioningFlags
+mayContain: msExchServerAssociationBL
+mayContain: msExchServerAssociationLink
+mayContain: msExchDirsyncID
+mayContain: msExchObjectCountQuota
+mayContain: msExchContentConversionSettings
+mayContain: msExchIMAP4Settings
+mayContain: msExchManagementSettings
+mayContain: msExchMobileSettings
+mayContain: msExchOWASettings
+mayContain: msExchPOP3Settings
+mayContain: msExchTransportInboundSettings
+mayContain: msExchTransportOutboundSettings
+mayContain: msExchEwsApplicationAccessPolicy
+mayContain: msExchEwsEnabled
+mayContain: msExchEwsExceptions
+mayContain: msExchEwsWellKnownApplicationPolicies
+mayContain: msExchExternalDirectoryObjectId
+mayContain: msExchLastExchangeChangedTime
+mayContain: msExchIsMSODirsynced
+mayContain: msExchOnPremiseObjectGuid
+mayContain: msExchShadowAssistantName
+mayContain: msExchShadowC
+mayContain: msExchShadowCo
+mayContain: msExchShadowCountryCode
+mayContain: msExchShadowDepartment
+mayContain: msExchShadowDisplayName
+mayContain: msExchShadowFacsimileTelephoneNumber
+mayContain: msExchShadowGivenName
+mayContain: msExchShadowHomePhone
+mayContain: msExchShadowInfo
+mayContain: msExchShadowL
+mayContain: msExchShadowMailNickname
+mayContain: msExchShadowMobile
+mayContain: msExchShadowOtherFacsimileTelephone
+mayContain: msExchShadowOtherHomePhone
+mayContain: msExchShadowOtherTelephone
+mayContain: msExchShadowPager
+mayContain: msExchShadowPhysicalDeliveryOfficeName
+mayContain: msExchShadowPostalCode
+mayContain: msExchShadowProxyAddresses
+mayContain: msExchShadowSn
+mayContain: msExchShadowSt
+mayContain: msExchShadowStreetAddress
+mayContain: msExchShadowTelephoneAssistant
+mayContain: msExchShadowTelephoneNumber
+mayContain: msExchShadowTitle
+mayContain: msExchShadowWindowsLiveID
+mayContain: msExchShadowWWWHomePage
+mayContain: msExchShadowManagerLink
+mayContain: msExchShadowCompany
+mayContain: msExchShadowInitials
+mayContain: msExchDirsyncAuthorityMetadata
+mayContain: msExchDirsyncStatusAck
+mayContain: msExchEdgeSyncConfigFlags
+mayContain: msExchHABRootDepartmentLink
+mayContain: msExchELCMailboxFlags
+mayContain: msExchDefaultPublicFolderMailbox
+mayContain: msExchForestModeFlag
+mayContain: msExchCanaryData0
+mayContain: msExchCanaryData1
+mayContain: msExchCanaryData2
+mayContain: msExchCorrelationId
+mayContain: msExchCapabilityIdentifiers
+mayContain: msExchObjectID
+mayContain: msExchProvisioningTags
+mayContain: msExchTenantCountry
+mayContain: msExchConfigurationXML
+mayContain: msExchMultiMailboxGUIDs
+mayContain: msExchMultiMailboxLocationsLink
+
+

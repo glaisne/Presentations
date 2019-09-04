@@ -1,0 +1,270 @@
+dn: CN=ms-Exch-Control-Point-Config,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Control-Point-Config
+adminDisplayName: ms-Exch-Control-Point-Config
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50141
+lDAPDisplayName: msExchControlPointConfig
+name: ms-Exch-Control-Point-Config
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: u43chrdEpkKFWqDMvSR4QA==
+subClassOf: top
+auxiliaryClass: msExchBaseClass
+possSuperiors: container
+possSuperiors: msExchTransportSettings
+mayContain: msExchControlPointFlags
+mayContain: msExchRMSLicensingLocationUrl
+mayContain: msExchRMSPublishingLocationUrl
+mayContain: msExchRMSServiceLocationUrl
+
+
+dn: CN=ms-Exch-Sync-Accounts-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Sync-Accounts-Policy
+adminDisplayName: ms-Exch-Sync-Accounts-Policy
+defaultSecurityDescriptor: D:S:
+governsID: 1.2.840.113556.1.5.7000.62.50142
+lDAPDisplayName: msExchSyncAccountsPolicy
+name: ms-Exch-Sync-Accounts-Policy
+objectCategory: CN=Class-Schema,<SchemaContainerDN>
+objectClass: classSchema
+objectClassCategory: 1
+rDNAttID: cn
+schemaIdGuid:: Zut1z4DZvEaGtfBXTjg/1A==
+subClassOf: msExchGenericPolicy
+auxiliaryClass: msExchBaseClass
+possSuperiors: container
+mayContain: msExchSyncAccountsFlags
+mayContain: msExchSyncAccountsMax
+mayContain: msExchSyncAccountsPollingInterval
+mayContain: msExchSyncAccountsTimeBeforeDormant
+mayContain: msExchSyncAccountsTimeBeforeInactive
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Client-Access-Array,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace:lDAPDisplayName
+lDAPDisplayName: msExchClientAccessArrayLegacy
+-
+
+
+dn: CN=ms-Exch-Sharing-Policy-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+
+dn: CN=ms-Exch-Sharing-Admin-Key,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: lDAPDisplayName
+lDAPDisplayName: msExchFedAdminKey
+-
+
+
+dn: CN=ms-Exch-Sharing-Org-Next-Certificate,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: lDAPDisplayName
+lDAPDisplayName: msExchFedOrgNextCertificate
+-
+
+
+dn: CN=ms-Exch-Sharing-Org-Next-Priv-Certificate,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: lDAPDisplayName
+lDAPDisplayName: msExchFedOrgNextPrivCertificate
+-
+
+
+dn: CN=ms-Exch-Sharing-Provisioning-Provider,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: lDAPDisplayName
+lDAPDisplayName: msExchFedProvisioningProvider
+-
+
+
+dn: CN=ms-Exch-Sharing-Provisioning-Provider,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 2048
+-
+
+
+dn: CN=ms-Exch-Approval-Application-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Co-Managed-Objects-BL,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Moderated-Objects-BL,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Parent-Plan-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Provisioning-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Sender-Hint-Translations,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+-
+
+
+dn: CN=ms-Exch-Server-Association-BL,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Server-Association-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Sharing-Policy-Link,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=ms-Exch-Transport-Recipient-Settings-Flags,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: attributeSecurityGuid
+attributeSecurityGuid:: F6SzsVXskUGzJ7cuM+OK8g==
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCalendarRepairDisabled
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxMoveFlags
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxMoveRemoteHostName
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxMoveStatus
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxMoveTargetMDBLink
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxPlanType
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchSyncAccountsPolicyDN
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchTextMessagingState
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchUMAddresses
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAssistantsMaintenanceSchedule
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCalendarRepairFlags
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCalendarRepairIntervalEndWindow
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCalendarRepairIntervalStartWindow
+-
+
+
+dn: CN=ms-Exch-Exchange-Server,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCalendarRepairLogFileAgeLimit
+-
+
+

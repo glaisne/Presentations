@@ -1,0 +1,283 @@
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute36
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute37
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute38
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute39
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute40
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute41
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute42
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute43
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute44
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute45
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionCustomAttribute1
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionCustomAttribute2
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionCustomAttribute3
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionCustomAttribute4
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionCustomAttribute5
+-
+
+
+dn: CN=ms-Exch-Domain-Content-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchContentByteEncoderTypeFor7BitCharsets
+-
+
+
+dn: CN=ms-Exch-Domain-Content-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchContentPreferredInternetCodePageForShiftJis
+-
+
+
+dn: CN=ms-Exch-Domain-Content-Config,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchContentRequiredCharSetCoverage
+-
+
+
+dn: CN=ms-Exch-Mail-Storage,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchAddressBookPolicyLink
+-
+
+
+dn: CN=ms-Exch-OAB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOfflineAddressBookBL
+-
+
+
+dn: CN=ms-Exch-OWA-Mailbox-Policy,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWASetPhotoURL
+-
+
+
+dn: CN=ms-Exch-OWA-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOWASetPhotoURL
+-
+
+
+dn: CN=ms-Exch-Private-MDB,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMailboxDatabaseTransportFlags
+-
+
+
+dn: CN=ms-Exch-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMRSProxyFlags
+-
+
+
+dn: CN=ms-Exch-Virtual-Directory,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMRSProxyMaxConnections
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Default-Public-Folder-Mailbox,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Default-Public-Folder-Mailbox
+adminDisplayName: ms-Exch-Default-Public-Folder-Mailbox
+attributeID: 1.2.840.113556.1.4.7000.102.51805
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchDefaultPublicFolderMailbox
+name: ms-Exch-Default-Public-Folder-Mailbox
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeUpper: 1024
+schemaIdGuid:: uwSsmhevvEOyQaAEsLLNrw==
+searchFlags: 25
+
+
+dn: CN=ms-Exch-Forest-Mode-Flag,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Forest-Mode-Flag
+adminDisplayName: ms-Exch-Forest-Mode-Flag
+attributeID: 1.2.840.113556.1.4.7000.102.51796
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchForestModeFlag
+name: ms-Exch-Forest-Mode-Flag
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: A1wuyOvuyU+EtTsfyK/JFQ==
+searchFlags: 0
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDefaultPublicFolderMailbox
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchForestModeFlag
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Workload-Classification,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Workload-Classification
+adminDisplayName: ms-Exch-Workload-Classification
+attributeID: 1.2.840.113556.1.4.7000.102.51811
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchWorkloadClassification
+name: ms-Exch-Workload-Classification
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: g5ucKbrNdESOJLHC3NA9eA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Workload-Management-Is-Enabled,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Workload-Management-Is-Enabled
+adminDisplayName: ms-Exch-Workload-Management-Is-Enabled
+attributeID: 1.2.840.113556.1.4.7000.102.51807
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchWorkloadManagementIsEnabled
+name: ms-Exch-Workload-Management-Is-Enabled
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: i1HtWvuqeUGZ2PsX67XKiw==
+searchFlags: 0
+
+

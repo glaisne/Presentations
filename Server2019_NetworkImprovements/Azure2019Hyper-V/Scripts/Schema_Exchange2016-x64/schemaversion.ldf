@@ -1,0 +1,115 @@
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpgradeInProgress
+schemaUpGradeInProgress: 1
+-
+
+
+dn: CN=ms-Exch-UM-Spoken-Name,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36034
+-
+
+
+dn: CN=ms-Exch-Auth-Orig,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36056
+-
+
+
+dn: CN=ms-Exch-Unauth-Orig,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36057
+-
+
+
+dn: CN=ms-Exch-DL-Mem-Submit-Perms,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36058
+-
+
+
+dn: CN=ms-Exch-DL-Mem-Reject-Perms,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36059
+-
+
+
+dn: CN=ms-Exch-Group-Member-Count,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36066
+-
+
+
+dn: CN=ms-Exch-Group-External-Member-Count,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mAPIID
+mAPIID: 36067
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpgradeInProgress
+schemaUpGradeInProgress: 0
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Setup-Time,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+delete: rangeUpper
+-
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Start-Sync,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+delete: rangeUpper
+-
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Start-Lockdown,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+delete: rangeUpper
+-
+
+
+dn: CN=ms-Exch-Relocate-Tenant-Start-Retired,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+delete: rangeUpper
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+
+dn: CN=ms-Exch-Schema-Version-Pt,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+replace: rangeUpper
+rangeUpper: 15317
+-
+
+
+dn:
+changetype: ntdsSchemaModify
+replace: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+

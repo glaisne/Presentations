@@ -1,0 +1,238 @@
+dn: CN=Address-Book-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchGlobalAddressListBL
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: company
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: department
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchRecipientSoftDeletedStatus
+-
+
+
+dn: CN=Mail-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchWhenSoftDeletedTime
+-
+
+
+dn: CN=ms-Exch-Availability-Address-Space,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchFedTargetAutodiscoverEPR
+-
+
+
+dn: CN=ms-Exch-Base-Class,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchELCMailboxFlags
+-
+
+
+dn: CN=ms-Exch-Coexistence-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCoexistenceOnPremisesSmartHost
+-
+
+
+dn: CN=ms-Exch-Coexistence-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCoexistenceSecureMailCertificateThumbprint
+-
+
+
+dn: CN=ms-Exch-Coexistence-Relationship,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchCoexistenceTransportServers
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchDirSyncServiceInstance
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMaxConcurrentMigrations
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchMigrationFlags
+-
+
+
+dn: CN=ms-Exch-Configuration-Unit-Container,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchOrganizationUpgradePolicyLink
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute16
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute17
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute18
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute19
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute20
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute21
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute22
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute23
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute24
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute25
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute26
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute27
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute28
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute29
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute30
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute31
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute32
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute33
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute34
+-
+
+
+dn: CN=ms-Exch-Custom-Attributes,<SchemaContainerDN>
+changetype: ntdsSchemaModify
+add: mayContain
+mayContain: msExchExtensionAttribute35
+-
+
+

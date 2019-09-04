@@ -1,0 +1,613 @@
+dn: CN=ms-Exch-Extension-Attribute-8,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Extension-Attribute-8
+adminDisplayName: ms-Exch-Extension-Attribute-8
+attributeID: 1.2.840.113556.1.2.430
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: extensionAttribute8
+mapiId: 32820
+name: ms-Exch-Extension-Attribute-8
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 1024
+schemaIdGuid:: b3mWv+YN0BGihQCqADBJ4g==
+searchFlags: 17
+
+
+dn: CN=ms-Exch-Extension-Attribute-9,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Extension-Attribute-9
+adminDisplayName: ms-Exch-Extension-Attribute-9
+attributeID: 1.2.840.113556.1.2.431
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: extensionAttribute9
+mapiId: 32821
+name: ms-Exch-Extension-Attribute-9
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 1024
+schemaIdGuid:: cHmWv+YN0BGihQCqADBJ4g==
+searchFlags: 17
+
+
+dn: CN=ms-Exch-Folder-Pathname,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Folder-Pathname
+adminDisplayName: ms-Exch-Folder-Pathname
+attributeID: 1.2.840.113556.1.2.337
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: folderPathname
+mapiId: 32772
+name: ms-Exch-Folder-Pathname
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 1024
+schemaIdGuid:: jf/48JER0BGgYACqAGwz7Q==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Form-Data,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Form-Data
+adminDisplayName: ms-Exch-Form-Data
+attributeID: 1.2.840.113556.1.2.607
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: formData
+mapiId: 35941
+name: ms-Exch-Form-Data
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: AHTfqOrF0RG7ywCAx2ZwwA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Forwarding-Address,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Forwarding-Address
+adminDisplayName: ms-Exch-Forwarding-Address
+attributeID: 1.2.840.113556.1.2.606
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: forwardingAddress
+mapiId: 35940
+name: ms-Exch-Forwarding-Address
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 256
+schemaIdGuid:: /1d3FvNH0RGpwwAA+ANnwQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Hide-DL-Membership,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Hide-DL-Membership
+adminDisplayName: ms-Exch-Hide-DL-Membership
+attributeID: 1.2.840.113556.1.2.297
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: hideDLMembership
+mapiId: 32952
+name: ms-Exch-Hide-DL-Membership
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: BXTfqOrF0RG7ywCAx2ZwwA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Hide-From-Address-Lists,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Hide-From-Address-Lists
+adminDisplayName: ms-Exch-Hide-From-Address-Lists
+attributeID: 1.2.840.113556.1.4.7000.102.73
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchHideFromAddressLists
+name: ms-Exch-Hide-From-Address-Lists
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: lgscopOw0hGqBgDAT47t2A==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-Home-MTA,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Home-MTA
+adminDisplayName: ms-Exch-Home-MTA
+attributeID: 1.2.840.113556.1.2.171
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: homeMTA
+mapiId: 32775
+name: ms-Exch-Home-MTA
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: iXmWv+YN0BGihQCqADBJ4g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Home-Server-Name,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Home-Server-Name
+adminDisplayName: ms-Exch-Home-Server-Name
+attributeID: 1.2.840.113556.1.4.7000.102.47
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: msExchHomeServerName
+name: ms-Exch-Home-Server-Name
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: DvOEopOw0hGqBgDAT47t2A==
+searchFlags: 25
+
+
+dn: CN=ms-Exch-Internet-Encoding,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Internet-Encoding
+adminDisplayName: ms-Exch-Internet-Encoding
+attributeID: 1.2.840.113556.1.2.551
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: internetEncoding
+mapiId: 14961
+name: ms-Exch-Internet-Encoding
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: HVh3FvNH0RGpwwAA+ANnwQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Is-Bridgehead-Site,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Is-Bridgehead-Site
+adminDisplayName: ms-Exch-Is-Bridgehead-Site
+attributeID: 1.2.840.113556.1.4.7000.102.35
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchIsBridgeheadSite
+name: ms-Exch-Is-Bridgehead-Site
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: jhCxppOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Language,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Language
+adminDisplayName: ms-Exch-Language
+attributeID: 1.2.840.113556.1.2.467
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: languageCode
+mapiId: 33144
+name: ms-Exch-Language
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: lHmWv+YN0BGihQCqADBJ4g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Language-ISO639,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Language-ISO639
+adminDisplayName: ms-Exch-Language-ISO639
+attributeID: 1.2.840.113556.1.2.616
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: language
+mapiId: 35948
+name: ms-Exch-Language-ISO639
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 64
+schemaIdGuid:: IVh3FvNH0RGpwwAA+ANnwQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Mail-Nickname,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Mail-Nickname
+adminDisplayName: ms-Exch-Mail-Nickname
+attributeID: 1.2.840.113556.1.2.447
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: mailNickname
+mapiId: 14848
+name: ms-Exch-Mail-Nickname
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 64
+schemaIdGuid:: s3mWv+YN0BGihQCqADBJ4g==
+searchFlags: 5
+
+
+dn: CN=ms-Exch-MAPI-Recipient,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MAPI-Recipient
+adminDisplayName: ms-Exch-MAPI-Recipient
+attributeID: 1.2.840.113556.1.2.371
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: mAPIRecipient
+mapiId: 14912
+name: ms-Exch-MAPI-Recipient
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: uHmWv+YN0BGihQCqADBJ4g==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-MDB-Over-Hard-Quota-Limit,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Over-Hard-Quota-Limit
+adminDisplayName: ms-Exch-MDB-Over-Hard-Quota-Limit
+attributeID: 1.2.840.113556.1.4.7000.102.11037
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: mDBOverHardQuotaLimit
+name: ms-Exch-MDB-Over-Hard-Quota-Limit
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: xB7Pj5Ow0hGqBgDAT47t2A==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-MDB-Over-Quota-Limit,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Over-Quota-Limit
+adminDisplayName: ms-Exch-MDB-Over-Quota-Limit
+attributeID: 1.2.840.113556.1.2.272
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: mDBOverQuotaLimit
+mapiId: 32977
+name: ms-Exch-MDB-Over-Quota-Limit
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: kf/48JER0BGgYACqAGwz7Q==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-MDB-Storage-Quota,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Storage-Quota
+adminDisplayName: ms-Exch-MDB-Storage-Quota
+attributeID: 1.2.840.113556.1.2.266
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: mDBStorageQuota
+mapiId: 32978
+name: ms-Exch-MDB-Storage-Quota
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: kv/48JER0BGgYACqAGwz7Q==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-MDB-Use-Defaults,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-MDB-Use-Defaults
+adminDisplayName: ms-Exch-MDB-Use-Defaults
+attributeID: 1.2.840.113556.1.2.309
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: mDBUseDefaults
+mapiId: 32980
+name: ms-Exch-MDB-Use-Defaults
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: k//48JER0BGgYACqAGwz7Q==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-NT-Account-Options,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-NT-Account-Options
+adminDisplayName: ms-Exch-NT-Account-Options
+attributeID: 1.2.840.113556.1.4.7000.102.44
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchNTAccountOptions
+name: ms-Exch-NT-Account-Options
+oMSyntax: 10
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: TObrFJiw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Ntds-Export-Containers,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Ntds-Export-Containers
+adminDisplayName: ms-Exch-Ntds-Export-Containers
+attributeID: 1.2.840.113556.1.4.7000.102.33
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: FALSE
+lDAPDisplayName: msExchNtdsExportContainers
+name: ms-Exch-Ntds-Export-Containers
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 0vRbFZiw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Ntds-Import-Container,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Ntds-Import-Container
+adminDisplayName: ms-Exch-Ntds-Import-Container
+attributeID: 1.2.840.113556.1.4.7000.102.34
+attributeSyntax: 2.5.5.1
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchNtdsImportContainer
+name: ms-Exch-Ntds-Import-Container
+oMSyntax: 127
+oMObjectClass:: KwwCh3McAIVK
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: 6MqSFZiw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-OOF-Reply-To-Originator,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-OOF-Reply-To-Originator
+adminDisplayName: ms-Exch-OOF-Reply-To-Originator
+attributeID: 1.2.840.113556.1.2.438
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: oOFReplyToOriginator
+mapiId: 33023
+name: ms-Exch-OOF-Reply-To-Originator
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: QHTfqOrF0RG7ywCAx2ZwwA==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-POP-Character-Set,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-POP-Character-Set
+adminDisplayName: ms-Exch-POP-Character-Set
+attributeID: 1.2.840.113556.1.2.468
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: pOPCharacterSet
+mapiId: 33145
+name: ms-Exch-POP-Character-Set
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 64
+schemaIdGuid:: +HmWv+YN0BGihQCqADBJ4g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-POP-Content-Format,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-POP-Content-Format
+adminDisplayName: ms-Exch-POP-Content-Format
+attributeID: 1.2.840.113556.1.2.466
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: pOPContentFormat
+mapiId: 33143
+name: ms-Exch-POP-Content-Format
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 1
+rangeUpper: 64
+schemaIdGuid:: +XmWv+YN0BGihQCqADBJ4g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Protocol-Settings,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Protocol-Settings
+adminDisplayName: ms-Exch-Protocol-Settings
+attributeID: 1.2.840.113556.1.2.528
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: FALSE
+lDAPDisplayName: protocolSettings
+mapiId: 33206
+name: ms-Exch-Protocol-Settings
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 256
+schemaIdGuid:: Xlh3FvNH0RGpwwAA+ANnwQ==
+searchFlags: 16
+
+
+dn: CN=ms-Exch-Remote-Private-IS-List,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Remote-Private-IS-List
+adminDisplayName: ms-Exch-Remote-Private-IS-List
+attributeID: 1.2.840.113556.1.4.7000.102.46
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRemotePrivateISList
+name: ms-Exch-Remote-Private-IS-List
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: DAMpHpiw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Remote-Server-List,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Remote-Server-List
+adminDisplayName: ms-Exch-Remote-Server-List
+attributeID: 1.2.840.113556.1.4.7000.102.45
+attributeSyntax: 2.5.5.12
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchRemoteServerList
+name: ms-Exch-Remote-Server-List
+oMSyntax: 64
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: FLJYHpiw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Replicate-Now,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Replicate-Now
+adminDisplayName: ms-Exch-Replicate-Now
+attributeID: 1.2.840.113556.1.4.7000.102.53
+attributeSyntax: 2.5.5.8
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: msExchReplicateNow
+name: ms-Exch-Replicate-Now
+oMSyntax: 1
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: YiSsHpiw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Replicated-Object-Version,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Replicated-Object-Version
+adminDisplayName: ms-Exch-Replicated-Object-Version
+attributeID: 1.2.840.113556.1.2.604
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: replicatedObjectVersion
+mapiId: 35938
+name: ms-Exch-Replicated-Object-Version
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: bFh3FvNH0RGpwwAA+ANnwQ==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Replication-Sensitivity,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Replication-Sensitivity
+adminDisplayName: ms-Exch-Replication-Sensitivity
+attributeID: 1.2.840.113556.1.2.223
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.9
+isMemberOfPartialAttributeSet: FALSE
+isSingleValued: TRUE
+lDAPDisplayName: replicationSensitivity
+mapiId: 33054
+name: ms-Exch-Replication-Sensitivity
+oMSyntax: 2
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+rangeLower: 0
+rangeUpper: 100
+schemaIdGuid:: G3qWv+YN0BGihQCqADBJ4g==
+searchFlags: 0
+
+
+dn: CN=ms-Exch-Replication-Signature,<SchemaContainerDN>
+changetype: ntdsSchemaAdd
+adminDescription: ms-Exch-Replication-Signature
+adminDisplayName: ms-Exch-Replication-Signature
+attributeID: 1.2.840.113556.1.4.7000.102.52
+attributeSecurityGuid:: iYopH5jeuEe1zVcq1T0mfg==
+attributeSyntax: 2.5.5.10
+isMemberOfPartialAttributeSet: TRUE
+isSingleValued: TRUE
+lDAPDisplayName: replicationSignature
+name: ms-Exch-Replication-Signature
+oMSyntax: 4
+objectCategory: CN=Attribute-Schema,<SchemaContainerDN>
+objectClass: attributeSchema
+schemaIdGuid:: KtkJmZOw0hGqBgDAT47t2A==
+searchFlags: 0
+
+
