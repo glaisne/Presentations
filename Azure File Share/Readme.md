@@ -128,6 +128,13 @@ get-smbconnection |fl *
             - File journaling picks up the new file and uploads it immediately.
         - Add a file on the Azure File Share and see that it doesn't sync right away. 
             - Azure syncs down on a 24 interval.
+ - Limiting the network utilization
+    - By default, the server will use every bit of bandwith it can.
+    - This bit of script, run on the file server, limits Monday-Friday between 7am and 6pm to just 20MBps. outside of these times, it will use whatever it can.
+```powershell
+import-module "c:\program files\azure\storagesyncagent\storagesync.management.servercmdlets.dll"
+New-StorageSyncNetworkLimit -Day Monday, Tuesday, Wednesday, Thursday, Friday -StartHour 7 -EndHour 18 -limitKbps 20000
+```
         
 
 
@@ -139,10 +146,16 @@ get-smbconnection |fl *
  - Cloud teiring can't be used on the system volume
  -Demo:
 ```powershell
-import-module "c:\program files\azure\storagesyncagent\storagesync.management.servercmdlets...
+import-module "c:\program files\azure\storagesyncagent\storagesync.management.servercmdlets.dll"
 invoke-storagesynccloudtiering -path <path to file>
 ```
- - Review the file
- - Open the file
- - review the file again, see that the size on disk is correct.
+    - Review the file
+    - Open the file
+    - review the file again, see that the size on disk is correct.
 
+# Things to be aware of
+ 
+ - (Teiring) Anti-Virus software will pull the files back down.
+ - (Teiring) Backups will do the same
+ - ACLs are replicated to the cloud, but are not enforced with accessed via Azure.
+ - Not too much replication (like having two anti-virus software running)
