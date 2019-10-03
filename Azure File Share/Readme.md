@@ -5,6 +5,10 @@
  - Disaster recovery 
     - GRS - if the datacenter goes down, the replica becomes available
 
+
+
+
+
 # Replication
 Storage account repliation
  - Locally-redundant storage (LRS) - All 3 copies in the same zone of a datacenter in the same zone.
@@ -14,6 +18,11 @@ Storage account repliation
  - Read-access geo-redundatn stoarage (RA-GRS) - GRS, where the secondary datacenter data is read-only available
     - not applicable to Azure files.
 
+
+
+
+
+
 # Encryption
 Storage account data is encrypted at rest. the only option to change this is to use your own key and tie it with a Key Vault for storing your data.
  - redundant copies are also encrypted.
@@ -22,16 +31,21 @@ Storage account data is encrypted at rest. the only option to change this is to 
     - this requires port 445 open
     - test-netconnection -computername <uri> -port 445
 
+
+
+
+
+
 # Firewall
  - allow access from Virtual networks
  - Allow access from internet IPs
 
 ```powershell
-$StorageAccountName = 'sa01ofawesome'
-$ResoruceGroup = 'StorageAccountDemo'
+$StorageAccountName = 'sademo01bawsug'
+$ResourceGroup = 'FileDemo'
 $ShareName = 'test01'
-$StorageAccount = Get-AZStorageAccount -StorageAccountName $StorageAccountName -ResourceGroupName $ResoruceGroup
-$StorageAccountKey = Get-AzStorageAccountKey -name $storageAccountName -ResourceGroupName $ResoruceGroup
+$StorageAccount = Get-AZStorageAccount -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroup
+$StorageAccountKey = Get-AzStorageAccountKey -name $storageAccountName -ResourceGroupName $ResourceGroup
 $StorageAccountContext = New-AzStorageContext $StorageAccountName -StorageAccountKey $StorageAccountKey[0].value
 
 $Share = get-azStorageShare $ShareName -context $StorageAccountContext
@@ -49,10 +63,10 @@ Set-AzStorageFileContent -share $Share -Source 'C:\Users\glais\Pictures\20190507
 Get-azStorageFileContent -Share $Share -Path 'images\20190507_064533.jpg'
 
 # remove the file
-Remove-AzureStorageFile -share $Share -path 'images\20190507_064533.jpg'
+Remove-AzStorageFile -share $Share -path 'images\20190507_064533.jpg'
 
 # remove the directory
-Remove-AzureStorageDirectory -share $Share -path 'images'
+Remove-AzStorageDirectory -share $Share -path 'images'
 
 ##########################################################
 # Map a drive
@@ -60,17 +74,24 @@ Remove-AzureStorageDirectory -share $Share -path 'images'
 
 Test-NetConnection -ComputerName "$StorageAccountName`.file.core.windows.net" -Port 445
 # Save the password so the drive will persist on reboot
-Invoke-Expression -Command "cmdkey /add:$StorageAccountName`.file.core.windows.net /user:Azure\$StorageAccountName /pass:/$($StorageAccountKey[0].value)"
-# Mount the drive
-New-PSDrive -Name Z -PSProvider FileSystem -Root "\\$StorageAccountName`.file.core.windows.net\$ShareName"
+# Invoke-Expression -Command "cmdkey /add:$StorageAccountName`.file.core.windows.net /user:Azure\$StorageAccountName /pass:/$($StorageAccountKey[0].value)"
+# # Mount the drive
+# New-PSDrive -Name Z -PSProvider FileSystem -Root "\\$StorageAccountName`.file.core.windows.net\$ShareName"
 
 $password = convertto-SecureString -string $StorageAccountKey[0].value -AsPlainText -Force
 $Credential = [system.management.automation.pscredential]::new("Azure\$StorageAccountName", $password)
 New-PSDrive -Name Z -PSProvider FileSystem -Root "\\$StorageAccountName`.file.core.windows.net\$ShareName" -Credential $Credential -persist
 
+
+
 get-smbconnection |fl *
 
 ```
+
+
+
+
+
 
 # Snapshots
  - through the Azure Portal, you can take snapshots of your data.
@@ -93,6 +114,11 @@ get-smbconnection |fl *
     - Review backup
     - restore file.
     - View snapshots in maped folder properties from the client.
+
+
+
+
+
 
 # Azure File Sync
  - Create sync from one Azure Share to one or more Windows file servers.
@@ -143,7 +169,7 @@ New-StorageSyncNetworkLimit -Day Monday, Tuesday, Wednesday, Thursday, Friday -S
  - least used files would be in the cloud only.
  - Based on a percentage of free space. Ex: configuring it at 20% means that as the drive gets to 20% free space, the least-used files are moved to Azure, removed from the file server, and a pointer is put in its place.
  - Each file server in a sync group can have its own tiering configuration.
- - Cloud teiring can't be used on the system volume
+ - Cloud tiering can't be used on the system volume
  -Demo:
 ```powershell
 import-module "c:\program files\azure\storagesyncagent\storagesync.management.servercmdlets.dll"
@@ -153,9 +179,14 @@ invoke-storagesynccloudtiering -path <path to file>
     - Open the file
     - review the file again, see that the size on disk is correct.
 
+
+
+
+
+
 # Things to be aware of
  
- - (Teiring) Anti-Virus software will pull the files back down.
- - (Teiring) Backups will do the same
+ - (Tiering) Anti-Virus software will pull the files back down.
+ - (Tiering) Backups will do the same
  - ACLs are replicated to the cloud, but are not enforced with accessed via Azure.
  - Not too much replication (like having two anti-virus software running)
